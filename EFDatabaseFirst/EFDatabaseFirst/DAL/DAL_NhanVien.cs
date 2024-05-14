@@ -88,22 +88,13 @@ namespace EFDatabaseFirst.DAL
             catch { }
             return null;
         }
-        public dynamic kiemTraDangNhap(string taikhoan, string matkhau)
+        public NHANVIEN kiemTraDangNhap(string taikhoan, string matkhau)
         {
-            var query = db.NHANVIENs.AsQueryable();
-            query = query.Where(nv => nv.TaiKhoan == taikhoan && nv.MatKhau ==matkhau);
-            var user = query.Select(s => new
-            {
-                s.MaNV,
-                s.HoTen,
-                s.GioiTinh,
-                s.SoDT,
-                s.NgaySinh,
-                s.ChucDanh,
-                s.TaiKhoan,
-                s.MatKhau
-            }).ToList();
-            return user;
+            NHANVIEN k;
+            var query = db.NHANVIENs.Where(nv => nv.TaiKhoan == taikhoan && nv.MatKhau == matkhau);
+            k = query.FirstOrDefault();
+            return k;
         }
+
     }
 }

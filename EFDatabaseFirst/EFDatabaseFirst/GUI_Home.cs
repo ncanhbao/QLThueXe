@@ -17,7 +17,7 @@ namespace EFDatabaseFirst
         bool panelQLCollapse;
         public GUI_Home()
         {
-            string username = GUI_DangNhap.username;
+            string username = GUI_DangNhap.user.HoTen;
             InitializeComponent();
             lbuser.Text = "Xin chào, " + username;
         }

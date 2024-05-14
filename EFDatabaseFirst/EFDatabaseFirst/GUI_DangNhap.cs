@@ -13,7 +13,7 @@ namespace EFDatabaseFirst
 {
     public partial class GUI_DangNhap : Form
     {
-        public static string username;
+        public static NHANVIEN user;
         BUS_NhanVien busNhanVien;
         public GUI_DangNhap()
         {
@@ -25,11 +25,11 @@ namespace EFDatabaseFirst
         {
             if (txttaikhoan.Text != "" & txtmatkhau.Text != "")
             {
-                var nv = busNhanVien.kiemTraDangNhap(txttaikhoan.Text, txtmatkhau.Text);
-                if (nv != null && nv.Count > 0)
+                user = busNhanVien.kiemTraDangNhap(txttaikhoan.Text, txtmatkhau.Text);
+                if (user != null)
                 {
-                    username = txttaikhoan.Text;
                     GUI_Home home = new GUI_Home();
+                    MessageBox.Show("Đăng nhập thành công", "Đăng nhập hệ thống");
                     home.Show();
                     this.Hide();
                 }

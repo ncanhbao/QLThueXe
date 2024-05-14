@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -25,27 +26,8 @@ namespace EFDatabaseFirst
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txthoten.Text != "" && txtdiachi.Text != "" && txtgioitinh.Text != "" && txtsodt.Text != "")
-            {
-                KHACH khach = new KHACH();
-                khach.HoTen = txthoten.Text;
-                khach.DiaChi = txtdiachi.Text;
-                khach.GioiTinh = txtgioitinh.Text;
-                khach.SoDT = txtsodt.Text;
-                if (busKhach.themKhach(khach))
-                {
-                    MessageBox.Show("Thêm thành công");
-                    busKhach.getKhach(dgvKhach); // refresh datagridview
-                }
-                else
-                {
-                    MessageBox.Show("Thêm ko thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Xin hãy nhập đầy đủ");
-            }
+            GUI_Khach_Them formThem = new GUI_Khach_Them();
+            formThem.ShowDialog();
         }
         private void GUI_Xe_Load(object sender, EventArgs e)
         {
@@ -56,6 +38,7 @@ namespace EFDatabaseFirst
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            string dateFormat = "dd/MM/yyyy";
             // Kiểm tra nếu có chọn table rồi
             if (dgvKhach.SelectedRows.Count > 0)
             {
@@ -70,6 +53,8 @@ namespace EFDatabaseFirst
                     khach.DiaChi = txtdiachi.Text;
                     khach.GioiTinh = txtgioitinh.Text;
                     khach.SoDT = txtsodt.Text;
+                    DateTime.TryParseExact(txtngaysinh.Text, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngaySinh);
+                    khach.NgaySinh = ngaySinh;
                     // Sửa
                     if (busKhach.suaKhach(khach))
                     {
@@ -96,7 +81,7 @@ namespace EFDatabaseFirst
         private void btnAll_Click(object sender, EventArgs e)
         {
             busKhach.getKhach(dgvKhach);
-            count = dgvKhach.Rows.Count - 1;
+            count = dgvKhach.Rows.Count;
             lbketqua.Text = count.ToString() + " kết quả";
         }
 
@@ -137,10 +122,10 @@ namespace EFDatabaseFirst
         {
             string hoten = txtSearch1.Text;
             string diachi = txtSearch2.Text;
-            string cmnd = txtSearch3.Text;
+            string gioitinh = txtSearch3.Text;
             string sdt = txtSearch4.Text;
 
-            var ds = busKhach.timKhach(hoten, diachi, cmnd, sdt);
+            var ds = busKhach.timKhach(hoten, diachi, gioitinh, sdt);
             if (ds != null)
             {
                 dgvKhach.DataSource = ds;
@@ -161,6 +146,7 @@ namespace EFDatabaseFirst
             txtdiachi.Text = row.Cells[2].Value.ToString();
             txtgioitinh.Text = row.Cells[3].Value.ToString();
             txtsodt.Text = row.Cells[4].Value.ToString();
+            txtngaysinh.Text = Convert.ToDateTime(row.Cells[5].Value).ToString("dd/MM/yyyy");
         }
     }
 }

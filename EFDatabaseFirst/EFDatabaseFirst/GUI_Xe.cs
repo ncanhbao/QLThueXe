@@ -27,12 +27,13 @@ namespace EFDatabaseFirst
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txthangxe.Text != "" && txtbienso.Text != "" && txttinhtrang.Text != "")
+            if (txthangxe.Text != "" & txtbienso.Text != "" & txttinhtrang.Text != "" & txtgia.Text != "")
             {
                 XE xe = new XE();
                 xe.HangXe = txthangxe.Text;
                 xe.BienSo = txtbienso.Text;
                 xe.TinhTrang = txttinhtrang.Text;
+                xe.Gia = Convert.ToInt32(txtgia.Text);
                 if (busXe.themXe(xe))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -51,7 +52,7 @@ namespace EFDatabaseFirst
         private void GUI_Xe_Load(object sender, EventArgs e)
         {
             busXe.getXe(dgvXe);
-            count = dgvXe.Rows.Count - 1;
+            count = dgvXe.Rows.Count;
             lbketqua.Text = count.ToString() + " kết quả";
 
         }
@@ -60,7 +61,7 @@ namespace EFDatabaseFirst
             // Kiểm tra nếu có chọn table rồi
             if (dgvXe.SelectedRows.Count > 0)
             {
-                if (txthangxe.Text != "" && txtbienso.Text != "" && txttinhtrang.Text != "")
+                if (txthangxe.Text != "" & txtbienso.Text != "" & txttinhtrang.Text != "" & txtgia.Text != "")
                 {
                     // Lấy row hiện tại
                     DataGridViewRow row = dgvXe.SelectedRows[0];
@@ -69,6 +70,7 @@ namespace EFDatabaseFirst
                     xe.HangXe = txthangxe.Text;
                     xe.BienSo = txtbienso.Text;
                     xe.TinhTrang = txttinhtrang.Text;
+                    xe.Gia = Convert.ToInt32(txtgia.Text);
                     // Sửa
                     if (busXe.suaXe(xe))
                     {
@@ -127,10 +129,9 @@ namespace EFDatabaseFirst
         {
             // Lấy giá trị từ các ô tìm kiếm
             string hangxe = txtSearch1.Text;
-            string bienso = txtSearch2.Text;
             string tinhtrang = txtSearch3.Text;
 
-            var ds = busXe.timXe(hangxe, bienso, tinhtrang);
+            var ds = busXe.timXe(hangxe, tinhtrang);
             if (ds != null)
             {
                 dgvXe.DataSource = ds;
@@ -157,6 +158,7 @@ namespace EFDatabaseFirst
             txthangxe.Text = row.Cells[1].Value.ToString();
             txtbienso.Text = row.Cells[2].Value.ToString();
             txttinhtrang.Text = row.Cells[3].Value.ToString();
+            txtgia.Text = row.Cells[4].Value.ToString();
         }
     }
 }

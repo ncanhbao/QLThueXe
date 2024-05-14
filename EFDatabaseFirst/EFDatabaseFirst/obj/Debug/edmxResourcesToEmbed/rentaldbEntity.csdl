@@ -30,18 +30,6 @@
     <NavigationProperty Name="KHACH" Relationship="Self.FK_DATXE_KHACH" FromRole="DATXE" ToRole="KHACH" />
     <NavigationProperty Name="XE" Relationship="Self.FK_DATXE_XE" FromRole="DATXE" ToRole="XE" />
   </EntityType>
-  <EntityType Name="GIA">
-    <Key>
-      <PropertyRef Name="MaLoaiXe" />
-      <PropertyRef Name="Ngay" />
-    </Key>
-    <Property Name="MaLoaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="GiaXe" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="LuuDem" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="NgoaiGio" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
   <EntityType Name="HOADONTT">
     <Key>
       <PropertyRef Name="SoHDTT" />
@@ -90,6 +78,7 @@
     <NavigationProperty Name="DATXEs" Relationship="Self.FK_DATXE_KHACH" FromRole="KHACH" ToRole="DATXE" />
     <NavigationProperty Name="HOPDONGs" Relationship="Self.FK_HOPDONG_KHACH" FromRole="KHACH" ToRole="HOPDONG" />
     <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="NHANVIEN">
     <Key>
@@ -143,8 +132,7 @@
     <NavigationProperty Name="SOXEs" Relationship="Self.FK_SOXE_XE" FromRole="XE" ToRole="SOXE" />
     <NavigationProperty Name="SUACHUAs" Relationship="Self.FK_SUACHUA_XE" FromRole="XE" ToRole="SUACHUA" />
     <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE" ToRole="XE_HDTT" />
-    <NavigationProperty Name="XERAs" Relationship="Self.FK_XERA_XE" FromRole="XE" ToRole="XERA" />
-    <NavigationProperty Name="XEVAOs" Relationship="Self.FK_XEVAO_XE" FromRole="XE" ToRole="XEVAO" />
+    <Property Name="Gia" Type="Int32" />
   </EntityType>
   <EntityType Name="XE_HDTT">
     <Key>
@@ -159,30 +147,6 @@
     <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="HOADONTT" Relationship="Self.FK_XE_HDTT_HOADONTT" FromRole="XE_HDTT" ToRole="HOADONTT" />
     <NavigationProperty Name="XE" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE_HDTT" ToRole="XE" />
-  </EntityType>
-  <EntityType Name="XERA">
-    <Key>
-      <PropertyRef Name="NgayRa" />
-      <PropertyRef Name="MaXe" />
-      <PropertyRef Name="GioRa" />
-    </Key>
-    <Property Name="NgayRa" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="MaXe" Type="Int32" Nullable="false" />
-    <Property Name="GioRa" Type="Time" Nullable="false" Precision="7" />
-    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="XE" Relationship="Self.FK_XERA_XE" FromRole="XERA" ToRole="XE" />
-  </EntityType>
-  <EntityType Name="XEVAO">
-    <Key>
-      <PropertyRef Name="NgayVao" />
-      <PropertyRef Name="MaXe" />
-      <PropertyRef Name="GioVao" />
-    </Key>
-    <Property Name="NgayVao" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="MaXe" Type="Int32" Nullable="false" />
-    <Property Name="GioVao" Type="Time" Nullable="false" Precision="7" />
-    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="XE" Relationship="Self.FK_XEVAO_XE" FromRole="XEVAO" ToRole="XE" />
   </EntityType>
   <Association Name="FK_CHITIETHOPDONG_HOPDONG">
     <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="1" />
@@ -316,34 +280,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_XERA_XE">
-    <End Role="XE" Type="Self.XE" Multiplicity="1" />
-    <End Role="XERA" Type="Self.XERA" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="XE">
-        <PropertyRef Name="MaXe" />
-      </Principal>
-      <Dependent Role="XERA">
-        <PropertyRef Name="MaXe" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_XEVAO_XE">
-    <End Role="XE" Type="Self.XE" Multiplicity="1" />
-    <End Role="XEVAO" Type="Self.XEVAO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="XE">
-        <PropertyRef Name="MaXe" />
-      </Principal>
-      <Dependent Role="XEVAO">
-        <PropertyRef Name="MaXe" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="rentaldbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CHITIETHOPDONGs" EntityType="Self.CHITIETHOPDONG" />
     <EntitySet Name="DATXEs" EntityType="Self.DATXE" />
-    <EntitySet Name="GIAs" EntityType="Self.GIA" />
     <EntitySet Name="HOADONTTs" EntityType="Self.HOADONTT" />
     <EntitySet Name="HOPDONGs" EntityType="Self.HOPDONG" />
     <EntitySet Name="KHACHes" EntityType="Self.KHACH" />
@@ -352,8 +291,6 @@
     <EntitySet Name="SUACHUAs" EntityType="Self.SUACHUA" />
     <EntitySet Name="XEs" EntityType="Self.XE" />
     <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" />
-    <EntitySet Name="XERAs" EntityType="Self.XERA" />
-    <EntitySet Name="XEVAOs" EntityType="Self.XEVAO" />
     <AssociationSet Name="FK_CHITIETHOPDONG_HOPDONG" Association="Self.FK_CHITIETHOPDONG_HOPDONG">
       <End Role="HOPDONG" EntitySet="HOPDONGs" />
       <End Role="CHITIETHOPDONG" EntitySet="CHITIETHOPDONGs" />
@@ -397,14 +334,6 @@
     <AssociationSet Name="FK_XE_HDTT_XE" Association="Self.FK_XE_HDTT_XE">
       <End Role="XE" EntitySet="XEs" />
       <End Role="XE_HDTT" EntitySet="XE_HDTT" />
-    </AssociationSet>
-    <AssociationSet Name="FK_XERA_XE" Association="Self.FK_XERA_XE">
-      <End Role="XE" EntitySet="XEs" />
-      <End Role="XERA" EntitySet="XERAs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_XEVAO_XE" Association="Self.FK_XEVAO_XE">
-      <End Role="XE" EntitySet="XEs" />
-      <End Role="XEVAO" EntitySet="XEVAOs" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -31,18 +31,6 @@
           <Property Name="NgayHenLay" Type="date" />
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="GIA">
-          <Key>
-            <PropertyRef Name="MaLoaiXe" />
-            <PropertyRef Name="Ngay" />
-          </Key>
-          <Property Name="MaLoaiXe" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Ngay" Type="date" Nullable="false" />
-          <Property Name="GiaXe" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="LuuDem" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="NgoaiGio" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="HOADONTT">
           <Key>
             <PropertyRef Name="SoHDTT" />
@@ -83,6 +71,7 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
           <Property Name="SoDT" Type="nchar" MaxLength="12" />
+          <Property Name="NgaySinh" Type="date" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -128,6 +117,7 @@
           <Property Name="HangXe" Type="nchar" MaxLength="20" />
           <Property Name="BienSo" Type="nchar" MaxLength="20" />
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gia" Type="int" />
         </EntityType>
         <EntityType Name="XE_HDTT">
           <Key>
@@ -140,28 +130,6 @@
           <Property Name="NgayTraXe" Type="date" />
           <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
           <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="0" />
-        </EntityType>
-        <EntityType Name="XERA">
-          <Key>
-            <PropertyRef Name="NgayRa" />
-            <PropertyRef Name="MaXe" />
-            <PropertyRef Name="GioRa" />
-          </Key>
-          <Property Name="NgayRa" Type="date" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="GioRa" Type="time" Precision="7" Nullable="false" />
-          <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="XEVAO">
-          <Key>
-            <PropertyRef Name="NgayVao" />
-            <PropertyRef Name="MaXe" />
-            <PropertyRef Name="GioVao" />
-          </Key>
-          <Property Name="NgayVao" Type="date" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="GioVao" Type="time" Precision="7" Nullable="false" />
-          <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_CHITIETHOPDONG_HOPDONG">
           <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="1" />
@@ -295,34 +263,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_XERA_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XERA" Type="Self.XERA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XERA">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XEVAO_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XEVAO" Type="Self.XEVAO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XEVAO">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="rentaldbModelStoreContainer">
           <EntitySet Name="CHITIETHOPDONG" EntityType="Self.CHITIETHOPDONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DATXE" EntityType="Self.DATXE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="GIA" EntityType="Self.GIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOADONTT" EntityType="Self.HOADONTT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOPDONG" EntityType="Self.HOPDONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACH" EntityType="Self.KHACH" Schema="dbo" store:Type="Tables" />
@@ -331,8 +274,6 @@
           <EntitySet Name="SUACHUA" EntityType="Self.SUACHUA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="XERA" EntityType="Self.XERA" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="XEVAO" EntityType="Self.XEVAO" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CHITIETHOPDONG_HOPDONG" Association="Self.FK_CHITIETHOPDONG_HOPDONG">
             <End Role="HOPDONG" EntitySet="HOPDONG" />
             <End Role="CHITIETHOPDONG" EntitySet="CHITIETHOPDONG" />
@@ -377,14 +318,6 @@
             <End Role="XE" EntitySet="XE" />
             <End Role="XE_HDTT" EntitySet="XE_HDTT" />
           </AssociationSet>
-          <AssociationSet Name="FK_XERA_XE" Association="Self.FK_XERA_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="XERA" EntitySet="XERA" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XEVAO_XE" Association="Self.FK_XEVAO_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="XEVAO" EntitySet="XEVAO" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -419,18 +352,6 @@
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="KHACH" Relationship="Self.FK_DATXE_KHACH" FromRole="DATXE" ToRole="KHACH" />
           <NavigationProperty Name="XE" Relationship="Self.FK_DATXE_XE" FromRole="DATXE" ToRole="XE" />
-        </EntityType>
-        <EntityType Name="GIA">
-          <Key>
-            <PropertyRef Name="MaLoaiXe" />
-            <PropertyRef Name="Ngay" />
-          </Key>
-          <Property Name="MaLoaiXe" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="GiaXe" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="LuuDem" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="NgoaiGio" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="HOADONTT">
           <Key>
@@ -480,6 +401,7 @@
           <NavigationProperty Name="DATXEs" Relationship="Self.FK_DATXE_KHACH" FromRole="KHACH" ToRole="DATXE" />
           <NavigationProperty Name="HOPDONGs" Relationship="Self.FK_HOPDONG_KHACH" FromRole="KHACH" ToRole="HOPDONG" />
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -533,9 +455,8 @@
           <NavigationProperty Name="SOXEs" Relationship="Self.FK_SOXE_XE" FromRole="XE" ToRole="SOXE" />
           <NavigationProperty Name="SUACHUAs" Relationship="Self.FK_SUACHUA_XE" FromRole="XE" ToRole="SUACHUA" />
           <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE" ToRole="XE_HDTT" />
-          <NavigationProperty Name="XERAs" Relationship="Self.FK_XERA_XE" FromRole="XE" ToRole="XERA" />
-          <NavigationProperty Name="XEVAOs" Relationship="Self.FK_XEVAO_XE" FromRole="XE" ToRole="XEVAO" />
-        </EntityType>
+          <Property Name="Gia" Type="Int32" />
+          </EntityType>
         <EntityType Name="XE_HDTT">
           <Key>
             <PropertyRef Name="SoHDTT" />
@@ -549,30 +470,6 @@
           <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="HOADONTT" Relationship="Self.FK_XE_HDTT_HOADONTT" FromRole="XE_HDTT" ToRole="HOADONTT" />
           <NavigationProperty Name="XE" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE_HDTT" ToRole="XE" />
-        </EntityType>
-        <EntityType Name="XERA">
-          <Key>
-            <PropertyRef Name="NgayRa" />
-            <PropertyRef Name="MaXe" />
-            <PropertyRef Name="GioRa" />
-          </Key>
-          <Property Name="NgayRa" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="GioRa" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_XERA_XE" FromRole="XERA" ToRole="XE" />
-        </EntityType>
-        <EntityType Name="XEVAO">
-          <Key>
-            <PropertyRef Name="NgayVao" />
-            <PropertyRef Name="MaXe" />
-            <PropertyRef Name="GioVao" />
-          </Key>
-          <Property Name="NgayVao" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="GioVao" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_XEVAO_XE" FromRole="XEVAO" ToRole="XE" />
         </EntityType>
         <Association Name="FK_CHITIETHOPDONG_HOPDONG">
           <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="1" />
@@ -706,34 +603,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_XERA_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XERA" Type="Self.XERA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XERA">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XEVAO_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XEVAO" Type="Self.XEVAO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XEVAO">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="rentaldbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CHITIETHOPDONGs" EntityType="Self.CHITIETHOPDONG" />
           <EntitySet Name="DATXEs" EntityType="Self.DATXE" />
-          <EntitySet Name="GIAs" EntityType="Self.GIA" />
           <EntitySet Name="HOADONTTs" EntityType="Self.HOADONTT" />
           <EntitySet Name="HOPDONGs" EntityType="Self.HOPDONG" />
           <EntitySet Name="KHACHes" EntityType="Self.KHACH" />
@@ -742,8 +614,6 @@
           <EntitySet Name="SUACHUAs" EntityType="Self.SUACHUA" />
           <EntitySet Name="XEs" EntityType="Self.XE" />
           <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" />
-          <EntitySet Name="XERAs" EntityType="Self.XERA" />
-          <EntitySet Name="XEVAOs" EntityType="Self.XEVAO" />
           <AssociationSet Name="FK_CHITIETHOPDONG_HOPDONG" Association="Self.FK_CHITIETHOPDONG_HOPDONG">
             <End Role="HOPDONG" EntitySet="HOPDONGs" />
             <End Role="CHITIETHOPDONG" EntitySet="CHITIETHOPDONGs" />
@@ -788,15 +658,7 @@
             <End Role="XE" EntitySet="XEs" />
             <End Role="XE_HDTT" EntitySet="XE_HDTT" />
           </AssociationSet>
-          <AssociationSet Name="FK_XERA_XE" Association="Self.FK_XERA_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="XERA" EntitySet="XERAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XEVAO_XE" Association="Self.FK_XEVAO_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="XEVAO" EntitySet="XEVAOs" />
-          </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -825,18 +687,6 @@
                 <ScalarProperty Name="SoLuongDat" ColumnName="SoLuongDat" />
                 <ScalarProperty Name="NgayHenLay" ColumnName="NgayHenLay" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="GIAs">
-            <EntityTypeMapping TypeName="rentaldbModel.GIA">
-              <MappingFragment StoreEntitySet="GIA">
-                <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
-                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-                <ScalarProperty Name="GiaXe" ColumnName="GiaXe" />
-                <ScalarProperty Name="LuuDem" ColumnName="LuuDem" />
-                <ScalarProperty Name="NgoaiGio" ColumnName="NgoaiGio" />
-                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -876,6 +726,7 @@
           <EntitySetMapping Name="KHACHes">
             <EntityTypeMapping TypeName="rentaldbModel.KHACH">
               <MappingFragment StoreEntitySet="KHACH">
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -924,6 +775,7 @@
           <EntitySetMapping Name="XEs">
             <EntityTypeMapping TypeName="rentaldbModel.XE">
               <MappingFragment StoreEntitySet="XE">
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
                 <ScalarProperty Name="MaXe" ColumnName="MaXe" />
                 <ScalarProperty Name="HangXe" ColumnName="HangXe" />
                 <ScalarProperty Name="BienSo" ColumnName="BienSo" />
@@ -943,27 +795,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="XERAs">
-            <EntityTypeMapping TypeName="rentaldbModel.XERA">
-              <MappingFragment StoreEntitySet="XERA">
-                <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="GioRa" ColumnName="GioRa" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="XEVAOs">
-            <EntityTypeMapping TypeName="rentaldbModel.XEVAO">
-              <MappingFragment StoreEntitySet="XEVAO">
-                <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="GioVao" ColumnName="GioVao" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

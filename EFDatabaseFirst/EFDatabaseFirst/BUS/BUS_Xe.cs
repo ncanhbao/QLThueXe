@@ -58,9 +58,9 @@ namespace EFDatabaseFirst.BUS
                 return false;
             }
         }
-        public dynamic timXe(string searchvalue1, string searchvalue2, string searchvalue3)
+        public dynamic timXe(string searchvalue1, string searchvalue3)
         {
-            return dalXe.timXe(searchvalue1, searchvalue2, searchvalue3);
+            return dalXe.timXe(searchvalue1, searchvalue3);
         }
     }
 }

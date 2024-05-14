@@ -27,7 +27,6 @@ namespace EFDatabaseFirst
     
         public virtual DbSet<CHITIETHOPDONG> CHITIETHOPDONGs { get; set; }
         public virtual DbSet<DATXE> DATXEs { get; set; }
-        public virtual DbSet<GIA> GIAs { get; set; }
         public virtual DbSet<HOADONTT> HOADONTTs { get; set; }
         public virtual DbSet<HOPDONG> HOPDONGs { get; set; }
         public virtual DbSet<KHACH> KHACHes { get; set; }
@@ -36,7 +35,5 @@ namespace EFDatabaseFirst
         public virtual DbSet<SUACHUA> SUACHUAs { get; set; }
         public virtual DbSet<XE> XEs { get; set; }
         public virtual DbSet<XE_HDTT> XE_HDTT { get; set; }
-        public virtual DbSet<XERA> XERAs { get; set; }
-        public virtual DbSet<XEVAO> XEVAOs { get; set; }
     }
 }

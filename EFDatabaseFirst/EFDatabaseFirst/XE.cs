@@ -22,14 +22,13 @@ namespace EFDatabaseFirst
             this.SOXEs = new HashSet<SOXE>();
             this.SUACHUAs = new HashSet<SUACHUA>();
             this.XE_HDTT = new HashSet<XE_HDTT>();
-            this.XERAs = new HashSet<XERA>();
-            this.XEVAOs = new HashSet<XEVAO>();
         }
     
         public int MaXe { get; set; }
         public string HangXe { get; set; }
         public string BienSo { get; set; }
         public string TinhTrang { get; set; }
+        public Nullable<int> Gia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHOPDONG> CHITIETHOPDONGs { get; set; }
@@ -41,9 +40,5 @@ namespace EFDatabaseFirst
         public virtual ICollection<SUACHUA> SUACHUAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<XE_HDTT> XE_HDTT { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<XERA> XERAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<XEVAO> XEVAOs { get; set; }
     }
 }

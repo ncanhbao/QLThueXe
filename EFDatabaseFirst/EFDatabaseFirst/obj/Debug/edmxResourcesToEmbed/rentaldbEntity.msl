@@ -26,18 +26,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="GIAs">
-      <EntityTypeMapping TypeName="rentaldbModel.GIA">
-        <MappingFragment StoreEntitySet="GIA">
-          <ScalarProperty Name="MaLoaiXe" ColumnName="MaLoaiXe" />
-          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-          <ScalarProperty Name="GiaXe" ColumnName="GiaXe" />
-          <ScalarProperty Name="LuuDem" ColumnName="LuuDem" />
-          <ScalarProperty Name="NgoaiGio" ColumnName="NgoaiGio" />
-          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="HOADONTTs">
       <EntityTypeMapping TypeName="rentaldbModel.HOADONTT">
         <MappingFragment StoreEntitySet="HOADONTT">
@@ -74,6 +62,7 @@
     <EntitySetMapping Name="KHACHes">
       <EntityTypeMapping TypeName="rentaldbModel.KHACH">
         <MappingFragment StoreEntitySet="KHACH">
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
           <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
           <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -122,6 +111,7 @@
     <EntitySetMapping Name="XEs">
       <EntityTypeMapping TypeName="rentaldbModel.XE">
         <MappingFragment StoreEntitySet="XE">
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
           <ScalarProperty Name="MaXe" ColumnName="MaXe" />
           <ScalarProperty Name="HangXe" ColumnName="HangXe" />
           <ScalarProperty Name="BienSo" ColumnName="BienSo" />
@@ -138,26 +128,6 @@
           <ScalarProperty Name="NgayTraXe" ColumnName="NgayTraXe" />
           <ScalarProperty Name="Gia" ColumnName="Gia" />
           <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="XERAs">
-      <EntityTypeMapping TypeName="rentaldbModel.XERA">
-        <MappingFragment StoreEntitySet="XERA">
-          <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="GioRa" ColumnName="GioRa" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="XEVAOs">
-      <EntityTypeMapping TypeName="rentaldbModel.XEVAO">
-        <MappingFragment StoreEntitySet="XEVAO">
-          <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="GioVao" ColumnName="GioVao" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

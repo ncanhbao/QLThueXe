@@ -36,7 +36,7 @@ namespace EFDatabaseFirst
         private void btnAll_Click(object sender, EventArgs e)
         {
             busNhanVien.getNhanVien(dgvNV);
-            count = dgvNV.Rows.Count - 1;
+            count = dgvNV.Rows.Count;
             lbketqua.Text = count.ToString() + " kết quả";
         }
 
@@ -50,7 +50,7 @@ namespace EFDatabaseFirst
                 nv.MaNV = Convert.ToInt16(row.Cells[0].Value.ToString());
 
                 // Hiển thị hộp thoại xác nhận trước khi xóa
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa khách này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -68,12 +68,13 @@ namespace EFDatabaseFirst
             }
             else
             {
-                MessageBox.Show("Hãy chọn khách muốn xóa");
+                MessageBox.Show("Hãy chọn nhân viên muốn xóa");
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            string dateFormat = "dd/MM/yyyy";
             if (dgvNV.SelectedRows.Count > 0)
             {
                 if (txthoten.Text != "" && txtgioitinh.Text != "" && txtsdt.Text != "" && txtngaysinh.Text != "" && txtchucdanh.Text != "" && txttaikhoan.Text != "" && txtmatkhau.Text != "")
@@ -82,12 +83,12 @@ namespace EFDatabaseFirst
                     DataGridViewRow row = dgvNV.SelectedRows[0];
 
                     NHANVIEN nv = new NHANVIEN();
-                    DateTime dt;
                     nv.MaNV = Convert.ToInt16(row.Cells[0].Value.ToString());
                     nv.HoTen = txthoten.Text;
+                    nv.GioiTinh = txtgioitinh.Text;
                     nv.SoDT = txtsdt.Text;
-                    DateTime.TryParse(txtngaysinh.Text,  out dt);
-                    nv.NgaySinh = dt;
+                    DateTime.TryParseExact(txtngaysinh.Text, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngaySinh);
+                    nv.NgaySinh = ngaySinh;
                     nv.ChucDanh = txtchucdanh.Text;
                     nv.TaiKhoan = txttaikhoan.Text;
                     nv.MatKhau = txtmatkhau.Text;
@@ -116,6 +117,21 @@ namespace EFDatabaseFirst
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+            string hoten = txtSearch1.Text;
+            string sdt = txtSearch2.Text;
+            string chucdanh = txtSearch4.Text;
+
+            var ds = busNhanVien.timNhanVien(hoten, sdt, chucdanh);
+            if (ds != null)
+            {
+                dgvNV.DataSource = ds;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            count = dgvNV.Rows.Count;
+            lbketqua.Text = count.ToString() + " kết quả";
         }
 
         private void GUI_NhanVien_Load(object sender, EventArgs e)
@@ -130,9 +146,9 @@ namespace EFDatabaseFirst
             DataGridViewRow row = dgvNV.SelectedRows[0];
             txtmanv.Text = row.Cells[0].Value.ToString();
             txthoten.Text = row.Cells[1].Value.ToString();
-            txtgioitinh.Text = row.Cells[3].Value.ToString();
-            txtsdt.Text = row.Cells[4].Value.ToString();
-            txtngaysinh.Text = row.Cells[4].Value.ToString();
+            txtgioitinh.Text = row.Cells[2].Value.ToString();
+            txtsdt.Text = row.Cells[3].Value.ToString();
+            txtngaysinh.Text = Convert.ToDateTime(row.Cells[4].Value).ToString("dd/MM/yyyy");
             txtchucdanh.Text = row.Cells[5].Value.ToString();
             txttaikhoan.Text = row.Cells[6].Value.ToString();
             txtmatkhau.Text = row.Cells[7].Value.ToString();

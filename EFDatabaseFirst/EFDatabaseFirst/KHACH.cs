@@ -26,6 +26,7 @@ namespace EFDatabaseFirst
         public string DiaChi { get; set; }
         public string SoDT { get; set; }
         public string GioiTinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DATXE> DATXEs { get; set; }

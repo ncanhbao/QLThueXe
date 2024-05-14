@@ -20,7 +20,8 @@ namespace EFDatabaseFirst.DAL
                 s.MaXe,
                 s.HangXe,
                 s.BienSo,
-                s.TinhTrang
+                s.TinhTrang,
+                s.Gia
             }).ToList();
             return ds;
         }
@@ -35,6 +36,7 @@ namespace EFDatabaseFirst.DAL
             k.HangXe = xe.HangXe;
             k.BienSo = xe.BienSo;
             k.TinhTrang = xe.TinhTrang;
+            k.Gia = xe.Gia;
             db.SaveChanges();
         }
         public void xoaXe(XE xe)
@@ -43,7 +45,7 @@ namespace EFDatabaseFirst.DAL
             db.XEs.Remove(k);
             db.SaveChanges();
         }
-        public dynamic timXe(string searchvalue1, string searchvalue2, string searchvalue3)
+        public dynamic timXe(string searchvalue1, string searchvalue3)
         {
             try
             {
@@ -52,10 +54,6 @@ namespace EFDatabaseFirst.DAL
                 if (!string.IsNullOrEmpty(searchvalue1))
                 {
                     query = query.Where(xe => xe.HangXe.Contains(searchvalue1));
-                }
-                if (!string.IsNullOrEmpty(searchvalue2))
-                {
-                    query = query.Where(xe => xe.BienSo.Contains(searchvalue2));
                 }
                 if (!string.IsNullOrEmpty(searchvalue3))
                 {
@@ -67,7 +65,8 @@ namespace EFDatabaseFirst.DAL
                     s.MaXe,
                     s.HangXe,
                     s.BienSo,
-                    s.TinhTrang
+                    s.TinhTrang,
+                    s.Gia
                 }).ToList();
 
                 return ds;

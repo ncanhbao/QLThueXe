@@ -21,7 +21,8 @@ namespace EFDatabaseFirst.DAL
                 s.HoTen,
                 s.DiaChi,
                 s.GioiTinh,
-                s.SoDT
+                s.SoDT,
+                s.NgaySinh
             }).ToList();
             return ds;
         }
@@ -37,6 +38,7 @@ namespace EFDatabaseFirst.DAL
             k.DiaChi = khach.DiaChi;
             k.GioiTinh = khach.GioiTinh;
             k.SoDT = khach.SoDT;
+            k.NgaySinh = khach.NgaySinh;
             db.SaveChanges();
         }
         public void xoaKhach(KHACH khach)
@@ -77,7 +79,8 @@ namespace EFDatabaseFirst.DAL
                     s.HoTen,
                     s.DiaChi,
                     s.GioiTinh,
-                    s.SoDT
+                    s.SoDT,
+                    s.NgaySinh
                 }).ToList();
 
                 return ds;

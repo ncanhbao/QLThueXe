@@ -67,9 +67,6 @@
     <Compile Include="DATXE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="GIA.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="GUI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +78,12 @@
     </Compile>
     <Compile Include="GUI_Khach.Designer.cs">
       <DependentUpon>GUI_Khach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Khach_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Khach_Them.Designer.cs">
+      <DependentUpon>GUI_Khach_Them.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_NhanVien.cs">
       <SubType>Form</SubType>
@@ -138,12 +141,6 @@
     <Compile Include="XE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="XERA.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XEVAO.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="XE_HDTT.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
@@ -152,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Khach.resx">
       <DependentUpon>GUI_Khach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Khach_Them.resx">
+      <DependentUpon>GUI_Khach_Them.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>

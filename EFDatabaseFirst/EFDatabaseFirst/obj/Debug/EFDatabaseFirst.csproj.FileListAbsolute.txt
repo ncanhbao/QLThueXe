@@ -17,3 +17,4 @@ D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\bin\Debug\EntityFramework.Sql
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDataba.45D9FDEE.Up2Date
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_NhanVien.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_NhanVien_Them.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Khach_Them.resources

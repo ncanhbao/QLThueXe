@@ -59,9 +59,9 @@ namespace EFDatabaseFirst.BUS
                 return false;
             }
         }
-        public dynamic timNhanVien(string searchvalue1, string searchvalue2, string searchvalue3, string searchvalue4)
+        public dynamic timNhanVien(string searchvalue1, string searchvalue2, string searchvalue4)
         {
-            return dalNhanVien.timNhanVien(searchvalue1, searchvalue2, searchvalue3, searchvalue4);
+            return dalNhanVien.timNhanVien(searchvalue1, searchvalue2, searchvalue4);
         }
     }
 }

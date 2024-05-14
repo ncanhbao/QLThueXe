@@ -18,8 +18,8 @@ namespace EFDatabaseFirst.DAL
             var ds = db.NHANVIENs.Select(s => new
             {
                 s.MaNV,
-                s.GioiTinh,
                 s.HoTen,
+                s.GioiTinh,
                 s.SoDT,
                 s.NgaySinh,
                 s.ChucDanh,
@@ -35,7 +35,7 @@ namespace EFDatabaseFirst.DAL
         }
         public void suaNhanVien(NHANVIEN nv)
         {
-            NHANVIEN k = db.NHANVIENs.Find(nv);
+            NHANVIEN k = db.NHANVIENs.Find(nv.MaNV);
             k.HoTen = nv.HoTen;
             k.GioiTinh = nv.GioiTinh;
             k.SoDT = nv.SoDT;
@@ -51,7 +51,7 @@ namespace EFDatabaseFirst.DAL
             db.NHANVIENs.Remove(k);
             db.SaveChanges();
         }
-        public dynamic timNhanVien(string searchvalue1, string searchvalue2, string searchvalue3, string searchvalue4)
+        public dynamic timNhanVien(string searchvalue1, string searchvalue2, string searchvalue4)
         {
             try
             {
@@ -64,11 +64,6 @@ namespace EFDatabaseFirst.DAL
                 if (!string.IsNullOrEmpty(searchvalue2))
                 {
                     query = query.Where(nv => nv.SoDT.Contains(searchvalue2));
-
-                }
-                if (!string.IsNullOrEmpty(searchvalue3))
-                {
-                    query = query.Where(nv => nv.NgaySinh.Equals(searchvalue3));
 
                 }
                 if (!string.IsNullOrEmpty(searchvalue4))

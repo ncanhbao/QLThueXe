@@ -1,4 +1,4 @@
-﻿using GUI_QuanLy;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace EFDatabaseFirst
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_Home());
+            Application.Run(new GUI_DangNhap());
         }
     }
 }

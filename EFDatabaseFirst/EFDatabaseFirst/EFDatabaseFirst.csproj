@@ -67,6 +67,12 @@
     <Compile Include="DATXE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="GUI_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DangNhap.Designer.cs">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="XE_HDTT.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_DangNhap.resx">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Home.resx">
       <DependentUpon>GUI_Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +241,10 @@
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
       <LastGenOutput>rentaldbEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\customer-review.png" />
+    <None Include="Resources\rent3.png" />
+    <None Include="Resources\rent21.png" />
+    <None Include="Resources\rent2.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

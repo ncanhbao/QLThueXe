@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI_QuanLy
+namespace EFDatabaseFirst
 {
     public partial class GUI_Home : Form
     {
@@ -17,7 +17,9 @@ namespace GUI_QuanLy
         bool panelQLCollapse;
         public GUI_Home()
         {
+            string username = GUI_DangNhap.username;
             InitializeComponent();
+            lbuser.Text = "Xin chào, " + username;
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -47,10 +49,7 @@ namespace GUI_QuanLy
             }
         }
      
-        private void btndanhmuc_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
+   
 
         private void btnQLxe_Click(object sender, EventArgs e)
         {
@@ -69,7 +68,9 @@ namespace GUI_QuanLy
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            GUI_DangNhap f = new GUI_DangNhap();
+            f.Show();
         }
 
         private void btnQLkhach_Click(object sender, EventArgs e)
@@ -115,10 +116,6 @@ namespace GUI_QuanLy
             panelQLTimer.Start();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
 
         private void btnnhanvien_Click(object sender, EventArgs e)
         {
@@ -134,5 +131,7 @@ namespace GUI_QuanLy
             panelmain.Controls.Add(Form_NhanVien);
             Form_NhanVien.Show();
         }
+
+        
     }
 }

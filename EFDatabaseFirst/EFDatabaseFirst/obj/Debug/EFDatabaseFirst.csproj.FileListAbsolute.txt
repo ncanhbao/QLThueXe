@@ -7,7 +7,6 @@ D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\bin\Debug\EFDatabaseFirst.exe
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\bin\Debug\EFDatabaseFirst.pdb
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.exe
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.pdb
-D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\GUI_QuanLy.GUI_Home.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Khach.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Xe.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\bin\Debug\EntityFramework.dll
@@ -18,3 +17,5 @@ D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDataba.45D9FDEE.U
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_NhanVien.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_NhanVien_Them.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Khach_Them.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_DangNhap.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Home.resources

@@ -1,4 +1,4 @@
-﻿namespace GUI_QuanLy
+﻿namespace EFDatabaseFirst
 {
     partial class GUI_Home
     {
@@ -56,6 +56,10 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelmain = new System.Windows.Forms.Panel();
             this.panelQLTimer = new System.Windows.Forms.Timer(this.components);
+            this.paneluser = new System.Windows.Forms.Panel();
+            this.lbuser = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.paneldanhmuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btndanhmuc)).BeginInit();
@@ -69,6 +73,8 @@
             this.panelbaocao.SuspendLayout();
             this.panelthoat.SuspendLayout();
             this.panelcoder.SuspendLayout();
+            this.paneluser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -111,7 +117,6 @@
             this.lbdanhmuc.Size = new System.Drawing.Size(123, 31);
             this.lbdanhmuc.TabIndex = 1;
             this.lbdanhmuc.Text = "Danh mục";
-            this.lbdanhmuc.Click += new System.EventHandler(this.label1_Click);
             // 
             // btndanhmuc
             // 
@@ -125,7 +130,6 @@
             this.btndanhmuc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btndanhmuc.TabIndex = 0;
             this.btndanhmuc.TabStop = false;
-            this.btndanhmuc.Click += new System.EventHandler(this.btndanhmuc_Click);
             // 
             // panelQL
             // 
@@ -240,7 +244,7 @@
             this.btnQLkhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLkhach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLkhach.ForeColor = System.Drawing.Color.White;
-            this.btnQLkhach.Image = global::EFDatabaseFirst.Properties.Resources.user;
+            this.btnQLkhach.Image = global::EFDatabaseFirst.Properties.Resources.customer_review;
             this.btnQLkhach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLkhach.Location = new System.Drawing.Point(0, -4);
             this.btnQLkhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -353,7 +357,7 @@
             this.btnthoat.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
             this.btnthoat.Size = new System.Drawing.Size(283, 65);
             this.btnthoat.TabIndex = 2;
-            this.btnthoat.Text = "          Thoát";
+            this.btnthoat.Text = "          Đăng xuất";
             this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
@@ -404,11 +408,57 @@
             this.panelQLTimer.Interval = 10;
             this.panelQLTimer.Tick += new System.EventHandler(this.panelQLTimer_Tick);
             // 
+            // paneluser
+            // 
+            this.paneluser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.paneluser.Controls.Add(this.lbuser);
+            this.paneluser.Controls.Add(this.pictureBox1);
+            this.paneluser.Controls.Add(this.label1);
+            this.paneluser.Location = new System.Drawing.Point(254, 0);
+            this.paneluser.Name = "paneluser";
+            this.paneluser.Size = new System.Drawing.Size(1278, 66);
+            this.paneluser.TabIndex = 2;
+            // 
+            // lbuser
+            // 
+            this.lbuser.AutoSize = true;
+            this.lbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbuser.ForeColor = System.Drawing.Color.White;
+            this.lbuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbuser.Location = new System.Drawing.Point(1074, 23);
+            this.lbuser.Name = "lbuser";
+            this.lbuser.Size = new System.Drawing.Size(124, 25);
+            this.lbuser.TabIndex = 1;
+            this.lbuser.Text = "label2            ";
+            this.lbuser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EFDatabaseFirst.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(1204, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hỗ trợ: 0817032059";
+            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 699);
+            this.Controls.Add(this.paneluser);
             this.Controls.Add(this.panelmain);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -431,6 +481,9 @@
             this.panelbaocao.ResumeLayout(false);
             this.panelthoat.ResumeLayout(false);
             this.panelcoder.ResumeLayout(false);
+            this.paneluser.ResumeLayout(false);
+            this.paneluser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,5 +517,9 @@
         private System.Windows.Forms.Button btnnhanvien;
         private System.Windows.Forms.Panel panelbaocao;
         private System.Windows.Forms.Button btnbaocao;
+        private System.Windows.Forms.Panel paneluser;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbuser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

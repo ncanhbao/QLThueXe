@@ -63,5 +63,9 @@ namespace EFDatabaseFirst.BUS
         {
             return dalNhanVien.timNhanVien(searchvalue1, searchvalue2, searchvalue4);
         }
+        public dynamic kiemTraDangNhap(string taikhoan, string matkhau)
+        {
+            return dalNhanVien.kiemTraDangNhap(taikhoan, matkhau);
+        }
     }
 }

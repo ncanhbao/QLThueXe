@@ -22,6 +22,7 @@ namespace EFDatabaseFirst
             this.SUACHUAs = new HashSet<SUACHUA>();
             this.XE_HDTT = new HashSet<XE_HDTT>();
             this.YEUCAUs = new HashSet<YEUCAU>();
+            this.PHIEUTHUCHIs = new HashSet<PHIEUTHUCHI>();
         }
     
         public int MaXe { get; set; }
@@ -40,5 +41,7 @@ namespace EFDatabaseFirst
         public virtual ICollection<XE_HDTT> XE_HDTT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YEUCAU> YEUCAUs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
     }
 }

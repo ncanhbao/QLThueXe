@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Khach_Them));
             this.btnhuybo = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtdiachi = new System.Windows.Forms.TextBox();
             this.cbgioitinh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
@@ -40,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtdiachi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +88,15 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // txtdiachi
+            // 
+            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiachi.Location = new System.Drawing.Point(237, 198);
+            this.txtdiachi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdiachi.Name = "txtdiachi";
+            this.txtdiachi.Size = new System.Drawing.Size(385, 34);
+            this.txtdiachi.TabIndex = 29;
             // 
             // cbgioitinh
             // 
@@ -183,15 +193,6 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Ngày sinh:";
             // 
-            // txtdiachi
-            // 
-            this.txtdiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.Location = new System.Drawing.Point(237, 198);
-            this.txtdiachi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtdiachi.Name = "txtdiachi";
-            this.txtdiachi.Size = new System.Drawing.Size(385, 34);
-            this.txtdiachi.TabIndex = 29;
-            // 
             // GUI_Khach_Them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,6 +201,7 @@
             this.Controls.Add(this.btnhuybo);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI_Khach_Them";
             this.Text = "Thêm khách hàng";
             this.groupBox1.ResumeLayout(false);

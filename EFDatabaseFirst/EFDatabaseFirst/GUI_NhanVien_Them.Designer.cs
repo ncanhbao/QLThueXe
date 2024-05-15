@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_NhanVien_Them));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbgioitinh = new System.Windows.Forms.ComboBox();
+            this.cbchucdanh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
             this.txtmatkhau = new System.Windows.Forms.TextBox();
@@ -43,8 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnhuybo = new System.Windows.Forms.Button();
-            this.cbchucdanh = new System.Windows.Forms.ComboBox();
-            this.cbgioitinh = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +74,32 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // cbgioitinh
+            // 
+            this.cbgioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbgioitinh.FormattingEnabled = true;
+            this.cbgioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
+            this.cbgioitinh.Location = new System.Drawing.Point(237, 253);
+            this.cbgioitinh.Name = "cbgioitinh";
+            this.cbgioitinh.Size = new System.Drawing.Size(385, 37);
+            this.cbgioitinh.TabIndex = 28;
+            // 
+            // cbchucdanh
+            // 
+            this.cbchucdanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbchucdanh.FormattingEnabled = true;
+            this.cbchucdanh.Items.AddRange(new object[] {
+            "Quản lý",
+            "NV cửa hàng",
+            "Thu ngân"});
+            this.cbchucdanh.Location = new System.Drawing.Point(237, 200);
+            this.cbchucdanh.Name = "cbchucdanh";
+            this.cbchucdanh.Size = new System.Drawing.Size(385, 37);
+            this.cbchucdanh.TabIndex = 27;
             // 
             // label8
             // 
@@ -218,32 +245,6 @@
             this.btnhuybo.UseVisualStyleBackColor = true;
             this.btnhuybo.Click += new System.EventHandler(this.btnhuybo_Click);
             // 
-            // cbchucdanh
-            // 
-            this.cbchucdanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbchucdanh.FormattingEnabled = true;
-            this.cbchucdanh.Items.AddRange(new object[] {
-            "Quản lý",
-            "NV cửa hàng",
-            "Thu ngân"});
-            this.cbchucdanh.Location = new System.Drawing.Point(237, 200);
-            this.cbchucdanh.Name = "cbchucdanh";
-            this.cbchucdanh.Size = new System.Drawing.Size(385, 37);
-            this.cbchucdanh.TabIndex = 27;
-            // 
-            // cbgioitinh
-            // 
-            this.cbgioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbgioitinh.FormattingEnabled = true;
-            this.cbgioitinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
-            this.cbgioitinh.Location = new System.Drawing.Point(237, 253);
-            this.cbgioitinh.Name = "cbgioitinh";
-            this.cbgioitinh.Size = new System.Drawing.Size(385, 37);
-            this.cbgioitinh.TabIndex = 28;
-            // 
             // GUI_NhanVien_Them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,6 +253,7 @@
             this.Controls.Add(this.btnhuybo);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI_NhanVien_Them";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm nhân viên";

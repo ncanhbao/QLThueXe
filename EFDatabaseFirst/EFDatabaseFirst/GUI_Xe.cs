@@ -113,7 +113,7 @@ namespace EFDatabaseFirst
             string tinhtrang = txtSearch3.Text;
 
             var ds = busXe.timXe(hangxe, tinhtrang);
-            if (ds != null)
+            if (ds.Count > 0)
             {
                 dgvXe.DataSource = ds;
             }

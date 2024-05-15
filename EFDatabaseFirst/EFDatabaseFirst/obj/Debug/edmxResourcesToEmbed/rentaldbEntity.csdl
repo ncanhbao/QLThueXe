@@ -64,6 +64,7 @@
     <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Precision="0" />
     <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="KHACH" ToRole="YEUCAU" />
+    <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_KHACH" FromRole="KHACH" ToRole="PHIEUTHUCHI" />
   </EntityType>
   <EntityType Name="NHANVIEN">
     <Key>
@@ -118,6 +119,7 @@
     <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE" ToRole="XE_HDTT" />
     <Property Name="Gia" Type="Int32" />
     <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="XE" ToRole="YEUCAU" />
+    <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_XE" FromRole="XE" ToRole="PHIEUTHUCHI" />
   </EntityType>
   <EntityType Name="XE_HDTT">
     <Key>
@@ -296,6 +298,16 @@
       <End Role="XE" EntitySet="XEs" />
       <End Role="YEUCAU" EntitySet="YEUCAUs" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="rentaldbModel.sysdiagram" />
+    <EntitySet Name="PHIEUTHUCHIs" EntityType="rentaldbModel.PHIEUTHUCHI" />
+    <AssociationSet Name="FK_PHIEUTHUCHI_KHACH" Association="rentaldbModel.FK_PHIEUTHUCHI_KHACH">
+      <End Role="KHACH" EntitySet="KHACHes" />
+      <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHIEUTHUCHI_XE" Association="rentaldbModel.FK_PHIEUTHUCHI_XE">
+      <End Role="XE" EntitySet="XEs" />
+      <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHIs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="YEUCAU">
     <Key>
@@ -310,6 +322,8 @@
     <Property Name="NgayTaoYC" Type="DateTime" Precision="3" />
     <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="YEUCAU" ToRole="KHACH" />
     <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="YEUCAU" ToRole="XE" />
+    <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiGianXuLy" Type="DateTime" Precision="3" />
   </EntityType>
   <Association Name="FK_YEUCAU_KHACH">
     <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="1" />
@@ -331,6 +345,56 @@
         <PropertyRef Name="MaXe" />
       </Principal>
       <Dependent Role="YEUCAU">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PHIEUTHUCHI">
+    <Key>
+      <PropertyRef Name="MaPhieu" />
+    </Key>
+    <Property Name="MaPhieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoaiPhieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoTien" Type="Int32" />
+    <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTT" Type="DateTime" Precision="3" />
+    <Property Name="PhuongThucTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaKhach" Type="Int32" />
+    <Property Name="MaXe" Type="Int32" />
+    <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_PHIEUTHUCHI_KHACH" FromRole="PHIEUTHUCHI" ToRole="KHACH" />
+    <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_PHIEUTHUCHI_XE" FromRole="PHIEUTHUCHI" ToRole="XE" />
+  </EntityType>
+  <Association Name="FK_PHIEUTHUCHI_KHACH">
+    <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="0..1" />
+    <End Type="rentaldbModel.PHIEUTHUCHI" Role="PHIEUTHUCHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH">
+        <PropertyRef Name="MaKhach" />
+      </Principal>
+      <Dependent Role="PHIEUTHUCHI">
+        <PropertyRef Name="MaKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHIEUTHUCHI_XE">
+    <End Type="rentaldbModel.XE" Role="XE" Multiplicity="0..1" />
+    <End Type="rentaldbModel.PHIEUTHUCHI" Role="PHIEUTHUCHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="PHIEUTHUCHI">
         <PropertyRef Name="MaXe" />
       </Dependent>
     </ReferentialConstraint>

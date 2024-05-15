@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88584b2333bd4ddaaa43bcf215e4f755" Name="Diagram1" ZoomLevel="120">
+      <Diagram DiagramId="88584b2333bd4ddaaa43bcf215e4f755" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="rentaldbModel.DATXE" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="rentaldbModel.HOADONTT" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="rentaldbModel.HOPDONG" Width="1.5" PointX="8.125" PointY="2.375" IsExpanded="true" />
@@ -26,6 +26,10 @@
         <EntityTypeShape EntityType="rentaldbModel.YEUCAU" Width="1.5" PointX="22.75" PointY="5.125" />
         <AssociationConnector Association="rentaldbModel.FK_YEUCAU_KHACH" />
         <AssociationConnector Association="rentaldbModel.FK_YEUCAU_XE" />
+        <EntityTypeShape EntityType="rentaldbModel.sysdiagram" Width="1.5" PointX="4.375" PointY="0.75" />
+        <EntityTypeShape EntityType="rentaldbModel.PHIEUTHUCHI" Width="1.5" PointX="25.75" PointY="5" />
+        <AssociationConnector Association="rentaldbModel.FK_PHIEUTHUCHI_KHACH" />
+        <AssociationConnector Association="rentaldbModel.FK_PHIEUTHUCHI_XE" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

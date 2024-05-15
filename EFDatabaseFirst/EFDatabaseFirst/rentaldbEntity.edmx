@@ -73,6 +73,20 @@
           <Property Name="ChucDanh" Type="nvarchar" MaxLength="50" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="PHIEUTHUCHI">
+          <Key>
+            <PropertyRef Name="MaPhieu" />
+          </Key>
+          <Property Name="MaPhieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoaiPhieu" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoTien" Type="int" />
+          <Property Name="NVXuLy" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgayTT" Type="datetime" />
+          <Property Name="PhuongThucTT" Type="nvarchar" MaxLength="50" />
+          <Property Name="NoiDung" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaKhach" Type="int" />
+          <Property Name="MaXe" Type="int" />
+        </EntityType>
         <EntityType Name="SOXE">
           <Key>
             <PropertyRef Name="SoHD" />
@@ -95,6 +109,16 @@
           <Property Name="NgaySuaXong" Type="date" />
           <Property Name="GhịChu" Type="nvarchar" MaxLength="50" />
           <Property Name="TienChiPhi" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="XE">
           <Key>
@@ -129,6 +153,8 @@
           <Property Name="NgayTra" Type="datetime" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
           <Property Name="NgayTaoYC" Type="datetime" />
+          <Property Name="NVXuLy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ThoiGianXuLy" Type="datetime" />
         </EntityType>
         <Association Name="FK_DATXE_KHACH">
           <End Role="KHACH" Type="Self.KHACH" Multiplicity="1" />
@@ -175,6 +201,30 @@
             </Principal>
             <Dependent Role="HOPDONG">
               <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PHIEUTHUCHI_KHACH">
+          <End Role="KHACH" Type="Self.KHACH" Multiplicity="0..1" />
+          <End Role="PHIEUTHUCHI" Type="Self.PHIEUTHUCHI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACH">
+              <PropertyRef Name="MaKhach" />
+            </Principal>
+            <Dependent Role="PHIEUTHUCHI">
+              <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PHIEUTHUCHI_XE">
+          <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+          <End Role="PHIEUTHUCHI" Type="Self.PHIEUTHUCHI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XE">
+              <PropertyRef Name="MaXe" />
+            </Principal>
+            <Dependent Role="PHIEUTHUCHI">
+              <PropertyRef Name="MaXe" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -268,8 +318,10 @@
           <EntitySet Name="HOPDONG" EntityType="Self.HOPDONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACH" EntityType="Self.KHACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIEUTHUCHI" EntityType="Self.PHIEUTHUCHI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SOXE" EntityType="Self.SOXE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SUACHUA" EntityType="Self.SUACHUA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YEUCAU" EntityType="Self.YEUCAU" Schema="dbo" store:Type="Tables" />
@@ -288,6 +340,14 @@
           <AssociationSet Name="FK_HOPDONG_KHACH" Association="Self.FK_HOPDONG_KHACH">
             <End Role="KHACH" EntitySet="KHACH" />
             <End Role="HOPDONG" EntitySet="HOPDONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PHIEUTHUCHI_KHACH" Association="Self.FK_PHIEUTHUCHI_KHACH">
+            <End Role="KHACH" EntitySet="KHACH" />
+            <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PHIEUTHUCHI_XE" Association="Self.FK_PHIEUTHUCHI_XE">
+            <End Role="XE" EntitySet="XE" />
+            <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHI" />
           </AssociationSet>
           <AssociationSet Name="FK_SOXE_HOPDONG" Association="Self.FK_SOXE_HOPDONG">
             <End Role="HOPDONG" EntitySet="HOPDONG" />
@@ -386,6 +446,7 @@
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="KHACH" ToRole="YEUCAU" />
+          <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_KHACH" FromRole="KHACH" ToRole="PHIEUTHUCHI" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -440,6 +501,7 @@
           <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE" ToRole="XE_HDTT" />
           <Property Name="Gia" Type="Int32" />
           <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="XE" ToRole="YEUCAU" />
+          <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_XE" FromRole="XE" ToRole="PHIEUTHUCHI" />
           </EntityType>
         <EntityType Name="XE_HDTT">
           <Key>
@@ -618,6 +680,16 @@
             <End Role="XE" EntitySet="XEs" />
             <End Role="YEUCAU" EntitySet="YEUCAUs" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="rentaldbModel.sysdiagram" />
+          <EntitySet Name="PHIEUTHUCHIs" EntityType="rentaldbModel.PHIEUTHUCHI" />
+          <AssociationSet Name="FK_PHIEUTHUCHI_KHACH" Association="rentaldbModel.FK_PHIEUTHUCHI_KHACH">
+            <End Role="KHACH" EntitySet="KHACHes" />
+            <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PHIEUTHUCHI_XE" Association="rentaldbModel.FK_PHIEUTHUCHI_XE">
+            <End Role="XE" EntitySet="XEs" />
+            <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHIs" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="YEUCAU">
           <Key>
@@ -632,6 +704,8 @@
           <Property Name="NgayTaoYC" Type="DateTime" Precision="3" />
           <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="YEUCAU" ToRole="KHACH" />
           <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="YEUCAU" ToRole="XE" />
+          <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ThoiGianXuLy" Type="DateTime" Precision="3" />
         </EntityType>
         <Association Name="FK_YEUCAU_KHACH">
           <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="1" />
@@ -653,6 +727,56 @@
               <PropertyRef Name="MaXe" />
             </Principal>
             <Dependent Role="YEUCAU">
+              <PropertyRef Name="MaXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PHIEUTHUCHI">
+          <Key>
+            <PropertyRef Name="MaPhieu" />
+          </Key>
+          <Property Name="MaPhieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoaiPhieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoTien" Type="Int32" />
+          <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTT" Type="DateTime" Precision="3" />
+          <Property Name="PhuongThucTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaKhach" Type="Int32" />
+          <Property Name="MaXe" Type="Int32" />
+          <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_PHIEUTHUCHI_KHACH" FromRole="PHIEUTHUCHI" ToRole="KHACH" />
+          <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_PHIEUTHUCHI_XE" FromRole="PHIEUTHUCHI" ToRole="XE" />
+        </EntityType>
+        <Association Name="FK_PHIEUTHUCHI_KHACH">
+          <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="0..1" />
+          <End Type="rentaldbModel.PHIEUTHUCHI" Role="PHIEUTHUCHI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACH">
+              <PropertyRef Name="MaKhach" />
+            </Principal>
+            <Dependent Role="PHIEUTHUCHI">
+              <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PHIEUTHUCHI_XE">
+          <End Type="rentaldbModel.XE" Role="XE" Multiplicity="0..1" />
+          <End Type="rentaldbModel.PHIEUTHUCHI" Role="PHIEUTHUCHI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XE">
+              <PropertyRef Name="MaXe" />
+            </Principal>
+            <Dependent Role="PHIEUTHUCHI">
               <PropertyRef Name="MaXe" />
             </Dependent>
           </ReferentialConstraint>
@@ -783,6 +907,8 @@
           <EntitySetMapping Name="YEUCAUs">
             <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
               <MappingFragment StoreEntitySet="YEUCAU">
+                <ScalarProperty Name="ThoiGianXuLy" ColumnName="ThoiGianXuLy" />
+                <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
                 <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
@@ -790,6 +916,32 @@
                 <ScalarProperty Name="MaXe" ColumnName="MaXe" />
                 <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
                 <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="rentaldbModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIEUTHUCHIs">
+            <EntityTypeMapping TypeName="rentaldbModel.PHIEUTHUCHI">
+              <MappingFragment StoreEntitySet="PHIEUTHUCHI">
+                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="PhuongThucTT" ColumnName="PhuongThucTT" />
+                <ScalarProperty Name="NgayTT" ColumnName="NgayTT" />
+                <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+                <ScalarProperty Name="LoaiPhieu" ColumnName="LoaiPhieu" />
+                <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

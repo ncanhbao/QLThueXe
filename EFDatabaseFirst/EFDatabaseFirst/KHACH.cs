@@ -20,6 +20,7 @@ namespace EFDatabaseFirst
             this.DATXEs = new HashSet<DATXE>();
             this.HOPDONGs = new HashSet<HOPDONG>();
             this.YEUCAUs = new HashSet<YEUCAU>();
+            this.PHIEUTHUCHIs = new HashSet<PHIEUTHUCHI>();
         }
     
         public int MaKhach { get; set; }
@@ -35,5 +36,7 @@ namespace EFDatabaseFirst
         public virtual ICollection<HOPDONG> HOPDONGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YEUCAU> YEUCAUs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
     }
 }

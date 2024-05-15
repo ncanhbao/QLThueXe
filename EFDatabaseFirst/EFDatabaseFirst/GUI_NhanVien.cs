@@ -122,7 +122,7 @@ namespace EFDatabaseFirst
             string chucdanh = txtSearch4.Text;
 
             var ds = busNhanVien.timNhanVien(hoten, sdt, chucdanh);
-            if (ds != null)
+            if (ds.Count > 0)
             {
                 dgvNV.DataSource = ds;
             }

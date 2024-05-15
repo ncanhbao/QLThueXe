@@ -150,6 +150,9 @@
     <Compile Include="NHANVIEN.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="PHIEUTHUCHI.cs">
+      <DependentUpon>rentaldbEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rentaldbEntity.Context.cs">
@@ -171,6 +174,9 @@
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="SUACHUA.cs">
+      <DependentUpon>rentaldbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="XE.cs">
@@ -288,6 +294,8 @@
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
       <LastGenOutput>rentaldbEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\schedulebig.png" />
+    <None Include="Resources\schedule.png" />
     <None Include="Resources\contract.png" />
     <None Include="Resources\customer-review.png" />
     <None Include="Resources\rent3.png" />

@@ -35,5 +35,7 @@ namespace EFDatabaseFirst
         public virtual DbSet<XE> XEs { get; set; }
         public virtual DbSet<XE_HDTT> XE_HDTT { get; set; }
         public virtual DbSet<YEUCAU> YEUCAUs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
     }
 }

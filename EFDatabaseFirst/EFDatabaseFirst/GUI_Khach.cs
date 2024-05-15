@@ -126,7 +126,7 @@ namespace EFDatabaseFirst
             string sdt = txtSearch4.Text;
 
             var ds = busKhach.timKhach(hoten, diachi, gioitinh, sdt);
-            if (ds != null)
+            if (ds.Count > 0)
             {
                 dgvKhach.DataSource = ds;
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_YeuCau_Them));
             this.btnhuybo = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,10 +54,10 @@
             this.txtbienso = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtpngaylay = new System.Windows.Forms.DateTimePicker();
             this.dtpngaytra = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
+            this.dtpngaylay = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -353,26 +354,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin yêu cầu";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(171, 37);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 29);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Ngày lấy:";
-            // 
-            // dtpngaylay
-            // 
-            this.dtpngaylay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpngaylay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpngaylay.Location = new System.Drawing.Point(295, 39);
-            this.dtpngaylay.Name = "dtpngaylay";
-            this.dtpngaylay.Size = new System.Drawing.Size(200, 27);
-            this.dtpngaylay.TabIndex = 37;
-            // 
             // dtpngaytra
             // 
             this.dtpngaytra.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -393,6 +374,26 @@
             this.label11.TabIndex = 38;
             this.label11.Text = "Ngày trả:";
             // 
+            // dtpngaylay
+            // 
+            this.dtpngaylay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpngaylay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpngaylay.Location = new System.Drawing.Point(295, 39);
+            this.dtpngaylay.Name = "dtpngaylay";
+            this.dtpngaylay.Size = new System.Drawing.Size(200, 27);
+            this.dtpngaylay.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(171, 37);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 29);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Ngày lấy:";
+            // 
             // GUI_YeuCau_Them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,8 +404,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnhuybo);
             this.Controls.Add(this.btnthem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI_YeuCau_Them";
-            this.Text = "GUI_YeuCau_Them";
+            this.Text = "Tạo yêu cầu mới";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -51,6 +51,8 @@
             this.lbtime = new System.Windows.Forms.Label();
             this.lbuser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btndanhmuc = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,8 +61,8 @@
             this.btntrangchu = new System.Windows.Forms.Button();
             this.btnQLkhach = new System.Windows.Forms.Button();
             this.btnyeucau = new System.Windows.Forms.Button();
-            this.btnbaocao = new System.Windows.Forms.Button();
             this.btnthuchi = new System.Windows.Forms.Button();
+            this.btnbaocao = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.paneldanhmuc.SuspendLayout();
@@ -75,6 +77,8 @@
             this.panelthuchi.SuspendLayout();
             this.panelthoat.SuspendLayout();
             this.paneluser.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndanhmuc)).BeginInit();
             this.SuspendLayout();
@@ -85,8 +89,8 @@
             this.sidebar.Controls.Add(this.paneldanhmuc);
             this.sidebar.Controls.Add(this.panelQL);
             this.sidebar.Controls.Add(this.panelyeucau);
-            this.sidebar.Controls.Add(this.panelbaocao);
             this.sidebar.Controls.Add(this.panelthuchi);
+            this.sidebar.Controls.Add(this.panelbaocao);
             this.sidebar.Controls.Add(this.panelthoat);
             this.sidebar.Controls.Add(this.lbcoder);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -130,10 +134,10 @@
             this.panelQL.Controls.Add(this.panelQLkhach);
             this.panelQL.Location = new System.Drawing.Point(3, 123);
             this.panelQL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQL.MaximumSize = new System.Drawing.Size(256, 264);
+            this.panelQL.MaximumSize = new System.Drawing.Size(256, 214);
             this.panelQL.MinimumSize = new System.Drawing.Size(240, 50);
             this.panelQL.Name = "panelQL";
-            this.panelQL.Size = new System.Drawing.Size(256, 264);
+            this.panelQL.Size = new System.Drawing.Size(256, 214);
             this.panelQL.TabIndex = 8;
             // 
             // panel1
@@ -188,7 +192,7 @@
             // panelyeucau
             // 
             this.panelyeucau.Controls.Add(this.btnyeucau);
-            this.panelyeucau.Location = new System.Drawing.Point(3, 391);
+            this.panelyeucau.Location = new System.Drawing.Point(3, 341);
             this.panelyeucau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelyeucau.Name = "panelyeucau";
             this.panelyeucau.Size = new System.Drawing.Size(263, 50);
@@ -197,7 +201,7 @@
             // panelbaocao
             // 
             this.panelbaocao.Controls.Add(this.btnbaocao);
-            this.panelbaocao.Location = new System.Drawing.Point(3, 445);
+            this.panelbaocao.Location = new System.Drawing.Point(3, 449);
             this.panelbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelbaocao.Name = "panelbaocao";
             this.panelbaocao.Size = new System.Drawing.Size(263, 50);
@@ -206,7 +210,7 @@
             // panelthuchi
             // 
             this.panelthuchi.Controls.Add(this.btnthuchi);
-            this.panelthuchi.Location = new System.Drawing.Point(3, 499);
+            this.panelthuchi.Location = new System.Drawing.Point(3, 395);
             this.panelthuchi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelthuchi.Name = "panelthuchi";
             this.panelthuchi.Size = new System.Drawing.Size(256, 50);
@@ -215,7 +219,7 @@
             // panelthoat
             // 
             this.panelthoat.Controls.Add(this.btnthoat);
-            this.panelthoat.Location = new System.Drawing.Point(3, 553);
+            this.panelthoat.Location = new System.Drawing.Point(3, 503);
             this.panelthoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelthoat.Name = "panelthoat";
             this.panelthoat.Size = new System.Drawing.Size(263, 50);
@@ -228,7 +232,7 @@
             this.lbcoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcoder.ForeColor = System.Drawing.Color.White;
             this.lbcoder.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lbcoder.Location = new System.Drawing.Point(3, 605);
+            this.lbcoder.Location = new System.Drawing.Point(3, 555);
             this.lbcoder.Name = "lbcoder";
             this.lbcoder.Size = new System.Drawing.Size(254, 47);
             this.lbcoder.TabIndex = 6;
@@ -259,7 +263,8 @@
             // paneluser
             // 
             this.paneluser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.paneluser.Controls.Add(this.lbtime);
+            this.paneluser.Controls.Add(this.pictureBox2);
+            this.paneluser.Controls.Add(this.panel2);
             this.paneluser.Controls.Add(this.lbuser);
             this.paneluser.Controls.Add(this.pictureBox1);
             this.paneluser.Location = new System.Drawing.Point(254, 0);
@@ -271,9 +276,9 @@
             // 
             this.lbtime.AutoSize = true;
             this.lbtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtime.ForeColor = System.Drawing.Color.White;
+            this.lbtime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.lbtime.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbtime.Location = new System.Drawing.Point(1065, 23);
+            this.lbtime.Location = new System.Drawing.Point(10, 16);
             this.lbtime.Name = "lbtime";
             this.lbtime.Size = new System.Drawing.Size(63, 25);
             this.lbtime.TabIndex = 3;
@@ -286,7 +291,7 @@
             this.lbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbuser.ForeColor = System.Drawing.Color.White;
             this.lbuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbuser.Location = new System.Drawing.Point(72, 23);
+            this.lbuser.Location = new System.Drawing.Point(65, 23);
             this.lbuser.Name = "lbuser";
             this.lbuser.Size = new System.Drawing.Size(124, 25);
             this.lbuser.TabIndex = 1;
@@ -298,6 +303,25 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbtime);
+            this.panel2.Location = new System.Drawing.Point(1052, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 59);
+            this.panel2.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EFDatabaseFirst.Properties.Resources.schedulebig;
+            this.pictureBox2.Location = new System.Drawing.Point(987, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -429,23 +453,6 @@
             this.btnyeucau.UseVisualStyleBackColor = true;
             this.btnyeucau.Click += new System.EventHandler(this.btnyeucau_Click);
             // 
-            // btnbaocao
-            // 
-            this.btnbaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbaocao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbaocao.ForeColor = System.Drawing.Color.White;
-            this.btnbaocao.Image = global::EFDatabaseFirst.Properties.Resources.report;
-            this.btnbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbaocao.Location = new System.Drawing.Point(-19, -4);
-            this.btnbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnbaocao.Name = "btnbaocao";
-            this.btnbaocao.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnbaocao.Size = new System.Drawing.Size(283, 65);
-            this.btnbaocao.TabIndex = 2;
-            this.btnbaocao.Text = "          Báo cáo";
-            this.btnbaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbaocao.UseVisualStyleBackColor = true;
-            // 
             // btnthuchi
             // 
             this.btnthuchi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -462,6 +469,23 @@
             this.btnthuchi.Text = "          Phiếu thu chi";
             this.btnthuchi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnthuchi.UseVisualStyleBackColor = true;
+            // 
+            // btnbaocao
+            // 
+            this.btnbaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbaocao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbaocao.ForeColor = System.Drawing.Color.White;
+            this.btnbaocao.Image = global::EFDatabaseFirst.Properties.Resources.report;
+            this.btnbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbaocao.Location = new System.Drawing.Point(-19, -4);
+            this.btnbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnbaocao.Name = "btnbaocao";
+            this.btnbaocao.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnbaocao.Size = new System.Drawing.Size(283, 65);
+            this.btnbaocao.TabIndex = 2;
+            this.btnbaocao.Text = "          Báo cáo";
+            this.btnbaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbaocao.UseVisualStyleBackColor = true;
             // 
             // btnthoat
             // 
@@ -510,6 +534,9 @@
             this.panelthoat.ResumeLayout(false);
             this.paneluser.ResumeLayout(false);
             this.paneluser.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btndanhmuc)).EndInit();
             this.ResumeLayout(false);
@@ -551,5 +578,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbtime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -52,14 +52,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtbienso = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtpngaylay = new System.Windows.Forms.DateTimePicker();
+            this.dtpngaytra = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnhuybo
             // 
             this.btnhuybo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhuybo.Location = new System.Drawing.Point(702, 494);
+            this.btnhuybo.Location = new System.Drawing.Point(702, 558);
             this.btnhuybo.Name = "btnhuybo";
             this.btnhuybo.Size = new System.Drawing.Size(133, 49);
             this.btnhuybo.TabIndex = 28;
@@ -70,12 +76,13 @@
             // btnthem
             // 
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(374, 494);
+            this.btnthem.Location = new System.Drawing.Point(374, 558);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(133, 49);
             this.btnthem.TabIndex = 27;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // groupBox1
             // 
@@ -332,11 +339,66 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Tình trạng:";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dtpngaytra);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.dtpngaylay);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 449);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1169, 87);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin yêu cầu";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(171, 37);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(111, 29);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Ngày lấy:";
+            // 
+            // dtpngaylay
+            // 
+            this.dtpngaylay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpngaylay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpngaylay.Location = new System.Drawing.Point(295, 39);
+            this.dtpngaylay.Name = "dtpngaylay";
+            this.dtpngaylay.Size = new System.Drawing.Size(200, 27);
+            this.dtpngaylay.TabIndex = 37;
+            // 
+            // dtpngaytra
+            // 
+            this.dtpngaytra.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpngaytra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpngaytra.Location = new System.Drawing.Point(767, 39);
+            this.dtpngaytra.Name = "dtpngaytra";
+            this.dtpngaytra.Size = new System.Drawing.Size(200, 27);
+            this.dtpngaytra.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(643, 37);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 29);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Ngày trả:";
+            // 
             // GUI_YeuCau_Them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 569);
+            this.ClientSize = new System.Drawing.Size(1209, 639);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnhuybo);
@@ -347,6 +409,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -377,5 +441,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtbienso;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtpngaytra;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpngaylay;
     }
 }

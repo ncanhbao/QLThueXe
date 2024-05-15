@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtchucdanh = new System.Windows.Forms.ComboBox();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtgioitinh = new System.Windows.Forms.TextBox();
@@ -61,6 +60,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,9 +79,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtchucdanh);
             this.groupBox1.Controls.Add(this.txttaikhoan);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtgioitinh);
@@ -124,19 +124,6 @@
             this.label8.Size = new System.Drawing.Size(153, 29);
             this.label8.TabIndex = 44;
             this.label8.Text = "Ngày tạo YC:";
-            // 
-            // txtchucdanh
-            // 
-            this.txtchucdanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtchucdanh.FormattingEnabled = true;
-            this.txtchucdanh.Items.AddRange(new object[] {
-            "NV cửa hàng",
-            "Quản lý",
-            "Thu ngân"});
-            this.txtchucdanh.Location = new System.Drawing.Point(140, 194);
-            this.txtchucdanh.Name = "txtchucdanh";
-            this.txtchucdanh.Size = new System.Drawing.Size(233, 37);
-            this.txtchucdanh.TabIndex = 43;
             // 
             // txttaikhoan
             // 
@@ -442,6 +429,15 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(141, 192);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(245, 34);
+            this.textBox2.TabIndex = 46;
+            // 
             // GUI_YeuCau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -486,7 +482,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.ComboBox txtchucdanh;
         private System.Windows.Forms.TextBox txttaikhoan;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtgioitinh;
@@ -500,5 +495,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

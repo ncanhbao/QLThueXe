@@ -58,9 +58,11 @@
     <Compile Include="BUS\BUS_Khach.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_Xe.cs" />
+    <Compile Include="BUS\BUS_YeuCau.cs" />
     <Compile Include="DAL\DAL_Khach.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DAL_Xe.cs" />
+    <Compile Include="DAL\DAL_YeuCau.cs" />
     <Compile Include="DATXE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>

@@ -117,9 +117,9 @@
     <Key>
       <PropertyRef Name="MaYC" />
     </Key>
-    <Property Name="MaYC" Type="int" Nullable="false" />
+    <Property Name="MaYC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaKhach" Type="int" Nullable="false" />
-    <Property Name="MaXe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaXe" Type="int" Nullable="false" />
     <Property Name="NgayLay" Type="datetime" />
     <Property Name="NgayTra" Type="datetime" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />

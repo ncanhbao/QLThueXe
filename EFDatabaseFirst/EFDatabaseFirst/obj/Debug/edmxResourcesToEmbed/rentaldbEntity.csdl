@@ -301,9 +301,9 @@
     <Key>
       <PropertyRef Name="MaYC" />
     </Key>
-    <Property Name="MaYC" Type="Int32" Nullable="false" />
+    <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaKhach" Type="Int32" Nullable="false" />
-    <Property Name="MaXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaXe" Type="Int32" Nullable="false" />
     <Property Name="NgayLay" Type="DateTime" Precision="3" />
     <Property Name="NgayTra" Type="DateTime" Precision="3" />
     <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="rentaldbModelStoreContainer" CdmEntityContainer="rentaldbEntities">
-    <EntitySetMapping Name="CHITIETHOPDONGs">
-      <EntityTypeMapping TypeName="rentaldbModel.CHITIETHOPDONG">
-        <MappingFragment StoreEntitySet="CHITIETHOPDONG">
-          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="Gia" ColumnName="Gia" />
-          <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
-          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="DATXEs">
       <EntityTypeMapping TypeName="rentaldbModel.DATXE">
         <MappingFragment StoreEntitySet="DATXE">
@@ -128,6 +115,19 @@
           <ScalarProperty Name="NgayTraXe" ColumnName="NgayTraXe" />
           <ScalarProperty Name="Gia" ColumnName="Gia" />
           <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEUCAUs">
+      <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
+        <MappingFragment StoreEntitySet="YEUCAU">
+          <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="NgayLay" ColumnName="NgayLay" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

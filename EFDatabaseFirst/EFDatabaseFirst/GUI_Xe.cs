@@ -27,27 +27,8 @@ namespace EFDatabaseFirst
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txthangxe.Text != "" & txtbienso.Text != "" & txttinhtrang.Text != "" & txtgia.Text != "")
-            {
-                XE xe = new XE();
-                xe.HangXe = txthangxe.Text;
-                xe.BienSo = txtbienso.Text;
-                xe.TinhTrang = txttinhtrang.Text;
-                xe.Gia = Convert.ToInt32(txtgia.Text);
-                if (busXe.themXe(xe))
-                {
-                    MessageBox.Show("Thêm thành công");
-                    busXe.getXe(dgvXe); // refresh datagridview
-                }
-                else
-                {
-                    MessageBox.Show("Thêm ko thành công");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Xin hãy nhập đầy đủ");
-            }
+            GUI_Xe_Them formThem = new GUI_Xe_Them();
+            formThem.ShowDialog();
         }
         private void GUI_Xe_Load(object sender, EventArgs e)
         {

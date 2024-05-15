@@ -3,36 +3,100 @@
   "WorkspaceRootPath": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\bus\\bus_xe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\bus\\bus_xe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\dal\\dal_xe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\dal\\dal_xe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_chonxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_chonxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_chonxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_chonxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_yeucau_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_yeucau_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_yeucau_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_yeucau_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_yeucau_them.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_yeucau_them.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\bus\\bus_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\bus\\bus_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\dal\\dal_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\dal\\dal_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_chonkhach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_chonkhach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_chonkhach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_chonkhach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_yeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_yeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_xe_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_xe_them.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_khach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_chonkhach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_chonkhach.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_yeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_yeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|d:\\ltcsdl\\qlthuexe\\efdatabasefirst\\efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\efdatabasefirst\\gui_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C368DC51-FB8B-40C4-9EEE-EA80F0459AFF}|EFDatabaseFirst\\EFDatabaseFirst.csproj|solutionrelative:efdatabasefirst\\gui_home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,35 +106,290 @@
       "DocumentGroups": [
         {
           "DockedWidth": 336,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GUI_NhanVien.cs [Design]",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_NhanVien.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_NhanVien.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_NhanVien.cs [Design]",
-              "RelativeToolTip": "EFDatabaseFirst\\GUI_NhanVien.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "BUS_Khach.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_Khach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\BUS\\BUS_Khach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_Khach.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\BUS\\BUS_Khach.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowEQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T16:16:13.141Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GUI_Home.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Home.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.cs",
-              "RelativeToolTip": "EFDatabaseFirst\\GUI_Home.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:25:23.751Z",
+              "WhenOpened": "2024-05-15T05:46:09.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BUS_Xe.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_Xe.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\BUS\\BUS_Xe.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_Xe.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\BUS\\BUS_Xe.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowEYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:46:07.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GUI_ChonXe.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonXe.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_ChonXe.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonXe.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_ChonXe.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAADgvysAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:39:48.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GUI_ChonXe.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonXe.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_ChonXe.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonXe.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_ChonXe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:37:50.669Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GUI_YeuCau_Them.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_YeuCau_Them.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T03:49:15.237Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GUI_YeuCau_Them.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_YeuCau_Them.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwDMAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:16:19.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DAL_Xe.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_Xe.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\DAL\\DAL_Xe.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_Xe.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\DAL\\DAL_Xe.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswF4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:45:02.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GUI_YeuCau_Them.Designer.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.Designer.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_YeuCau_Them.Designer.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau_Them.Designer.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_YeuCau_Them.Designer.cs",
+              "ViewState": "AQIAAOgAAAAAAAAAAAAEwPcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:47:17.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DAL_Khach.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_Khach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\DAL\\DAL_Khach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_Khach.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\DAL\\DAL_Khach.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAswGAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:37:58.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GUI_ChonKhach.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwDEAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:34:17.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GUI_ChonKhach.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_ChonKhach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_ChonKhach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:33:09.71Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BUS_NhanVien.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T14:52:30.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GUI_Khach.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Khach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Khach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Khach.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_Khach.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAawJQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:34:50.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GUI_ChonKhach.Designer.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.Designer.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_ChonKhach.Designer.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_ChonKhach.Designer.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_ChonKhach.Designer.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAEwFkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:54:32.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GUI_YeuCau.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_YeuCau.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_YeuCau.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T17:32:35.456Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GUI_Xe_Them.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Xe_Them.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Xe_Them.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Xe_Them.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_Xe_Them.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T05:31:56.829Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GUI_Khach.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Khach.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Khach.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Khach.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_Khach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:39:47.36Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DAL_NhanVien.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAIwGAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T14:52:48.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GUI_DangNhap.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_DangNhap.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_DangNhap.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T14:41:55.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GUI_DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_DangNhap.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs [Design]",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T14:29:02.535Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GUI_YeuCau.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_YeuCau.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_YeuCau.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_YeuCau.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAnwBsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:18:39.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GUI_Home.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Home.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_Home.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAADwv5cAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:19:55.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "GUI_Home.cs [Design]",
               "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.cs",
               "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Home.cs",
@@ -82,66 +401,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GUI_DangNhap.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_DangNhap.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
-              "RelativeToolTip": "EFDatabaseFirst\\GUI_DangNhap.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAARAAAA",
+              "DocumentIndex": 23,
+              "Title": "GUI_Home.Designer.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.Designer.cs",
+              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_Home.Designer.cs",
+              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_Home.Designer.cs",
+              "RelativeToolTip": "EFDatabaseFirst\\GUI_Home.Designer.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAEwGIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:41:55.932Z",
+              "WhenOpened": "2024-05-14T17:12:08.766Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DAL_NhanVien.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
-              "RelativeToolTip": "EFDatabaseFirst\\DAL\\DAL_NhanVien.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAIwFoAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:52:48.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BUS_NhanVien.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
-              "RelativeToolTip": "EFDatabaseFirst\\BUS\\BUS_NhanVien.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:52:30.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GUI_NhanVien.cs",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_NhanVien.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_NhanVien.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_NhanVien.cs",
-              "RelativeToolTip": "EFDatabaseFirst\\GUI_NhanVien.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAEwH4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:13:01.941Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GUI_DangNhap.cs [Design]",
-              "DocumentMoniker": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs",
-              "RelativeDocumentMoniker": "EFDatabaseFirst\\GUI_DangNhap.cs",
-              "ToolTip": "D:\\LTCSDL\\QLThueXe\\EFDatabaseFirst\\EFDatabaseFirst\\GUI_DangNhap.cs [Design]",
-              "RelativeToolTip": "EFDatabaseFirst\\GUI_DangNhap.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:29:02.535Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },

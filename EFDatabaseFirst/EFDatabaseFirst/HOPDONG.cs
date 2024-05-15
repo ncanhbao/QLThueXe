@@ -17,7 +17,6 @@ namespace EFDatabaseFirst
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HOPDONG()
         {
-            this.CHITIETHOPDONGs = new HashSet<CHITIETHOPDONG>();
             this.HOADONTTs = new HashSet<HOADONTT>();
             this.SOXEs = new HashSet<SOXE>();
         }
@@ -32,8 +31,6 @@ namespace EFDatabaseFirst
         public string DKChung { get; set; }
         public Nullable<decimal> TienTamUng { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETHOPDONG> CHITIETHOPDONGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADONTT> HOADONTTs { get; set; }
         public virtual KHACH KHACH { get; set; }

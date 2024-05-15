@@ -62,5 +62,13 @@ namespace EFDatabaseFirst.BUS
         {
             return dalXe.timXe(searchvalue1, searchvalue3);
         }
+        public XE chonXe(int maxe)
+        {
+            return dalXe.chonXe(maxe);
+        }
+        public void getXeChuaThue(DataGridView dgv)
+        {
+            dgv.DataSource = dalXe.getXeChuaThue();
+        }
     }
 }

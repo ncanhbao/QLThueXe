@@ -58,14 +58,23 @@
     <Compile Include="BUS\BUS_Khach.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_Xe.cs" />
-    <Compile Include="CHITIETHOPDONG.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\DAL_Khach.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DAL_Xe.cs" />
     <Compile Include="DATXE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_ChonKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChonKhach.Designer.cs">
+      <DependentUpon>GUI_ChonKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_ChonXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChonXe.Designer.cs">
+      <DependentUpon>GUI_ChonXe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_DangNhap.cs">
       <SubType>Form</SubType>
@@ -109,6 +118,24 @@
     <Compile Include="GUI_Xe.Designer.cs">
       <DependentUpon>GUI_Xe.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Xe_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Xe_Them.Designer.cs">
+      <DependentUpon>GUI_Xe_Them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_YeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_YeuCau.Designer.cs">
+      <DependentUpon>GUI_YeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_YeuCau_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_YeuCau_Them.Designer.cs">
+      <DependentUpon>GUI_YeuCau_Them.cs</DependentUpon>
+    </Compile>
     <Compile Include="HOADONTT.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
@@ -150,6 +177,15 @@
     <Compile Include="XE_HDTT.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="YEUCAU.cs">
+      <DependentUpon>rentaldbEntity.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI_ChonKhach.resx">
+      <DependentUpon>GUI_ChonKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ChonXe.resx">
+      <DependentUpon>GUI_ChonXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +206,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Xe.resx">
       <DependentUpon>GUI_Xe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Xe_Them.resx">
+      <DependentUpon>GUI_Xe_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_YeuCau.resx">
+      <DependentUpon>GUI_YeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_YeuCau_Them.resx">
+      <DependentUpon>GUI_YeuCau_Them.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,6 +286,7 @@
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
       <LastGenOutput>rentaldbEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\contract.png" />
     <None Include="Resources\customer-review.png" />
     <None Include="Resources\rent3.png" />
     <None Include="Resources\rent21.png" />

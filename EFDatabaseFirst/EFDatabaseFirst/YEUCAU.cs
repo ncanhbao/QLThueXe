@@ -12,17 +12,17 @@ namespace EFDatabaseFirst
     using System;
     using System.Collections.Generic;
     
-    public partial class CHITIETHOPDONG
+    public partial class YEUCAU
     {
-        public string SoHD { get; set; }
+        public int MaYC { get; set; }
+        public int MaKhach { get; set; }
         public int MaXe { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<decimal> Gia { get; set; }
-        public Nullable<System.DateTime> NgayNhan { get; set; }
+        public Nullable<System.DateTime> NgayLay { get; set; }
         public Nullable<System.DateTime> NgayTra { get; set; }
-        public string GhiChu { get; set; }
+        public string TrangThai { get; set; }
+        public Nullable<System.DateTime> NgayTaoYC { get; set; }
     
-        public virtual HOPDONG HOPDONG { get; set; }
+        public virtual KHACH KHACH { get; set; }
         public virtual XE XE { get; set; }
     }
 }

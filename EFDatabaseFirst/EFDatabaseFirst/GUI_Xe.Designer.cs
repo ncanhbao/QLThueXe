@@ -41,18 +41,18 @@
             this.txtSearch1 = new System.Windows.Forms.TextBox();
             this.txttinhtrang = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSearch3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtmaxe = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtgia = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.lbketqua = new System.Windows.Forms.Label();
             this.btnAll = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtgia = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtSearch3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -199,15 +199,6 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Tình trạng:";
             // 
-            // txtSearch3
-            // 
-            this.txtSearch3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch3.Location = new System.Drawing.Point(170, 87);
-            this.txtSearch3.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch3.Name = "txtSearch3";
-            this.txtSearch3.Size = new System.Drawing.Size(323, 34);
-            this.txtSearch3.TabIndex = 19;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -250,6 +241,26 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // txtgia
+            // 
+            this.txtgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtgia.Location = new System.Drawing.Point(220, 224);
+            this.txtgia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtgia.Name = "txtgia";
+            this.txtgia.Size = new System.Drawing.Size(385, 34);
+            this.txtgia.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(45, 224);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 29);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Giá thuê:";
             // 
             // lbketqua
             // 
@@ -295,12 +306,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtSearch3);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtSearch1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btnAll);
-            this.groupBox2.Controls.Add(this.txtSearch3);
             this.groupBox2.Controls.Add(this.lbketqua);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(737, 11);
@@ -324,25 +335,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
-            // txtgia
+            // txtSearch3
             // 
-            this.txtgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgia.Location = new System.Drawing.Point(220, 224);
-            this.txtgia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtgia.Name = "txtgia";
-            this.txtgia.Size = new System.Drawing.Size(385, 34);
-            this.txtgia.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(45, 224);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 29);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Giá thuê:";
+            this.txtSearch3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch3.FormattingEnabled = true;
+            this.txtSearch3.Items.AddRange(new object[] {
+            "Chưa thuê",
+            "Đã thuê",
+            "Bảo dưỡng"});
+            this.txtSearch3.Location = new System.Drawing.Point(170, 87);
+            this.txtSearch3.Name = "txtSearch3";
+            this.txtSearch3.Size = new System.Drawing.Size(323, 37);
+            this.txtSearch3.TabIndex = 27;
             // 
             // GUI_Xe
             // 
@@ -384,7 +388,6 @@
         private System.Windows.Forms.TextBox txtSearch1;
         private System.Windows.Forms.TextBox txttinhtrang;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSearch3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtmaxe;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -396,6 +399,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox txtSearch3;
     }
 }
 

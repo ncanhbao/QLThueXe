@@ -88,5 +88,12 @@ namespace EFDatabaseFirst.DAL
             catch { }
             return null;
         }
+        public KHACH chonKhach(int makhach)
+        {
+            KHACH k;
+            var query = db.KHACHes.Where(kh => kh.MaKhach == makhach);
+            k = query.FirstOrDefault();
+            return k;
+        }
     }
 }

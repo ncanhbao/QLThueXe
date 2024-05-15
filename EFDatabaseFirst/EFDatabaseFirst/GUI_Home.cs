@@ -132,6 +132,24 @@ namespace EFDatabaseFirst
             Form_NhanVien.Show();
         }
 
-        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbtime.Text = DateTime.Now.ToString("dd/MM/yyyy  HH:mm:ss");
+        }
+
+        private void btnyeucau_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_YeuCau Form_YeuCau = new GUI_YeuCau();
+            Form_YeuCau.TopLevel = false;
+            Form_YeuCau.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_YeuCau);
+            Form_YeuCau.Show();
+        }
     }
 }

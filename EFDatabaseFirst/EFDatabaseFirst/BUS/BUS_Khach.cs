@@ -63,5 +63,9 @@ namespace EFDatabaseFirst.BUS
         {
             return dalKhach.timKhach(searchvalue1, searchvalue2, searchvalue3, searchvalue4);
         }
+        public KHACH chonKhach(int makhach)
+        {
+            return dalKhach.chonKhach(makhach);
+        }
     }
 }

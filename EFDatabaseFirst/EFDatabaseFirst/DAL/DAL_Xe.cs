@@ -74,5 +74,27 @@ namespace EFDatabaseFirst.DAL
             catch { }
             return null;
         }
+        public XE chonXe(int maxe)
+        {
+            XE k;
+            var query = db.XEs.Where(xe => xe.MaXe == maxe);
+            k = query.FirstOrDefault();
+            return k;
+        }
+        public dynamic getXeChuaThue()
+        {
+            var ds = db.XEs
+               .Where(s => s.TinhTrang == "Chưa thuê")
+               .Select(s => new
+               {
+                   s.MaXe,
+                   s.HangXe,
+                   s.BienSo,
+                   s.TinhTrang,
+                   s.Gia
+               }).ToList();
+            return ds;
+        }
+
     }
 }

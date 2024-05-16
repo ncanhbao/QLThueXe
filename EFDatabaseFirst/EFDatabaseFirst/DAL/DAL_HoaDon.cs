@@ -21,7 +21,8 @@ namespace EFDatabaseFirst.DAL
                 s.MaYC,
                 s.TongTien,
                 s.TrangThai,
-                s.HangXe
+                s.HangXe,
+                s.NoiDung
             }).ToList();
             return ds;
         }
@@ -44,6 +45,7 @@ namespace EFDatabaseFirst.DAL
                             hd.TrangThai,
                             hd.HangXe,
                             kh.HoTen,
+                            hd.NoiDung
                         };
 
             if (!string.IsNullOrEmpty(searchvalue1))
@@ -68,7 +70,8 @@ namespace EFDatabaseFirst.DAL
                 s.MaYC,
                 s.TongTien,
                 s.TrangThai,
-                s.HangXe
+                s.HangXe,
+                s.NoiDung
             }).ToList();
 
             return ds;
@@ -111,7 +114,8 @@ namespace EFDatabaseFirst.DAL
                    s.MaYC,
                    s.TongTien,
                    s.TrangThai,
-                   s.HangXe
+                   s.HangXe,
+                   s.NoiDung
                }).ToList();
             return ds;
         }

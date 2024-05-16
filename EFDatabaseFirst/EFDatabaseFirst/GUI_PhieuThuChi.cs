@@ -81,7 +81,14 @@ namespace EFDatabaseFirst
             txtngayxuly.Text = Convert.ToDateTime(row.Cells[4].Value).ToString("dd/MM/yyyy");
             txtphuongthucTT.Text = row.Cells[5].Value.ToString();
             txtnoidung.Text = row.Cells[6].Value.ToString();
-            txttenKH.Text = busPhieu.getKhach(Convert.ToInt32(row.Cells[7].Value)).HoTen;
+            if (row.Cells[7].Value == null)
+            {
+                txttenKH.Text = "Cửa hàng cho thuê xe";
+            }
+            else
+            {
+                txttenKH.Text = busPhieu.getKhach(Convert.ToInt32(row.Cells[7].Value)).HoTen;
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

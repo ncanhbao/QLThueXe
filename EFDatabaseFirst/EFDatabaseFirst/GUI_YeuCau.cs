@@ -125,7 +125,7 @@ namespace EFDatabaseFirst
         {
             if (txtmaYC.Text != "")
             {
-                if (txttrangthai.Text == "Chưa thanh toán")
+                if (txttrangthai.Text != "Chờ xử lý")
                 {
                     MessageBox.Show("Yêu cầu đã được xử lý");
                 }

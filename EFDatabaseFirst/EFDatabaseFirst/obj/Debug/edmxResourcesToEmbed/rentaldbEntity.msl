@@ -67,6 +67,7 @@
     <EntitySetMapping Name="HOADONs">
       <EntityTypeMapping TypeName="rentaldbModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
           <ScalarProperty Name="HangXe" ColumnName="HangXe" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />

@@ -30,3 +30,6 @@ D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_HoaDon.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ChonHoaDon.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ThongTinUser.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_BaoDuongXe.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ChuyenKhoan.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_BaoCao.resources

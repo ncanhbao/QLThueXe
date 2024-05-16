@@ -64,8 +64,15 @@ namespace EFDatabaseFirst
         {
             DataGridViewRow row = dgvHD.SelectedRows[0];
             txtmaHD.Text = row.Cells[0].Value.ToString();
-            txttenKH.Text = busHoaDon.getKhach(busHoaDon.getYeuCau(Convert.ToInt32(row.Cells[1].Value)).MaKhach).HoTen;
-            txthangxe.Text = busHoaDon.getXe(busHoaDon.getYeuCau(Convert.ToInt32(row.Cells[1].Value)).MaXe).HangXe;
+            if (row.Cells["NoiDung"].Value != null)
+            {
+                txttenKH.Text = "Cừa hàng cho thuê xe";
+            }
+            else
+            {
+                txttenKH.Text = busHoaDon.getKhach(busHoaDon.getYeuCau(Convert.ToInt32(row.Cells[1].Value)).MaKhach).HoTen;
+            }
+            txthangxe.Text = row.Cells["HangXe"].Value.ToString();
             txttongtien.Text = row.Cells[2].Value.ToString();
             txttrangthai.Text = row.Cells[3].Value.ToString();
         }

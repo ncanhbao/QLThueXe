@@ -9,6 +9,7 @@
     <Property Name="TongTien" Type="int" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
     <Property Name="HangXe" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="KHACH">
     <Key>

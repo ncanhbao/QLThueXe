@@ -16,11 +16,13 @@ namespace EFDatabaseFirst
     {
         BUS_PhieuThuChi busPhieu;
         BUS_HoaDon busHoaDon;
+        BUS_Xe busXe;
         public GUI_Phieu_Them()
         {
             InitializeComponent();
             busPhieu = new BUS_PhieuThuChi();
             busHoaDon = new BUS_HoaDon();
+            busXe = new BUS_Xe();
         }
 
         private void btnhuybo_Click(object sender, EventArgs e)
@@ -43,19 +45,41 @@ namespace EFDatabaseFirst
                     phieu.NgayTT = DateTime.Now;
                     phieu.PhuongThucTT = cbphuongthucTT.Text;
                     phieu.NoiDung = txtnoidung.Text;
-                    phieu.MaKhach = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach;
-                    phieu.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
-                    yeucau.MaYC = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC);
-                    yeucau.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
-                    hoadon.MaHD = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaHD);
-                    if (busPhieu.themPhieu(phieu, yeucau, hoadon))
+                    if (txttenKH.Text != "Cửa hàng cho thuê xe")
                     {
-                        MessageBox.Show("Thêm thành công");
-                    }
+                        phieu.MaKhach = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach;
+                        phieu.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
+                        yeucau.MaYC = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC);
+                        yeucau.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
+                        hoadon.MaHD = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaHD);
+                        if (busPhieu.themPhieu(phieu, yeucau, hoadon))
+                        {
+                            if (phieu.PhuongThucTT == "Chuyển khoản ngân hàng")
+                            {
+                                GUI_ChuyenKhoan ck = new GUI_ChuyenKhoan();
+                                ck.ShowDialog();
+                            }    
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm ko thành công");
+                        }
+                    }    
                     else
                     {
-                        MessageBox.Show("Thêm ko thành công");
-                    }
+                        phieu.MaKhach = null;
+                        phieu.MaXe = busXe.chonXeTheoHang(txthangxe.Text).MaXe;
+                        hoadon.MaHD = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaHD);
+                        if (busPhieu.themPhieuThu(phieu, hoadon))
+                        {
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm ko thành công");
+                        }
+                    }    
                 }    
                 else
                 {
@@ -84,8 +108,15 @@ namespace EFDatabaseFirst
             if (GUI_ChonHoaDon.hoadon != null)
             {
                 txtmaHD.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.MaHD);
-                txttenKH.Text = busHoaDon.getKhach(busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach).HoTen;
-                txthangxe.Text = busHoaDon.getXe(busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe).HangXe;
+                if(GUI_ChonHoaDon.hoadon.NoiDung != null)
+                {
+                    txttenKH.Text = "Cửa hàng cho thuê xe";
+                }
+                else
+                {
+                    txttenKH.Text = busHoaDon.getKhach(busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach).HoTen;
+                }
+                txthangxe.Text = GUI_ChonHoaDon.hoadon.HangXe;
                 txttongtien.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.TongTien);
                 txttrangthai.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.TrangThai);
             }

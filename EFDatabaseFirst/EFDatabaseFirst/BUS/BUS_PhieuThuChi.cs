@@ -54,6 +54,18 @@ namespace EFDatabaseFirst.BUS
         {
             return dalPhieu.getKhach(makh);
         }
-       
-    }
+        public bool themPhieuThu(PHIEUTHUCHI phieu, HOADON hoadon)
+        {
+            try
+            {
+                dalPhieu.themPhieuThu(phieu, hoadon);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        }
 }

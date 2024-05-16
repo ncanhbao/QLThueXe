@@ -74,5 +74,9 @@ namespace EFDatabaseFirst.BUS
         {
             dgv.DataSource = dalXe.getXeChuaTT();
         }
+        public XE chonXeTheoHang(string hangxe)
+        {
+            return dalXe.chonXeTheoHang(hangxe);
+        }
     }
 }

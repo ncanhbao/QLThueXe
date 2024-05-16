@@ -127,6 +127,7 @@
     <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="YEUCAU" Relationship="rentaldbModel.FK_HOADON_YEUCAU" FromRole="HOADON" ToRole="YEUCAU" />
     <Property Name="HangXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="YEUCAU">
     <Key>

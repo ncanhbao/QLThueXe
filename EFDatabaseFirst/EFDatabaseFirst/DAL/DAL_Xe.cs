@@ -109,6 +109,12 @@ namespace EFDatabaseFirst.DAL
                }).ToList();
             return ds;
         }
-
+        public XE chonXeTheoHang(string hangxe)
+        {
+            XE k;
+            var query = db.XEs.Where(xe => xe.HangXe == hangxe);
+            k = query.FirstOrDefault();
+            return k;
+        }
     }
 }

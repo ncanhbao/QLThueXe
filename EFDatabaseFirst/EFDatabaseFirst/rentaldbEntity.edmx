@@ -14,6 +14,7 @@
           <Property Name="TongTien" Type="int" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
           <Property Name="HangXe" Type="nvarchar" MaxLength="50" />
+          <Property Name="NoiDung" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="KHACH">
           <Key>
@@ -307,6 +308,7 @@
           <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="YEUCAU" Relationship="rentaldbModel.FK_HOADON_YEUCAU" FromRole="HOADON" ToRole="YEUCAU" />
           <Property Name="HangXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="YEUCAU">
           <Key>
@@ -433,6 +435,7 @@
           <EntitySetMapping Name="HOADONs">
             <EntityTypeMapping TypeName="rentaldbModel.HOADON">
               <MappingFragment StoreEntitySet="HOADON">
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
                 <ScalarProperty Name="HangXe" ColumnName="HangXe" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />

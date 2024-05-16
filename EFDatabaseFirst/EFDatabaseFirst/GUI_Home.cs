@@ -20,6 +20,25 @@ namespace EFDatabaseFirst
             InitializeComponent();
             txtusername.Text = GUI_DangNhap.user.HoTen;
             lbchucdanh.Text = GUI_DangNhap.user.ChucDanh;
+            if (lbchucdanh.Text != "Quản lý")
+            {
+                btntrangchu.Enabled = false;
+
+                btnQLxe.Enabled = false;
+
+                btnQLkhach.Enabled = false;
+
+                btnnhanvien.Enabled = false;
+
+                btnhoadon.Enabled = false;
+
+                if (lbchucdanh.Text == "NV cửa hàng")
+                {
+                    btnbaocao.Enabled = false;
+                    btnthuchi.Enabled = false;
+                }
+            }
+
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -48,8 +67,8 @@ namespace EFDatabaseFirst
                 }
             }
         }
-     
-   
+
+
 
         private void btnQLxe_Click(object sender, EventArgs e)
         {
@@ -195,6 +214,36 @@ namespace EFDatabaseFirst
             Form_User.Dock = DockStyle.Fill;
             panelmain.Controls.Add(Form_User);
             Form_User.Show();
+        }
+
+        private void btnbaoduong_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_BaoDuongXe Form_BaoDuong = new GUI_BaoDuongXe();
+            Form_BaoDuong.TopLevel = false;
+            Form_BaoDuong.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_BaoDuong);
+            Form_BaoDuong.Show();
+        }
+
+        private void btnbaocao_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_BaoCao Form_BaoCao = new GUI_BaoCao();
+            Form_BaoCao.TopLevel = false;
+            Form_BaoCao.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_BaoCao);
+            Form_BaoCao.Show();
         }
     }
 }

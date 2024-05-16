@@ -243,7 +243,7 @@
             this.groupBox2.Size = new System.Drawing.Size(534, 398);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin";
+            this.groupBox2.Text = "Thông tin xe";
             // 
             // btnthemxe
             // 

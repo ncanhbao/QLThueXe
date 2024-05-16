@@ -113,5 +113,14 @@ namespace EFDatabaseFirst.DAL
             a = query.FirstOrDefault();
             return a;
         }
-    }
+        public void themPhieuThu(PHIEUTHUCHI phieu, HOADON hoadon)
+        {
+            db.PHIEUTHUCHIs.Add(phieu);
+            HOADON hd = db.HOADONs.Find(hoadon.MaHD);
+            hd.TrangThai = "Đã thanh toán";
+            XE xe = db.XEs.Find(phieu.MaXe);
+            xe.TinhTrang = "Chưa thuê";
+            db.SaveChanges();
+        }
+        }
 }

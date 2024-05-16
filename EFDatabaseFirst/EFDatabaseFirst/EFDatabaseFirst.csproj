@@ -62,6 +62,18 @@
     <Compile Include="BUS\BUS_Xe.cs" />
     <Compile Include="BUS\BUS_YeuCau.cs" />
     <Compile Include="DAL\DAL_HoaDon.cs" />
+    <Compile Include="GUI_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_BaoCao.Designer.cs">
+      <DependentUpon>GUI_BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_BaoDuongXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_BaoDuongXe.Designer.cs">
+      <DependentUpon>GUI_BaoDuongXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_ChonHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="GUI_ChonXe.Designer.cs">
       <DependentUpon>GUI_ChonXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_ChuyenKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChuyenKhoan.Designer.cs">
+      <DependentUpon>GUI_ChuyenKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_DangNhap.cs">
       <SubType>Form</SubType>
@@ -213,6 +231,12 @@
     <Compile Include="YEUCAU.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_BaoCao.resx">
+      <DependentUpon>GUI_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_BaoDuongXe.resx">
+      <DependentUpon>GUI_BaoDuongXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_ChonHoaDon.resx">
       <DependentUpon>GUI_ChonHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_ChonXe.resx">
       <DependentUpon>GUI_ChonXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ChuyenKhoan.resx">
+      <DependentUpon>GUI_ChuyenKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
@@ -337,6 +364,8 @@
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
       <LastGenOutput>rentaldbEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Screenshot 2024-05-17 013849.png" />
+    <None Include="Resources\tools.png" />
     <None Include="Resources\user2.png" />
     <None Include="Resources\schedulebig.png" />
     <None Include="Resources\schedule.png" />

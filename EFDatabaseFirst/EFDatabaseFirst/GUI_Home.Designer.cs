@@ -34,37 +34,38 @@
             this.paneldanhmuc = new System.Windows.Forms.Panel();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.lbchucdanh = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelQL = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnhoadon = new System.Windows.Forms.Button();
             this.panelnhanvien = new System.Windows.Forms.Panel();
+            this.btnnhanvien = new System.Windows.Forms.Button();
             this.panelQLxe = new System.Windows.Forms.Panel();
+            this.btnQLxe = new System.Windows.Forms.Button();
             this.panelquanly = new System.Windows.Forms.Panel();
+            this.btntrangchu = new System.Windows.Forms.Button();
             this.panelQLkhach = new System.Windows.Forms.Panel();
+            this.btnQLkhach = new System.Windows.Forms.Button();
             this.panelyeucau = new System.Windows.Forms.Panel();
+            this.btnyeucau = new System.Windows.Forms.Button();
             this.panelthuchi = new System.Windows.Forms.Panel();
+            this.btnthuchi = new System.Windows.Forms.Button();
             this.panelbaocao = new System.Windows.Forms.Panel();
+            this.btnbaocao = new System.Windows.Forms.Button();
             this.panelthoat = new System.Windows.Forms.Panel();
+            this.btnthoat = new System.Windows.Forms.Button();
             this.lbcoder = new System.Windows.Forms.Label();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelmain = new System.Windows.Forms.Panel();
             this.panelQLTimer = new System.Windows.Forms.Timer(this.components);
             this.paneluser = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbtime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnhoadon = new System.Windows.Forms.Button();
-            this.btnnhanvien = new System.Windows.Forms.Button();
-            this.btnQLxe = new System.Windows.Forms.Button();
-            this.btntrangchu = new System.Windows.Forms.Button();
-            this.btnQLkhach = new System.Windows.Forms.Button();
-            this.btnyeucau = new System.Windows.Forms.Button();
-            this.btnthuchi = new System.Windows.Forms.Button();
-            this.btnbaocao = new System.Windows.Forms.Button();
-            this.btnthoat = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.paneldanhmuc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelQL.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelnhanvien.SuspendLayout();
@@ -76,9 +77,8 @@
             this.panelbaocao.SuspendLayout();
             this.panelthoat.SuspendLayout();
             this.paneluser.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -140,6 +140,17 @@
             this.lbchucdanh.Text = "Chức danh";
             this.lbchucdanh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EFDatabaseFirst.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panelQL
             // 
             this.panelQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -166,6 +177,24 @@
             this.panel1.Size = new System.Drawing.Size(269, 58);
             this.panel1.TabIndex = 5;
             // 
+            // btnhoadon
+            // 
+            this.btnhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhoadon.ForeColor = System.Drawing.Color.White;
+            this.btnhoadon.Image = global::EFDatabaseFirst.Properties.Resources.contract;
+            this.btnhoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhoadon.Location = new System.Drawing.Point(1, -4);
+            this.btnhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnhoadon.Name = "btnhoadon";
+            this.btnhoadon.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnhoadon.Size = new System.Drawing.Size(261, 65);
+            this.btnhoadon.TabIndex = 2;
+            this.btnhoadon.Text = "         Hóa đơn";
+            this.btnhoadon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhoadon.UseVisualStyleBackColor = true;
+            this.btnhoadon.Click += new System.EventHandler(this.btnhoadon_Click);
+            // 
             // panelnhanvien
             // 
             this.panelnhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
@@ -175,6 +204,24 @@
             this.panelnhanvien.Name = "panelnhanvien";
             this.panelnhanvien.Size = new System.Drawing.Size(269, 54);
             this.panelnhanvien.TabIndex = 4;
+            // 
+            // btnnhanvien
+            // 
+            this.btnnhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnhanvien.ForeColor = System.Drawing.Color.White;
+            this.btnnhanvien.Image = global::EFDatabaseFirst.Properties.Resources.employees;
+            this.btnnhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnhanvien.Location = new System.Drawing.Point(1, -4);
+            this.btnnhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnnhanvien.Name = "btnnhanvien";
+            this.btnnhanvien.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnnhanvien.Size = new System.Drawing.Size(261, 65);
+            this.btnnhanvien.TabIndex = 2;
+            this.btnnhanvien.Text = "         Nhân viên";
+            this.btnnhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnhanvien.UseVisualStyleBackColor = true;
+            this.btnnhanvien.Click += new System.EventHandler(this.btnnhanvien_Click);
             // 
             // panelQLxe
             // 
@@ -186,6 +233,24 @@
             this.panelQLxe.Size = new System.Drawing.Size(259, 50);
             this.panelQLxe.TabIndex = 2;
             // 
+            // btnQLxe
+            // 
+            this.btnQLxe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLxe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLxe.ForeColor = System.Drawing.Color.White;
+            this.btnQLxe.Image = global::EFDatabaseFirst.Properties.Resources.transport;
+            this.btnQLxe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLxe.Location = new System.Drawing.Point(-1, -4);
+            this.btnQLxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQLxe.Name = "btnQLxe";
+            this.btnQLxe.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnQLxe.Size = new System.Drawing.Size(261, 65);
+            this.btnQLxe.TabIndex = 2;
+            this.btnQLxe.Text = "         Danh sách xe";
+            this.btnQLxe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLxe.UseVisualStyleBackColor = true;
+            this.btnQLxe.Click += new System.EventHandler(this.btnQLxe_Click);
+            // 
             // panelquanly
             // 
             this.panelquanly.Controls.Add(this.btntrangchu);
@@ -194,6 +259,24 @@
             this.panelquanly.Name = "panelquanly";
             this.panelquanly.Size = new System.Drawing.Size(256, 50);
             this.panelquanly.TabIndex = 1;
+            // 
+            // btntrangchu
+            // 
+            this.btntrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntrangchu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntrangchu.ForeColor = System.Drawing.Color.White;
+            this.btntrangchu.Image = global::EFDatabaseFirst.Properties.Resources.home__1_;
+            this.btntrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntrangchu.Location = new System.Drawing.Point(-17, -7);
+            this.btntrangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btntrangchu.Name = "btntrangchu";
+            this.btntrangchu.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btntrangchu.Size = new System.Drawing.Size(275, 65);
+            this.btntrangchu.TabIndex = 2;
+            this.btntrangchu.Text = "          Quản lý";
+            this.btntrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntrangchu.UseVisualStyleBackColor = true;
+            this.btntrangchu.Click += new System.EventHandler(this.btntrangchu_Click);
             // 
             // panelQLkhach
             // 
@@ -205,6 +288,24 @@
             this.panelQLkhach.Size = new System.Drawing.Size(269, 54);
             this.panelQLkhach.TabIndex = 3;
             // 
+            // btnQLkhach
+            // 
+            this.btnQLkhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLkhach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLkhach.ForeColor = System.Drawing.Color.White;
+            this.btnQLkhach.Image = global::EFDatabaseFirst.Properties.Resources.customer_review;
+            this.btnQLkhach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLkhach.Location = new System.Drawing.Point(1, -4);
+            this.btnQLkhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQLkhach.Name = "btnQLkhach";
+            this.btnQLkhach.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnQLkhach.Size = new System.Drawing.Size(261, 65);
+            this.btnQLkhach.TabIndex = 2;
+            this.btnQLkhach.Text = "         Khách hàng";
+            this.btnQLkhach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLkhach.UseVisualStyleBackColor = true;
+            this.btnQLkhach.Click += new System.EventHandler(this.btnQLkhach_Click);
+            // 
             // panelyeucau
             // 
             this.panelyeucau.Controls.Add(this.btnyeucau);
@@ -213,6 +314,24 @@
             this.panelyeucau.Name = "panelyeucau";
             this.panelyeucau.Size = new System.Drawing.Size(263, 50);
             this.panelyeucau.TabIndex = 6;
+            // 
+            // btnyeucau
+            // 
+            this.btnyeucau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnyeucau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnyeucau.ForeColor = System.Drawing.Color.White;
+            this.btnyeucau.Image = global::EFDatabaseFirst.Properties.Resources.key;
+            this.btnyeucau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnyeucau.Location = new System.Drawing.Point(-19, -4);
+            this.btnyeucau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnyeucau.Name = "btnyeucau";
+            this.btnyeucau.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnyeucau.Size = new System.Drawing.Size(283, 65);
+            this.btnyeucau.TabIndex = 2;
+            this.btnyeucau.Text = "          Yêu cầu";
+            this.btnyeucau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnyeucau.UseVisualStyleBackColor = true;
+            this.btnyeucau.Click += new System.EventHandler(this.btnyeucau_Click);
             // 
             // panelthuchi
             // 
@@ -223,6 +342,24 @@
             this.panelthuchi.Size = new System.Drawing.Size(256, 50);
             this.panelthuchi.TabIndex = 4;
             // 
+            // btnthuchi
+            // 
+            this.btnthuchi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnthuchi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthuchi.ForeColor = System.Drawing.Color.White;
+            this.btnthuchi.Image = global::EFDatabaseFirst.Properties.Resources.invoice;
+            this.btnthuchi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthuchi.Location = new System.Drawing.Point(-19, -4);
+            this.btnthuchi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnthuchi.Name = "btnthuchi";
+            this.btnthuchi.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnthuchi.Size = new System.Drawing.Size(281, 65);
+            this.btnthuchi.TabIndex = 2;
+            this.btnthuchi.Text = "          Phiếu thu chi";
+            this.btnthuchi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthuchi.UseVisualStyleBackColor = true;
+            this.btnthuchi.Click += new System.EventHandler(this.btnthuchi_Click);
+            // 
             // panelbaocao
             // 
             this.panelbaocao.Controls.Add(this.btnbaocao);
@@ -232,6 +369,23 @@
             this.panelbaocao.Size = new System.Drawing.Size(263, 50);
             this.panelbaocao.TabIndex = 7;
             // 
+            // btnbaocao
+            // 
+            this.btnbaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbaocao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbaocao.ForeColor = System.Drawing.Color.White;
+            this.btnbaocao.Image = global::EFDatabaseFirst.Properties.Resources.report;
+            this.btnbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbaocao.Location = new System.Drawing.Point(-19, -4);
+            this.btnbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnbaocao.Name = "btnbaocao";
+            this.btnbaocao.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnbaocao.Size = new System.Drawing.Size(283, 65);
+            this.btnbaocao.TabIndex = 2;
+            this.btnbaocao.Text = "          Báo cáo";
+            this.btnbaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbaocao.UseVisualStyleBackColor = true;
+            // 
             // panelthoat
             // 
             this.panelthoat.Controls.Add(this.btnthoat);
@@ -240,6 +394,24 @@
             this.panelthoat.Name = "panelthoat";
             this.panelthoat.Size = new System.Drawing.Size(263, 50);
             this.panelthoat.TabIndex = 5;
+            // 
+            // btnthoat
+            // 
+            this.btnthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthoat.ForeColor = System.Drawing.Color.White;
+            this.btnthoat.Image = global::EFDatabaseFirst.Properties.Resources._switch;
+            this.btnthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthoat.Location = new System.Drawing.Point(-19, -4);
+            this.btnthoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnthoat.Size = new System.Drawing.Size(283, 65);
+            this.btnthoat.TabIndex = 2;
+            this.btnthoat.Text = "          Đăng xuất";
+            this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // lbcoder
             // 
@@ -286,6 +458,16 @@
             this.paneluser.Size = new System.Drawing.Size(1278, 66);
             this.paneluser.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EFDatabaseFirst.Properties.Resources.schedulebig;
+            this.pictureBox2.Location = new System.Drawing.Point(985, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -314,187 +496,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::EFDatabaseFirst.Properties.Resources.schedulebig;
-            this.pictureBox2.Location = new System.Drawing.Point(985, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EFDatabaseFirst.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnhoadon
-            // 
-            this.btnhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhoadon.ForeColor = System.Drawing.Color.White;
-            this.btnhoadon.Image = global::EFDatabaseFirst.Properties.Resources.contract;
-            this.btnhoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnhoadon.Location = new System.Drawing.Point(1, -4);
-            this.btnhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnhoadon.Name = "btnhoadon";
-            this.btnhoadon.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnhoadon.Size = new System.Drawing.Size(261, 65);
-            this.btnhoadon.TabIndex = 2;
-            this.btnhoadon.Text = "         Hóa đơn";
-            this.btnhoadon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnhoadon.UseVisualStyleBackColor = true;
-            this.btnhoadon.Click += new System.EventHandler(this.btnhoadon_Click);
-            // 
-            // btnnhanvien
-            // 
-            this.btnnhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnhanvien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnhanvien.ForeColor = System.Drawing.Color.White;
-            this.btnnhanvien.Image = global::EFDatabaseFirst.Properties.Resources.employees;
-            this.btnnhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnhanvien.Location = new System.Drawing.Point(1, -4);
-            this.btnnhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnnhanvien.Name = "btnnhanvien";
-            this.btnnhanvien.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnnhanvien.Size = new System.Drawing.Size(261, 65);
-            this.btnnhanvien.TabIndex = 2;
-            this.btnnhanvien.Text = "         Nhân viên";
-            this.btnnhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnhanvien.UseVisualStyleBackColor = true;
-            this.btnnhanvien.Click += new System.EventHandler(this.btnnhanvien_Click);
-            // 
-            // btnQLxe
-            // 
-            this.btnQLxe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLxe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLxe.ForeColor = System.Drawing.Color.White;
-            this.btnQLxe.Image = global::EFDatabaseFirst.Properties.Resources.transport;
-            this.btnQLxe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLxe.Location = new System.Drawing.Point(-1, -4);
-            this.btnQLxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnQLxe.Name = "btnQLxe";
-            this.btnQLxe.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnQLxe.Size = new System.Drawing.Size(261, 65);
-            this.btnQLxe.TabIndex = 2;
-            this.btnQLxe.Text = "         Danh sách xe";
-            this.btnQLxe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLxe.UseVisualStyleBackColor = true;
-            this.btnQLxe.Click += new System.EventHandler(this.btnQLxe_Click);
-            // 
-            // btntrangchu
-            // 
-            this.btntrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntrangchu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntrangchu.ForeColor = System.Drawing.Color.White;
-            this.btntrangchu.Image = global::EFDatabaseFirst.Properties.Resources.home__1_;
-            this.btntrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btntrangchu.Location = new System.Drawing.Point(-17, -7);
-            this.btntrangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btntrangchu.Name = "btntrangchu";
-            this.btntrangchu.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btntrangchu.Size = new System.Drawing.Size(275, 65);
-            this.btntrangchu.TabIndex = 2;
-            this.btntrangchu.Text = "          Quản lý";
-            this.btntrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btntrangchu.UseVisualStyleBackColor = true;
-            this.btntrangchu.Click += new System.EventHandler(this.btntrangchu_Click);
-            // 
-            // btnQLkhach
-            // 
-            this.btnQLkhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLkhach.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLkhach.ForeColor = System.Drawing.Color.White;
-            this.btnQLkhach.Image = global::EFDatabaseFirst.Properties.Resources.customer_review;
-            this.btnQLkhach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLkhach.Location = new System.Drawing.Point(1, -4);
-            this.btnQLkhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnQLkhach.Name = "btnQLkhach";
-            this.btnQLkhach.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnQLkhach.Size = new System.Drawing.Size(261, 65);
-            this.btnQLkhach.TabIndex = 2;
-            this.btnQLkhach.Text = "         Khách hàng";
-            this.btnQLkhach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLkhach.UseVisualStyleBackColor = true;
-            this.btnQLkhach.Click += new System.EventHandler(this.btnQLkhach_Click);
-            // 
-            // btnyeucau
-            // 
-            this.btnyeucau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnyeucau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnyeucau.ForeColor = System.Drawing.Color.White;
-            this.btnyeucau.Image = global::EFDatabaseFirst.Properties.Resources.key;
-            this.btnyeucau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnyeucau.Location = new System.Drawing.Point(-19, -4);
-            this.btnyeucau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnyeucau.Name = "btnyeucau";
-            this.btnyeucau.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnyeucau.Size = new System.Drawing.Size(283, 65);
-            this.btnyeucau.TabIndex = 2;
-            this.btnyeucau.Text = "          Yêu cầu";
-            this.btnyeucau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnyeucau.UseVisualStyleBackColor = true;
-            this.btnyeucau.Click += new System.EventHandler(this.btnyeucau_Click);
-            // 
-            // btnthuchi
-            // 
-            this.btnthuchi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnthuchi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthuchi.ForeColor = System.Drawing.Color.White;
-            this.btnthuchi.Image = global::EFDatabaseFirst.Properties.Resources.invoice;
-            this.btnthuchi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnthuchi.Location = new System.Drawing.Point(-19, -4);
-            this.btnthuchi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnthuchi.Name = "btnthuchi";
-            this.btnthuchi.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnthuchi.Size = new System.Drawing.Size(281, 65);
-            this.btnthuchi.TabIndex = 2;
-            this.btnthuchi.Text = "          Phiếu thu chi";
-            this.btnthuchi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnthuchi.UseVisualStyleBackColor = true;
-            this.btnthuchi.Click += new System.EventHandler(this.btnthuchi_Click);
-            // 
-            // btnbaocao
-            // 
-            this.btnbaocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbaocao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbaocao.ForeColor = System.Drawing.Color.White;
-            this.btnbaocao.Image = global::EFDatabaseFirst.Properties.Resources.report;
-            this.btnbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbaocao.Location = new System.Drawing.Point(-19, -4);
-            this.btnbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnbaocao.Name = "btnbaocao";
-            this.btnbaocao.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnbaocao.Size = new System.Drawing.Size(283, 65);
-            this.btnbaocao.TabIndex = 2;
-            this.btnbaocao.Text = "          Báo cáo";
-            this.btnbaocao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbaocao.UseVisualStyleBackColor = true;
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthoat.ForeColor = System.Drawing.Color.White;
-            this.btnthoat.Image = global::EFDatabaseFirst.Properties.Resources._switch;
-            this.btnthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnthoat.Location = new System.Drawing.Point(-19, -4);
-            this.btnthoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.btnthoat.Size = new System.Drawing.Size(283, 65);
-            this.btnthoat.TabIndex = 2;
-            this.btnthoat.Text = "          Đăng xuất";
-            this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnthoat.UseVisualStyleBackColor = true;
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
-            // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,6 +513,7 @@
             this.sidebar.ResumeLayout(false);
             this.paneldanhmuc.ResumeLayout(false);
             this.paneldanhmuc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelQL.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelnhanvien.ResumeLayout(false);
@@ -523,10 +525,9 @@
             this.panelbaocao.ResumeLayout(false);
             this.panelthoat.ResumeLayout(false);
             this.paneluser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -20,11 +20,11 @@ namespace EFDatabaseFirst.BUS
         {
             dgv.DataSource = dalPhieu.getPhieu();
         }
-        public bool themPhieu(PHIEUTHUCHI phieu)
+        public bool themPhieu(PHIEUTHUCHI phieu, YEUCAU yeucau, HOADON hoadon)
         {
             try
             {
-                dalPhieu.themPhieu(phieu);
+                dalPhieu.themPhieu(phieu, yeucau, hoadon);
                 return true;
             }
             catch (Exception ex)
@@ -54,5 +54,6 @@ namespace EFDatabaseFirst.BUS
         {
             return dalPhieu.getKhach(makh);
         }
+       
     }
 }

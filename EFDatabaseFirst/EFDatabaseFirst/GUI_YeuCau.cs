@@ -70,8 +70,7 @@ namespace EFDatabaseFirst
             {
                 // Lấy MaXe của hàng được chọn
                 DataGridViewRow row = dgvYC.SelectedRows[0];
-                YEUCAU a = new YEUCAU();
-                a.MaYC = Convert.ToInt16(row.Cells[0].Value.ToString());
+                int a = Convert.ToInt16(row.Cells[0].Value.ToString());
 
                 // Hiển thị hộp thoại xác nhận trước khi xóa
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa yêu cầu này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -92,7 +91,7 @@ namespace EFDatabaseFirst
             }
             else
             {
-                MessageBox.Show("Hãy chọn khách muốn xóa");
+                MessageBox.Show("Hãy chọn yêu cầu muốn xóa");
             }
         }
 
@@ -138,11 +137,11 @@ namespace EFDatabaseFirst
                         busYeuCau.getYeuCau(dgvYC); // refresh datagridview
                         HOADON hd = new HOADON();
                         hd.MaYC = Convert.ToInt32(txtmaYC.Text);
-                        hd.TongTien = gia * (TGthue.Days + 1);
+                        hd.TongTien = gia * TGthue.Days;
                         hd.TrangThai = "Chưa thanh toán";
+                        hd.HangXe = txthangxe.Text;
                         busHoaDon.themHoaDon(hd);
                         MessageBox.Show("Xử lý yêu cầu thành công");
-                        MessageBox.Show(Convert.ToString(TGthue.Days));
                     }
                     else
                     {

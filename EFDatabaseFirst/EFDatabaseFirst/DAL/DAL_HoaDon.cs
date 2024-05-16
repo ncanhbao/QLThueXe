@@ -21,7 +21,7 @@ namespace EFDatabaseFirst.DAL
                 s.MaYC,
                 s.TongTien,
                 s.TrangThai,
-                s.MaXe
+                s.HangXe
             }).ToList();
             return ds;
         }
@@ -35,7 +35,6 @@ namespace EFDatabaseFirst.DAL
 
             var query = from hd in db.HOADONs
                         join yc in db.YEUCAUs on hd.MaYC equals yc.MaYC
-                        join xe in db.XEs on yc.MaXe equals xe.MaXe
                         join kh in db.KHACHes on yc.MaKhach equals kh.MaKhach
                         select new
                         {
@@ -43,9 +42,8 @@ namespace EFDatabaseFirst.DAL
                             hd.MaYC,
                             hd.TongTien,
                             hd.TrangThai,
-                            hd.MaXe,
+                            hd.HangXe,
                             kh.HoTen,
-                            xe.HangXe
                         };
 
             if (!string.IsNullOrEmpty(searchvalue1))
@@ -70,7 +68,7 @@ namespace EFDatabaseFirst.DAL
                 s.MaYC,
                 s.TongTien,
                 s.TrangThai,
-                s.MaXe
+                s.HangXe
             }).ToList();
 
             return ds;
@@ -95,6 +93,27 @@ namespace EFDatabaseFirst.DAL
             var query = db.YEUCAUs.Where(x => x.MaYC == mayc);
             a = query.FirstOrDefault();
             return a;
+        }
+        public HOADON chonHoaDon(int mahd)
+        {
+            HOADON k;
+            var query = db.HOADONs.Where(hd => hd.MaHD == mahd);
+            k = query.FirstOrDefault();
+            return k;
+        }
+        public dynamic getHoaDonChuaTT()
+        {
+            var ds = db.HOADONs
+               .Where(s => s.TrangThai == "Chưa thanh toán")
+               .Select(s => new
+               {
+                   s.MaHD,
+                   s.MaYC,
+                   s.TongTien,
+                   s.TrangThai,
+                   s.HangXe
+               }).ToList();
+            return ds;
         }
     }
 }

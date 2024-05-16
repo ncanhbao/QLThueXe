@@ -181,5 +181,20 @@ namespace EFDatabaseFirst
             panelmain.Controls.Add(Form_HD);
             Form_HD.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_ThongTinUser Form_User = new GUI_ThongTinUser();
+            Form_User.TopLevel = false;
+            Form_User.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_User);
+            Form_User.Show();
+        }
     }
 }

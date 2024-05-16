@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,12 @@ namespace EFDatabaseFirst
     public partial class GUI_Phieu_Them : Form
     {
         BUS_PhieuThuChi busPhieu;
+        BUS_HoaDon busHoaDon;
         public GUI_Phieu_Them()
         {
             InitializeComponent();
             busPhieu = new BUS_PhieuThuChi();
+            busHoaDon = new BUS_HoaDon();
         }
 
         private void btnhuybo_Click(object sender, EventArgs e)
@@ -25,72 +28,67 @@ namespace EFDatabaseFirst
             this.Close();
         }
 
-        private void btnthemKH_Click(object sender, EventArgs e)
-        {
-            GUI_ChonKhach formchonkhach = new GUI_ChonKhach();
-            formchonkhach.ShowDialog();
-
-            if (GUI_ChonKhach.khachthue != null)
-            {
-                txthoten.Text = GUI_ChonKhach.khachthue.HoTen;
-                txtsdt.Text = GUI_ChonKhach.khachthue.SoDT;
-                txtngaysinh.Text = Convert.ToDateTime(GUI_ChonKhach.khachthue.NgaySinh).ToString("dd/MM/yyyy");
-                txtdiachi.Text = GUI_ChonKhach.khachthue.DiaChi;
-                txtgioitinh.Text = GUI_ChonKhach.khachthue.GioiTinh;
-            }
-        }
-
-        private void btnthemxe_Click(object sender, EventArgs e)
-        {
-            GUI_ChonXeTT formchonxe = new GUI_ChonXeTT();
-            formchonxe.ShowDialog();
-
-            if (GUI_ChonXeTT.xett != null)
-            {
-                txthangxe.Text = GUI_ChonXeTT.xett.HangXe;
-                txtbienso.Text = GUI_ChonXeTT.xett.BienSo;
-                txttinhtrang.Text = GUI_ChonXeTT.xett.TinhTrang;
-                txtgia.Text = Convert.ToString(GUI_ChonXeTT.xett.Gia);
-            }
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (GUI_ChonXeTT.xett != null & GUI_ChonKhach.khachthue != null & cbloaiphieu.Text != "" & cbphuongthucTT.Text != "" & txtsotien.Text != "" & txtnoidung.Text != "")
+            if (GUI_ChonHoaDon.hoadon != null & cbloaiphieu.Text != "" & cbphuongthucTT.Text != "" & txtsotien.Text != "" & txtnoidung.Text != "")
             {
-                PHIEUTHUCHI phieu = new PHIEUTHUCHI();
-                phieu.LoaiPhieu = cbloaiphieu.Text;
-                phieu.SoTien = Convert.ToInt32(txtsotien.Text);
-                phieu.NVXuLy = GUI_DangNhap.user.HoTen;
-                phieu.NgayTT = DateTime.Now;
-                phieu.PhuongThucTT = cbphuongthucTT.Text;
-                phieu.NoiDung = txtnoidung.Text;
-                phieu.MaKhach = GUI_ChonKhach.khachthue.MaKhach;
-                phieu.MaXe = GUI_ChonXeTT.xett.MaXe;
-                if (busPhieu.themPhieu(phieu))
+                if(Convert.ToInt32(txtsotien.Text) == Convert.ToInt32(txttongtien.Text))
                 {
-                    MessageBox.Show("Thêm thành công");
-                }
+                    PHIEUTHUCHI phieu = new PHIEUTHUCHI();
+                    YEUCAU yeucau = new YEUCAU();
+                    HOADON hoadon = new HOADON(); 
+                    phieu.LoaiPhieu = cbloaiphieu.Text;
+                    phieu.SoTien = Convert.ToInt32(txtsotien.Text);
+                    phieu.NVXuLy = GUI_DangNhap.user.HoTen;
+                    phieu.NgayTT = DateTime.Now;
+                    phieu.PhuongThucTT = cbphuongthucTT.Text;
+                    phieu.NoiDung = txtnoidung.Text;
+                    phieu.MaKhach = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach;
+                    phieu.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
+                    yeucau.MaYC = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC);
+                    yeucau.MaXe = busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe;
+                    hoadon.MaHD = Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaHD);
+                    if (busPhieu.themPhieu(phieu, yeucau, hoadon))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm ko thành công");
+                    }
+                }    
                 else
                 {
-                    MessageBox.Show("Thêm ko thành công");
-                }
+                    MessageBox.Show("Hãy nhập đúng số tiền cần thanh toán");
+                }    
             }
             else
             {
-                if (GUI_ChonXeTT.xett == null)
+                if (GUI_ChonHoaDon.hoadon == null)
                 {
-                    MessageBox.Show("Bạn chưa chọn xe", "Thiếu dữ liệu");
+                    MessageBox.Show("Bạn chưa chọn hóa đơn", "Thiếu dữ liệu");
                 }
-                if (GUI_ChonKhach.khachthue == null)
-                {
-                    MessageBox.Show("Bạn chưa chọn khách hàng", "Thiếu dữ liệu");
-                }
-                if (GUI_ChonXeTT.xett != null & GUI_ChonKhach.khachthue != null)
+                else
                 {
                     MessageBox.Show("Hãy nhập đầy đủ thông tin", "Chưa điền đủ thông tin");
                 }
+                
             } 
+        }
+
+        private void btnchonHD_Click(object sender, EventArgs e)
+        {
+            GUI_ChonHoaDon formchonhd = new GUI_ChonHoaDon();
+            formchonhd.ShowDialog();
+
+            if (GUI_ChonHoaDon.hoadon != null)
+            {
+                txtmaHD.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.MaHD);
+                txttenKH.Text = busHoaDon.getKhach(busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaKhach).HoTen;
+                txthangxe.Text = busHoaDon.getXe(busHoaDon.getYeuCau(Convert.ToInt32(GUI_ChonHoaDon.hoadon.MaYC)).MaXe).HangXe;
+                txttongtien.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.TongTien);
+                txttrangthai.Text = Convert.ToString(GUI_ChonHoaDon.hoadon.TrangThai);
+            }
         }
     }
 }

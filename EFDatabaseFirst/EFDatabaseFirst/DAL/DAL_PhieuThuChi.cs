@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EFDatabaseFirst.DAL
 {
@@ -29,9 +31,16 @@ namespace EFDatabaseFirst.DAL
             }).ToList();
             return ds;
         }
-        public void themPhieu(PHIEUTHUCHI phieu)
+      
+        public void themPhieu(PHIEUTHUCHI phieu, YEUCAU yeucau, HOADON hoadon)
         {
             db.PHIEUTHUCHIs.Add(phieu);
+            YEUCAU yc = db.YEUCAUs.Find(yeucau.MaYC);
+            yc.TrangThai = "Đã thanh toán";
+            HOADON hd = db.HOADONs.Find(hoadon.MaHD);
+            hd.TrangThai = "Đã thanh toán";
+            XE xe = db.XEs.Find(yeucau.MaXe);
+            xe.TinhTrang = "Chưa thuê";
             db.SaveChanges();
         }
         public void xoaPhieu(PHIEUTHUCHI phieu)

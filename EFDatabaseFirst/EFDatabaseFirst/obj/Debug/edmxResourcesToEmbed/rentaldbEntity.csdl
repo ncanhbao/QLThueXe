@@ -125,8 +125,8 @@
     <Property Name="MaYC" Type="Int32" />
     <Property Name="TongTien" Type="Int32" />
     <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="MaXe" Type="Int32" />
     <NavigationProperty Name="YEUCAU" Relationship="rentaldbModel.FK_HOADON_YEUCAU" FromRole="HOADON" ToRole="YEUCAU" />
+    <Property Name="HangXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="YEUCAU">
     <Key>

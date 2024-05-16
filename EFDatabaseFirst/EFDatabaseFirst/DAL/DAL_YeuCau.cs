@@ -48,9 +48,9 @@ namespace EFDatabaseFirst.DAL
             a = query.FirstOrDefault();
             return a;
         }
-        public void xoaYeuCau(YEUCAU a)
+        public void xoaYeuCau(int mayc)
         {
-            YEUCAU k = db.YEUCAUs.Find(a.MaYC);
+            YEUCAU k = db.YEUCAUs.Find(mayc);
             db.YEUCAUs.Remove(k);
             db.SaveChanges();
         }

@@ -11,14 +11,19 @@ using System.Windows.Forms;
 
 namespace EFDatabaseFirst
 {
-    public partial class GUI_ChonKhach : Form
+    public partial class GUI_ChonHoaDon : Form
     {
-        BUS_Khach busKhach;
-        public static KHACH khachthue;
-        public GUI_ChonKhach()
+        BUS_HoaDon busHoaDon;
+        public static HOADON hoadon;
+        public GUI_ChonHoaDon()
         {
             InitializeComponent();
-            busKhach = new BUS_Khach();
+            busHoaDon = new BUS_HoaDon();
+        }
+
+        private void GUI_ChonHoaDon_Load(object sender, EventArgs e)
+        {
+            busHoaDon.getHoaDonChuaTT(dataGridView1);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -26,29 +31,24 @@ namespace EFDatabaseFirst
             this.Close();
         }
 
-        private void GUI_ChonKhach_Load(object sender, EventArgs e)
-        {
-            busKhach.getKhach(dataGridView1);
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (khachthue != null)
+            if (hoadon != null)
             {
-                MessageBox.Show("Chọn thành công", "Chọn khách hàng");
+                MessageBox.Show("Chọn thành công", "Chọn hóa đơn");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn khách hàng", "Lỗi");
-            } 
+                MessageBox.Show("Bạn chưa chọn hóa đơn", "Lỗi");
+            }
         }
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewRow row = dataGridView1.SelectedRows[0];
-            textBox1.Text = row.Cells[1].Value.ToString();
-            khachthue = busKhach.chonKhach(Convert.ToInt32(row.Cells[0].Value.ToString()));
+            hoadon = busHoaDon.chonHoaDon(Convert.ToInt32(row.Cells[0].Value.ToString()));
+            textBox1.Text = hoadon.MaHD.ToString();
         }
-
     }
 }

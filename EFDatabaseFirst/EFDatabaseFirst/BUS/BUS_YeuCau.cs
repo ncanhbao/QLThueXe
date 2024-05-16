@@ -40,7 +40,7 @@ namespace EFDatabaseFirst.BUS
         {
             return dalYeuCau.getXe(maxe);
         }
-        public bool xoaYeuCau(YEUCAU a)
+        public bool xoaYeuCau(int a)
         {
             try
             {

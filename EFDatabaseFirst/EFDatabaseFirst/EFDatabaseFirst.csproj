@@ -62,6 +62,12 @@
     <Compile Include="BUS\BUS_Xe.cs" />
     <Compile Include="BUS\BUS_YeuCau.cs" />
     <Compile Include="DAL\DAL_HoaDon.cs" />
+    <Compile Include="GUI_ChonHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChonHoaDon.Designer.cs">
+      <DependentUpon>GUI_ChonHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_ChonXeTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="GUI_Phieu_Them.Designer.cs">
       <DependentUpon>GUI_Phieu_Them.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_ThongTinUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ThongTinUser.Designer.cs">
+      <DependentUpon>GUI_ThongTinUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Xe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,9 @@
     <Compile Include="YEUCAU.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_ChonHoaDon.resx">
+      <DependentUpon>GUI_ChonHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_ChonXeTT.resx">
       <DependentUpon>GUI_ChonXeTT.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Phieu_Them.resx">
       <DependentUpon>GUI_Phieu_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ThongTinUser.resx">
+      <DependentUpon>GUI_ThongTinUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Xe.resx">
       <DependentUpon>GUI_Xe.cs</DependentUpon>

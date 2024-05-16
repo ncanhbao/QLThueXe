@@ -18,7 +18,7 @@ namespace EFDatabaseFirst
         public Nullable<int> MaYC { get; set; }
         public Nullable<int> TongTien { get; set; }
         public string TrangThai { get; set; }
-        public Nullable<int> MaXe { get; set; }
+        public string HangXe { get; set; }
     
         public virtual YEUCAU YEUCAU { get; set; }
     }

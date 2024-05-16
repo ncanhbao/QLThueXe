@@ -48,5 +48,13 @@ namespace EFDatabaseFirst.BUS
         {
             return dalHoaDon.getYeuCau(mayc);
         }
+        public HOADON chonHoaDon(int mahd)
+        {
+            return dalHoaDon.chonHoaDon(mahd);
+        }
+        public void getHoaDonChuaTT(DataGridView dgv)
+        {
+            dgv.DataSource = dalHoaDon.getHoaDonChuaTT();
+        }
     }
 }

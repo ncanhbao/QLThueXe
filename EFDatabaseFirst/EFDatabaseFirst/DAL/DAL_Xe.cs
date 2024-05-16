@@ -95,6 +95,20 @@ namespace EFDatabaseFirst.DAL
                }).ToList();
             return ds;
         }
+        public dynamic getXeChuaTT()
+        {
+            var ds = db.XEs
+               .Where(s => s.TinhTrang == "Đã thuê")
+               .Select(s => new
+               {
+                   s.MaXe,
+                   s.HangXe,
+                   s.BienSo,
+                   s.TinhTrang,
+                   s.Gia
+               }).ToList();
+            return ds;
+        }
 
     }
 }

@@ -70,5 +70,9 @@ namespace EFDatabaseFirst.BUS
         {
             dgv.DataSource = dalXe.getXeChuaThue();
         }
+        public void getXeChuaTT(DataGridView dgv)
+        {
+            dgv.DataSource = dalXe.getXeChuaTT();
+        }
     }
 }

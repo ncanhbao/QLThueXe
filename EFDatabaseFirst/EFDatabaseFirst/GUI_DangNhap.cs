@@ -29,7 +29,6 @@ namespace EFDatabaseFirst
                 if (user != null)
                 {
                     GUI_Home home = new GUI_Home();
-                    MessageBox.Show("Đăng nhập thành công", "Đăng nhập hệ thống");
                     home.Show();
                     this.Hide();
                 }

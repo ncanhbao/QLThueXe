@@ -44,6 +44,8 @@
             this.txthoten = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtngaysinh = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmakhach = new System.Windows.Forms.TextBox();
             this.txtSearch2 = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtngaysinh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhach)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -250,6 +250,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // txtngaysinh
+            // 
+            this.txtngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtngaysinh.Location = new System.Drawing.Point(475, 234);
+            this.txtngaysinh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtngaysinh.Name = "txtngaysinh";
+            this.txtngaysinh.Size = new System.Drawing.Size(229, 34);
+            this.txtngaysinh.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(342, 237);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 29);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Ngày sinh:";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -394,26 +414,6 @@
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(342, 237);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 29);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Ngày sinh:";
-            // 
-            // txtngaysinh
-            // 
-            this.txtngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtngaysinh.Location = new System.Drawing.Point(475, 234);
-            this.txtngaysinh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtngaysinh.Name = "txtngaysinh";
-            this.txtngaysinh.Size = new System.Drawing.Size(229, 34);
-            this.txtngaysinh.TabIndex = 19;
             // 
             // GUI_Khach
             // 

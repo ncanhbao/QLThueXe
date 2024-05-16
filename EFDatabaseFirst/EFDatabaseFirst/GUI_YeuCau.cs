@@ -16,11 +16,14 @@ namespace EFDatabaseFirst
     public partial class GUI_YeuCau : Form
     {
         BUS_YeuCau busYeuCau;
-        int count;
+        BUS_HoaDon busHoaDon;
+        int count, gia;
+        TimeSpan TGthue;
         public GUI_YeuCau()
         {
             InitializeComponent();
             busYeuCau = new BUS_YeuCau();
+            busHoaDon = new BUS_HoaDon();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -56,7 +59,9 @@ namespace EFDatabaseFirst
             {
                 txtNVxuly.Text = row.Cells[7].Value.ToString();
                 txtngayxuly.Text = Convert.ToDateTime(row.Cells[8].Value).ToString("dd/MM/yyyy");
-            }    
+            }
+            gia = (int)busYeuCau.getXe(Convert.ToInt32(row.Cells[2].Value)).Gia;
+            TGthue = Convert.ToDateTime(row.Cells[4].Value.ToString()) - Convert.ToDateTime(row.Cells[3].Value.ToString());
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -121,14 +126,28 @@ namespace EFDatabaseFirst
         {
             if (txtmaYC.Text != "")
             {
-                if (busYeuCau.capNhatYeuCau(Convert.ToInt32(txtmaYC.Text)))
+                if (txttrangthai.Text == "Chưa thanh toán")
                 {
-                    MessageBox.Show("Xử lý yêu cầu thành công");
-                    busYeuCau.getYeuCau(dgvYC); // refresh datagridview
+                    MessageBox.Show("Yêu cầu đã được xử lý");
                 }
                 else
                 {
-                    MessageBox.Show("Sửa ko thành công");
+                    if (busYeuCau.capNhatYeuCau(Convert.ToInt32(txtmaYC.Text)))
+                    {
+                        
+                        busYeuCau.getYeuCau(dgvYC); // refresh datagridview
+                        HOADON hd = new HOADON();
+                        hd.MaYC = Convert.ToInt32(txtmaYC.Text);
+                        hd.TongTien = gia * (TGthue.Days + 1);
+                        hd.TrangThai = "Chưa thanh toán";
+                        busHoaDon.themHoaDon(hd);
+                        MessageBox.Show("Xử lý yêu cầu thành công");
+                        MessageBox.Show(Convert.ToString(TGthue.Days));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa ko thành công");
+                    }
                 }
             }   
             else

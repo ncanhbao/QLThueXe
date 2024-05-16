@@ -14,6 +14,12 @@ namespace EFDatabaseFirst
     
     public partial class YEUCAU
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public YEUCAU()
+        {
+            this.HOADONs = new HashSet<HOADON>();
+        }
+    
         public int MaYC { get; set; }
         public int MaKhach { get; set; }
         public int MaXe { get; set; }
@@ -24,6 +30,8 @@ namespace EFDatabaseFirst
         public string NVXuLy { get; set; }
         public Nullable<System.DateTime> ThoiGianXuLy { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOADON> HOADONs { get; set; }
         public virtual KHACH KHACH { get; set; }
         public virtual XE XE { get; set; }
     }

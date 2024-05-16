@@ -55,17 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_HoaDon.cs" />
     <Compile Include="BUS\BUS_Khach.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
+    <Compile Include="BUS\BUS_PhieuThuChi.cs" />
     <Compile Include="BUS\BUS_Xe.cs" />
     <Compile Include="BUS\BUS_YeuCau.cs" />
+    <Compile Include="DAL\DAL_HoaDon.cs" />
+    <Compile Include="GUI_ChonXeTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChonXeTT.Designer.cs">
+      <DependentUpon>GUI_ChonXeTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DAL_Khach.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
+    <Compile Include="DAL\DAL_PhieuThuChi.cs" />
     <Compile Include="DAL\DAL_Xe.cs" />
     <Compile Include="DAL\DAL_YeuCau.cs" />
-    <Compile Include="DATXE.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="GUI_ChonKhach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +90,12 @@
     </Compile>
     <Compile Include="GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_HoaDon.Designer.cs">
+      <DependentUpon>GUI_HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_Home.cs">
       <SubType>Form</SubType>
@@ -114,6 +127,18 @@
     <Compile Include="GUI_NhanVien_Them.Designer.cs">
       <DependentUpon>GUI_NhanVien_Them.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_PhieuThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_PhieuThuChi.Designer.cs">
+      <DependentUpon>GUI_PhieuThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Phieu_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Phieu_Them.Designer.cs">
+      <DependentUpon>GUI_Phieu_Them.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Xe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,10 +163,7 @@
     <Compile Include="GUI_YeuCau_Them.Designer.cs">
       <DependentUpon>GUI_YeuCau_Them.cs</DependentUpon>
     </Compile>
-    <Compile Include="HOADONTT.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HOPDONG.cs">
+    <Compile Include="HOADON.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="KHACH.cs">
@@ -170,24 +192,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
     </Compile>
-    <Compile Include="SOXE.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SUACHUA.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="XE.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="XE_HDTT.cs">
-      <DependentUpon>rentaldbEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="YEUCAU.cs">
       <DependentUpon>rentaldbEntity.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_ChonXeTT.resx">
+      <DependentUpon>GUI_ChonXeTT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_ChonKhach.resx">
       <DependentUpon>GUI_ChonKhach.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_HoaDon.resx">
+      <DependentUpon>GUI_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Home.resx">
       <DependentUpon>GUI_Home.cs</DependentUpon>
@@ -211,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_NhanVien_Them.resx">
       <DependentUpon>GUI_NhanVien_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_PhieuThuChi.resx">
+      <DependentUpon>GUI_PhieuThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Phieu_Them.resx">
+      <DependentUpon>GUI_Phieu_Them.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Xe.resx">
       <DependentUpon>GUI_Xe.cs</DependentUpon>
@@ -294,6 +319,7 @@
       <DependentUpon>rentaldbEntity.edmx</DependentUpon>
       <LastGenOutput>rentaldbEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user2.png" />
     <None Include="Resources\schedulebig.png" />
     <None Include="Resources\schedule.png" />
     <None Include="Resources\contract.png" />

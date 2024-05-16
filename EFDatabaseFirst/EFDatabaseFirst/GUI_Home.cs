@@ -17,9 +17,9 @@ namespace EFDatabaseFirst
         bool panelQLCollapse;
         public GUI_Home()
         {
-            string username = GUI_DangNhap.user.HoTen;
             InitializeComponent();
-            lbuser.Text = "Xin chào, " + username;
+            txtusername.Text = GUI_DangNhap.user.HoTen;
+            lbchucdanh.Text = GUI_DangNhap.user.ChucDanh;
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -150,6 +150,36 @@ namespace EFDatabaseFirst
             Form_YeuCau.Dock = DockStyle.Fill;
             panelmain.Controls.Add(Form_YeuCau);
             Form_YeuCau.Show();
+        }
+
+        private void btnthuchi_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_PhieuThuChi Form_Phieu = new GUI_PhieuThuChi();
+            Form_Phieu.TopLevel = false;
+            Form_Phieu.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_Phieu);
+            Form_Phieu.Show();
+        }
+
+        private void btnhoadon_Click(object sender, EventArgs e)
+        {
+            if (panelmain.Controls.Count > 0)
+            {
+                // Lấy form hiện tại ra khỏi panelMain và đóng nó
+                Form currentForm = panelmain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            GUI_HoaDon Form_HD = new GUI_HoaDon();
+            Form_HD.TopLevel = false;
+            Form_HD.Dock = DockStyle.Fill;
+            panelmain.Controls.Add(Form_HD);
+            Form_HD.Show();
         }
     }
 }

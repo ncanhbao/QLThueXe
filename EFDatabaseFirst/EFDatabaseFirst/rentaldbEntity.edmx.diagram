@@ -4,32 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88584b2333bd4ddaaa43bcf215e4f755" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="rentaldbModel.DATXE" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.HOADONTT" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.HOPDONG" Width="1.5" PointX="8.125" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.KHACH" Width="1.5" PointX="2.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.NHANVIEN" Width="1.5" PointX="16.25" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.SOXE" Width="1.5" PointX="13" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.SUACHUA" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+      <Diagram DiagramId="88584b2333bd4ddaaa43bcf215e4f755" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="rentaldbModel.KHACH" Width="1.5" PointX="21.125" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="rentaldbModel.NHANVIEN" Width="1.5" PointX="18.375" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="rentaldbModel.XE" Width="1.5" PointX="20.5" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="rentaldbModel.XE_HDTT" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
-        <AssociationConnector Association="rentaldbModel.FK_DATXE_KHACH" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_DATXE_XE" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_HOADONTT_HOPDONG" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_XE_HDTT_HOADONTT" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_HOPDONG_KHACH" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_SOXE_HOPDONG" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_SOXE_XE" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_SUACHUA_XE" ManuallyRouted="false" />
-        <AssociationConnector Association="rentaldbModel.FK_XE_HDTT_XE" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="rentaldbModel.YEUCAU" Width="1.5" PointX="22.75" PointY="5.125" />
-        <AssociationConnector Association="rentaldbModel.FK_YEUCAU_KHACH" />
-        <AssociationConnector Association="rentaldbModel.FK_YEUCAU_XE" />
         <EntityTypeShape EntityType="rentaldbModel.sysdiagram" Width="1.5" PointX="4.375" PointY="0.75" />
-        <EntityTypeShape EntityType="rentaldbModel.PHIEUTHUCHI" Width="1.5" PointX="25.75" PointY="5" />
+        <EntityTypeShape EntityType="rentaldbModel.PHIEUTHUCHI" Width="1.5" PointX="28.375" PointY="3.875" />
         <AssociationConnector Association="rentaldbModel.FK_PHIEUTHUCHI_KHACH" />
         <AssociationConnector Association="rentaldbModel.FK_PHIEUTHUCHI_XE" />
+        <EntityTypeShape EntityType="rentaldbModel.HOADON" Width="1.5" PointX="25.625" PointY="6" />
+        <EntityTypeShape EntityType="rentaldbModel.YEUCAU" Width="1.5" PointX="23.375" PointY="5.375" />
+        <AssociationConnector Association="rentaldbModel.FK_HOADON_YEUCAU" />
+        <AssociationConnector Association="rentaldbModel.FK_YEUCAU_KHACH" />
+        <AssociationConnector Association="rentaldbModel.FK_YEUCAU_XE" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

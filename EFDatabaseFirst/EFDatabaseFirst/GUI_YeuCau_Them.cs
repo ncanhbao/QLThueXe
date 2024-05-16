@@ -81,15 +81,15 @@ namespace EFDatabaseFirst
             {
                 if (GUI_ChonKhach.khachthue == null)
                 {
-                    MessageBox.Show("Bạn chưa thêm khách hàng", "Lỗi");
+                    MessageBox.Show("Bạn chưa thêm khách hàng", "Thiếu dữ liệu");
                 }
                 if (GUI_ChonXe.xethue == null)
                 {
-                    MessageBox.Show("Bạn chưa chọn xe", "Lỗi");
+                    MessageBox.Show("Bạn chưa chọn xe", "Thiếu dữ liệu");
                 }
                 if (dtpngaytra.Value <= dtpngaylay.Value)
                 {
-                    MessageBox.Show("Thời gian thuê không hợp lệ", "Lỗi");
+                    MessageBox.Show("Thời gian thuê không hợp lệ", "Dữ liệu không hợp lệ");
                 }    
             }
            

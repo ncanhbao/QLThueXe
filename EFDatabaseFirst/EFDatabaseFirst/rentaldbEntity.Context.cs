@@ -25,17 +25,12 @@ namespace EFDatabaseFirst
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DATXE> DATXEs { get; set; }
-        public virtual DbSet<HOADONTT> HOADONTTs { get; set; }
-        public virtual DbSet<HOPDONG> HOPDONGs { get; set; }
         public virtual DbSet<KHACH> KHACHes { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
-        public virtual DbSet<SOXE> SOXEs { get; set; }
-        public virtual DbSet<SUACHUA> SUACHUAs { get; set; }
         public virtual DbSet<XE> XEs { get; set; }
-        public virtual DbSet<XE_HDTT> XE_HDTT { get; set; }
-        public virtual DbSet<YEUCAU> YEUCAUs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
+        public virtual DbSet<HOADON> HOADONs { get; set; }
+        public virtual DbSet<YEUCAU> YEUCAUs { get; set; }
     }
 }

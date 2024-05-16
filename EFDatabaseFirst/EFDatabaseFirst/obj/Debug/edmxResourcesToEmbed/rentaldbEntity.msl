@@ -1,51 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="rentaldbModelStoreContainer" CdmEntityContainer="rentaldbEntities">
-    <EntitySetMapping Name="DATXEs">
-      <EntityTypeMapping TypeName="rentaldbModel.DATXE">
-        <MappingFragment StoreEntitySet="DATXE">
-          <ScalarProperty Name="NgayDatXe" ColumnName="NgayDatXe" />
-          <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="SoLuongDat" ColumnName="SoLuongDat" />
-          <ScalarProperty Name="NgayHenLay" ColumnName="NgayHenLay" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HOADONTTs">
-      <EntityTypeMapping TypeName="rentaldbModel.HOADONTT">
-        <MappingFragment StoreEntitySet="HOADONTT">
-          <ScalarProperty Name="SoHDTT" ColumnName="SoHDTT" />
-          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-          <ScalarProperty Name="HinhThucTT" ColumnName="HinhThucTT" />
-          <ScalarProperty Name="TongXeThue" ColumnName="TongXeThue" />
-          <ScalarProperty Name="TraTruoc" ColumnName="TraTruoc" />
-          <ScalarProperty Name="PhiPS" ColumnName="PhiPS" />
-          <ScalarProperty Name="LyDo" ColumnName="LyDo" />
-          <ScalarProperty Name="TongThanhToan" ColumnName="TongThanhToan" />
-          <ScalarProperty Name="SoTienNop" ColumnName="SoTienNop" />
-          <ScalarProperty Name="TenLaiXe" ColumnName="TenLaiXe" />
-          <ScalarProperty Name="TenKeToan" ColumnName="TenKeToan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HOPDONGs">
-      <EntityTypeMapping TypeName="rentaldbModel.HOPDONG">
-        <MappingFragment StoreEntitySet="HOPDONG">
-          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-          <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-          <ScalarProperty Name="NDCongViec" ColumnName="NDCongViec" />
-          <ScalarProperty Name="TrachNhiem" ColumnName="TrachNhiem" />
-          <ScalarProperty Name="DonGia_HTTT" ColumnName="DonGia&amp;HTTT" />
-          <ScalarProperty Name="DKCuThe" ColumnName="DKCuThe" />
-          <ScalarProperty Name="DKChung" ColumnName="DKChung" />
-          <ScalarProperty Name="TienTamUng" ColumnName="TienTamUng" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="KHACHes">
       <EntityTypeMapping TypeName="rentaldbModel.KHACH">
         <MappingFragment StoreEntitySet="KHACH">
@@ -72,29 +27,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SOXEs">
-      <EntityTypeMapping TypeName="rentaldbModel.SOXE">
-        <MappingFragment StoreEntitySet="SOXE">
-          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
-          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-          <ScalarProperty Name="TienThue" ColumnName="TienThue" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SUACHUAs">
-      <EntityTypeMapping TypeName="rentaldbModel.SUACHUA">
-        <MappingFragment StoreEntitySet="SUACHUA">
-          <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-          <ScalarProperty Name="NgaySuaXong" ColumnName="NgaySuaXong" />
-          <ScalarProperty Name="GhịChu" ColumnName="GhịChu" />
-          <ScalarProperty Name="TienChiPhi" ColumnName="TienChiPhi" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="XEs">
       <EntityTypeMapping TypeName="rentaldbModel.XE">
         <MappingFragment StoreEntitySet="XE">
@@ -103,33 +35,6 @@
           <ScalarProperty Name="HangXe" ColumnName="HangXe" />
           <ScalarProperty Name="BienSo" ColumnName="BienSo" />
           <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="XE_HDTT">
-      <EntityTypeMapping TypeName="rentaldbModel.XE_HDTT">
-        <MappingFragment StoreEntitySet="XE_HDTT">
-          <ScalarProperty Name="SoHDTT" ColumnName="SoHDTT" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="NgayNhanXe" ColumnName="NgayNhanXe" />
-          <ScalarProperty Name="NgayTraXe" ColumnName="NgayTraXe" />
-          <ScalarProperty Name="Gia" ColumnName="Gia" />
-          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="YEUCAUs">
-      <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
-        <MappingFragment StoreEntitySet="YEUCAU">
-          <ScalarProperty Name="ThoiGianXuLy" ColumnName="ThoiGianXuLy" />
-          <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
-          <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
-          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-          <ScalarProperty Name="NgayLay" ColumnName="NgayLay" />
-          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-          <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -156,6 +61,32 @@
           <ScalarProperty Name="SoTien" ColumnName="SoTien" />
           <ScalarProperty Name="LoaiPhieu" ColumnName="LoaiPhieu" />
           <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="rentaldbModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEUCAUs">
+      <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
+        <MappingFragment StoreEntitySet="YEUCAU">
+          <ScalarProperty Name="ThoiGianXuLy" ColumnName="ThoiGianXuLy" />
+          <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
+          <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="NgayLay" ColumnName="NgayLay" />
+          <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+          <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

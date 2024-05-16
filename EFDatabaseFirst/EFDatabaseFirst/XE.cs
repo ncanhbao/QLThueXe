@@ -17,12 +17,8 @@ namespace EFDatabaseFirst
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public XE()
         {
-            this.DATXEs = new HashSet<DATXE>();
-            this.SOXEs = new HashSet<SOXE>();
-            this.SUACHUAs = new HashSet<SUACHUA>();
-            this.XE_HDTT = new HashSet<XE_HDTT>();
-            this.YEUCAUs = new HashSet<YEUCAU>();
             this.PHIEUTHUCHIs = new HashSet<PHIEUTHUCHI>();
+            this.YEUCAUs = new HashSet<YEUCAU>();
         }
     
         public int MaXe { get; set; }
@@ -32,16 +28,8 @@ namespace EFDatabaseFirst
         public Nullable<int> Gia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DATXE> DATXEs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SOXE> SOXEs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUACHUA> SUACHUAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<XE_HDTT> XE_HDTT { get; set; }
+        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YEUCAU> YEUCAUs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
     }
 }

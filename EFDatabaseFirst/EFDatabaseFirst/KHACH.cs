@@ -17,10 +17,8 @@ namespace EFDatabaseFirst
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACH()
         {
-            this.DATXEs = new HashSet<DATXE>();
-            this.HOPDONGs = new HashSet<HOPDONG>();
-            this.YEUCAUs = new HashSet<YEUCAU>();
             this.PHIEUTHUCHIs = new HashSet<PHIEUTHUCHI>();
+            this.YEUCAUs = new HashSet<YEUCAU>();
         }
     
         public int MaKhach { get; set; }
@@ -31,12 +29,8 @@ namespace EFDatabaseFirst
         public Nullable<System.DateTime> NgaySinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DATXE> DATXEs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOPDONG> HOPDONGs { get; set; }
+        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YEUCAU> YEUCAUs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTHUCHI> PHIEUTHUCHIs { get; set; }
     }
 }

@@ -24,3 +24,7 @@ D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Xe_Them.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ChonKhach.resources
 D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ChonXe.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_PhieuThuChi.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_Phieu_Them.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_ChonXeTT.resources
+D:\LTCSDL\QLThueXe\EFDatabaseFirst\EFDatabaseFirst\obj\Debug\EFDatabaseFirst.GUI_HoaDon.resources

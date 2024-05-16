@@ -5,49 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="rentaldbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="DATXE">
+        <EntityType Name="HOADON">
           <Key>
-            <PropertyRef Name="NgayDatXe" />
-            <PropertyRef Name="MaKhach" />
-            <PropertyRef Name="MaXe" />
+            <PropertyRef Name="MaHD" />
           </Key>
-          <Property Name="NgayDatXe" Type="date" Nullable="false" />
-          <Property Name="MaKhach" Type="int" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="SoLuongDat" Type="int" />
-          <Property Name="NgayHenLay" Type="date" />
-          <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="HOADONTT">
-          <Key>
-            <PropertyRef Name="SoHDTT" />
-          </Key>
-          <Property Name="SoHDTT" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="SoHD" Type="nchar" MaxLength="10" />
-          <Property Name="Ngay" Type="date" />
-          <Property Name="HinhThucTT" Type="nvarchar" MaxLength="50" />
-          <Property Name="TongXeThue" Type="int" />
-          <Property Name="TraTruoc" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="PhiPS" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="LyDo" Type="nvarchar" MaxLength="50" />
-          <Property Name="TongThanhToan" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="SoTienNop" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="TenLaiXe" Type="nvarchar" MaxLength="50" />
-          <Property Name="TenKeToan" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="HOPDONG">
-          <Key>
-            <PropertyRef Name="SoHD" />
-          </Key>
-          <Property Name="SoHD" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Ngay" Type="date" />
-          <Property Name="MaKhach" Type="int" />
-          <Property Name="NDCongViec" Type="nvarchar" MaxLength="50" />
-          <Property Name="TrachNhiem" Type="nvarchar" MaxLength="50" />
-          <Property Name="DonGia&amp;HTTT" Type="nvarchar" MaxLength="50" />
-          <Property Name="DKCuThe" Type="nvarchar" MaxLength="50" />
-          <Property Name="DKChung" Type="nvarchar" MaxLength="50" />
-          <Property Name="TienTamUng" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaYC" Type="int" />
+          <Property Name="TongTien" Type="int" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaXe" Type="int" />
         </EntityType>
         <EntityType Name="KHACH">
           <Key>
@@ -87,29 +53,6 @@
           <Property Name="MaKhach" Type="int" />
           <Property Name="MaXe" Type="int" />
         </EntityType>
-        <EntityType Name="SOXE">
-          <Key>
-            <PropertyRef Name="SoHD" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="SoHD" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="NgayNhan" Type="date" />
-          <Property Name="NgayTra" Type="date" />
-          <Property Name="TienThue" Type="decimal" Precision="18" Scale="0" />
-        </EntityType>
-        <EntityType Name="SUACHUA">
-          <Key>
-            <PropertyRef Name="NgaySua" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="NgaySua" Type="date" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
-          <Property Name="NgaySuaXong" Type="date" />
-          <Property Name="GhịChu" Type="nvarchar" MaxLength="50" />
-          <Property Name="TienChiPhi" Type="decimal" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -130,18 +73,6 @@
           <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
           <Property Name="Gia" Type="int" />
         </EntityType>
-        <EntityType Name="XE_HDTT">
-          <Key>
-            <PropertyRef Name="SoHDTT" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="SoHDTT" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaXe" Type="int" Nullable="false" />
-          <Property Name="NgayNhanXe" Type="date" />
-          <Property Name="NgayTraXe" Type="date" />
-          <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="YEUCAU">
           <Key>
             <PropertyRef Name="MaYC" />
@@ -156,51 +87,15 @@
           <Property Name="NVXuLy" Type="nvarchar" MaxLength="50" />
           <Property Name="ThoiGianXuLy" Type="datetime" />
         </EntityType>
-        <Association Name="FK_DATXE_KHACH">
-          <End Role="KHACH" Type="Self.KHACH" Multiplicity="1" />
-          <End Role="DATXE" Type="Self.DATXE" Multiplicity="*" />
+        <Association Name="FK_HOADON_YEUCAU">
+          <End Role="YEUCAU" Type="Self.YEUCAU" Multiplicity="0..1" />
+          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="KHACH">
-              <PropertyRef Name="MaKhach" />
+            <Principal Role="YEUCAU">
+              <PropertyRef Name="MaYC" />
             </Principal>
-            <Dependent Role="DATXE">
-              <PropertyRef Name="MaKhach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DATXE_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="DATXE" Type="Self.DATXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="DATXE">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HOADONTT_HOPDONG">
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="0..1" />
-          <End Role="HOADONTT" Type="Self.HOADONTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOPDONG">
-              <PropertyRef Name="SoHD" />
-            </Principal>
-            <Dependent Role="HOADONTT">
-              <PropertyRef Name="SoHD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HOPDONG_KHACH">
-          <End Role="KHACH" Type="Self.KHACH" Multiplicity="0..1" />
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACH">
-              <PropertyRef Name="MaKhach" />
-            </Principal>
-            <Dependent Role="HOPDONG">
-              <PropertyRef Name="MaKhach" />
+            <Dependent Role="HOADON">
+              <PropertyRef Name="MaYC" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -224,66 +119,6 @@
               <PropertyRef Name="MaXe" />
             </Principal>
             <Dependent Role="PHIEUTHUCHI">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SOXE_HOPDONG">
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="1" />
-          <End Role="SOXE" Type="Self.SOXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOPDONG">
-              <PropertyRef Name="SoHD" />
-            </Principal>
-            <Dependent Role="SOXE">
-              <PropertyRef Name="SoHD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SOXE_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="SOXE" Type="Self.SOXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="SOXE">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SUACHUA_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="SUACHUA" Type="Self.SUACHUA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="SUACHUA">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XE_HDTT_HOADONTT">
-          <End Role="HOADONTT" Type="Self.HOADONTT" Multiplicity="1" />
-          <End Role="XE_HDTT" Type="Self.XE_HDTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOADONTT">
-              <PropertyRef Name="SoHDTT" />
-            </Principal>
-            <Dependent Role="XE_HDTT">
-              <PropertyRef Name="SoHDTT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XE_HDTT_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XE_HDTT" Type="Self.XE_HDTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XE_HDTT">
               <PropertyRef Name="MaXe" />
             </Dependent>
           </ReferentialConstraint>
@@ -313,33 +148,16 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="rentaldbModelStoreContainer">
-          <EntitySet Name="DATXE" EntityType="Self.DATXE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HOADONTT" EntityType="Self.HOADONTT" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HOPDONG" EntityType="Self.HOPDONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACH" EntityType="Self.KHACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUTHUCHI" EntityType="Self.PHIEUTHUCHI" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SOXE" EntityType="Self.SOXE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SUACHUA" EntityType="Self.SUACHUA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YEUCAU" EntityType="Self.YEUCAU" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_DATXE_KHACH" Association="Self.FK_DATXE_KHACH">
-            <End Role="KHACH" EntitySet="KHACH" />
-            <End Role="DATXE" EntitySet="DATXE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DATXE_XE" Association="Self.FK_DATXE_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="DATXE" EntitySet="DATXE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOADONTT_HOPDONG" Association="Self.FK_HOADONTT_HOPDONG">
-            <End Role="HOPDONG" EntitySet="HOPDONG" />
-            <End Role="HOADONTT" EntitySet="HOADONTT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOPDONG_KHACH" Association="Self.FK_HOPDONG_KHACH">
-            <End Role="KHACH" EntitySet="KHACH" />
-            <End Role="HOPDONG" EntitySet="HOPDONG" />
+          <AssociationSet Name="FK_HOADON_YEUCAU" Association="Self.FK_HOADON_YEUCAU">
+            <End Role="YEUCAU" EntitySet="YEUCAU" />
+            <End Role="HOADON" EntitySet="HOADON" />
           </AssociationSet>
           <AssociationSet Name="FK_PHIEUTHUCHI_KHACH" Association="Self.FK_PHIEUTHUCHI_KHACH">
             <End Role="KHACH" EntitySet="KHACH" />
@@ -348,26 +166,6 @@
           <AssociationSet Name="FK_PHIEUTHUCHI_XE" Association="Self.FK_PHIEUTHUCHI_XE">
             <End Role="XE" EntitySet="XE" />
             <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHI" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SOXE_HOPDONG" Association="Self.FK_SOXE_HOPDONG">
-            <End Role="HOPDONG" EntitySet="HOPDONG" />
-            <End Role="SOXE" EntitySet="SOXE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SOXE_XE" Association="Self.FK_SOXE_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="SOXE" EntitySet="SOXE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SUACHUA_XE" Association="Self.FK_SUACHUA_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="SUACHUA" EntitySet="SUACHUA" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XE_HDTT_HOADONTT" Association="Self.FK_XE_HDTT_HOADONTT">
-            <End Role="HOADONTT" EntitySet="HOADONTT" />
-            <End Role="XE_HDTT" EntitySet="XE_HDTT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XE_HDTT_XE" Association="Self.FK_XE_HDTT_XE">
-            <End Role="XE" EntitySet="XE" />
-            <End Role="XE_HDTT" EntitySet="XE_HDTT" />
           </AssociationSet>
           <AssociationSet Name="FK_YEUCAU_KHACH" Association="Self.FK_YEUCAU_KHACH">
             <End Role="KHACH" EntitySet="KHACH" />
@@ -382,57 +180,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="rentaldbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="DATXE">
-          <Key>
-            <PropertyRef Name="NgayDatXe" />
-            <PropertyRef Name="MaKhach" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="NgayDatXe" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MaKhach" Type="Int32" Nullable="false" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="SoLuongDat" Type="Int32" />
-          <Property Name="NgayHenLay" Type="DateTime" Precision="0" />
-          <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="KHACH" Relationship="Self.FK_DATXE_KHACH" FromRole="DATXE" ToRole="KHACH" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_DATXE_XE" FromRole="DATXE" ToRole="XE" />
-        </EntityType>
-        <EntityType Name="HOADONTT">
-          <Key>
-            <PropertyRef Name="SoHDTT" />
-          </Key>
-          <Property Name="SoHDTT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="SoHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Ngay" Type="DateTime" Precision="0" />
-          <Property Name="HinhThucTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TongXeThue" Type="Int32" />
-          <Property Name="TraTruoc" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="PhiPS" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="LyDo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TongThanhToan" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="SoTienNop" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="TenLaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TenKeToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="HOPDONG" Relationship="Self.FK_HOADONTT_HOPDONG" FromRole="HOADONTT" ToRole="HOPDONG" />
-          <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_HOADONTT" FromRole="HOADONTT" ToRole="XE_HDTT" />
-        </EntityType>
-        <EntityType Name="HOPDONG">
-          <Key>
-            <PropertyRef Name="SoHD" />
-          </Key>
-          <Property Name="SoHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Ngay" Type="DateTime" Precision="0" />
-          <Property Name="MaKhach" Type="Int32" />
-          <Property Name="NDCongViec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TrachNhiem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DonGia_HTTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DKCuThe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DKChung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TienTamUng" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="HOADONTTs" Relationship="Self.FK_HOADONTT_HOPDONG" FromRole="HOPDONG" ToRole="HOADONTT" />
-          <NavigationProperty Name="KHACH" Relationship="Self.FK_HOPDONG_KHACH" FromRole="HOPDONG" ToRole="KHACH" />
-          <NavigationProperty Name="SOXEs" Relationship="Self.FK_SOXE_HOPDONG" FromRole="HOPDONG" ToRole="SOXE" />
-        </EntityType>
         <EntityType Name="KHACH">
           <Key>
             <PropertyRef Name="MaKhach" />
@@ -441,12 +188,10 @@
           <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="SoDT" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="DATXEs" Relationship="Self.FK_DATXE_KHACH" FromRole="KHACH" ToRole="DATXE" />
-          <NavigationProperty Name="HOPDONGs" Relationship="Self.FK_HOPDONG_KHACH" FromRole="KHACH" ToRole="HOPDONG" />
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="KHACH" ToRole="YEUCAU" />
           <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_KHACH" FromRole="KHACH" ToRole="PHIEUTHUCHI" />
+          <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="KHACH" ToRole="YEUCAU" />
         </EntityType>
         <EntityType Name="NHANVIEN">
           <Key>
@@ -461,32 +206,6 @@
           <Property Name="ChucDanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="SOXE">
-          <Key>
-            <PropertyRef Name="SoHD" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="SoHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="NgayNhan" Type="DateTime" Precision="0" />
-          <Property Name="NgayTra" Type="DateTime" Precision="0" />
-          <Property Name="TienThue" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="HOPDONG" Relationship="Self.FK_SOXE_HOPDONG" FromRole="SOXE" ToRole="HOPDONG" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_SOXE_XE" FromRole="SOXE" ToRole="XE" />
-        </EntityType>
-        <EntityType Name="SUACHUA">
-          <Key>
-            <PropertyRef Name="NgaySua" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="NgaySua" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgaySuaXong" Type="DateTime" Precision="0" />
-          <Property Name="GhịChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TienChiPhi" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_SUACHUA_XE" FromRole="SUACHUA" ToRole="XE" />
-        </EntityType>
         <EntityType Name="XE">
           <Key>
             <PropertyRef Name="MaXe" />
@@ -495,191 +214,14 @@
           <Property Name="HangXe" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="BienSo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DATXEs" Relationship="Self.FK_DATXE_XE" FromRole="XE" ToRole="DATXE" />
-          <NavigationProperty Name="SOXEs" Relationship="Self.FK_SOXE_XE" FromRole="XE" ToRole="SOXE" />
-          <NavigationProperty Name="SUACHUAs" Relationship="Self.FK_SUACHUA_XE" FromRole="XE" ToRole="SUACHUA" />
-          <NavigationProperty Name="XE_HDTT" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE" ToRole="XE_HDTT" />
           <Property Name="Gia" Type="Int32" />
-          <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="XE" ToRole="YEUCAU" />
           <NavigationProperty Name="PHIEUTHUCHIs" Relationship="rentaldbModel.FK_PHIEUTHUCHI_XE" FromRole="XE" ToRole="PHIEUTHUCHI" />
+          <NavigationProperty Name="YEUCAUs" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="XE" ToRole="YEUCAU" />
           </EntityType>
-        <EntityType Name="XE_HDTT">
-          <Key>
-            <PropertyRef Name="SoHDTT" />
-            <PropertyRef Name="MaXe" />
-          </Key>
-          <Property Name="SoHDTT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="NgayNhanXe" Type="DateTime" Precision="0" />
-          <Property Name="NgayTraXe" Type="DateTime" Precision="0" />
-          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="HOADONTT" Relationship="Self.FK_XE_HDTT_HOADONTT" FromRole="XE_HDTT" ToRole="HOADONTT" />
-          <NavigationProperty Name="XE" Relationship="Self.FK_XE_HDTT_XE" FromRole="XE_HDTT" ToRole="XE" />
-        </EntityType>
-        <Association Name="FK_DATXE_KHACH">
-          <End Role="KHACH" Type="Self.KHACH" Multiplicity="1" />
-          <End Role="DATXE" Type="Self.DATXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACH">
-              <PropertyRef Name="MaKhach" />
-            </Principal>
-            <Dependent Role="DATXE">
-              <PropertyRef Name="MaKhach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DATXE_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="DATXE" Type="Self.DATXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="DATXE">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HOADONTT_HOPDONG">
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="0..1" />
-          <End Role="HOADONTT" Type="Self.HOADONTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOPDONG">
-              <PropertyRef Name="SoHD" />
-            </Principal>
-            <Dependent Role="HOADONTT">
-              <PropertyRef Name="SoHD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XE_HDTT_HOADONTT">
-          <End Role="HOADONTT" Type="Self.HOADONTT" Multiplicity="1" />
-          <End Role="XE_HDTT" Type="Self.XE_HDTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOADONTT">
-              <PropertyRef Name="SoHDTT" />
-            </Principal>
-            <Dependent Role="XE_HDTT">
-              <PropertyRef Name="SoHDTT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HOPDONG_KHACH">
-          <End Role="KHACH" Type="Self.KHACH" Multiplicity="0..1" />
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACH">
-              <PropertyRef Name="MaKhach" />
-            </Principal>
-            <Dependent Role="HOPDONG">
-              <PropertyRef Name="MaKhach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SOXE_HOPDONG">
-          <End Role="HOPDONG" Type="Self.HOPDONG" Multiplicity="1" />
-          <End Role="SOXE" Type="Self.SOXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HOPDONG">
-              <PropertyRef Name="SoHD" />
-            </Principal>
-            <Dependent Role="SOXE">
-              <PropertyRef Name="SoHD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SOXE_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="SOXE" Type="Self.SOXE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="SOXE">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SUACHUA_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="SUACHUA" Type="Self.SUACHUA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="SUACHUA">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_XE_HDTT_XE">
-          <End Role="XE" Type="Self.XE" Multiplicity="1" />
-          <End Role="XE_HDTT" Type="Self.XE_HDTT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="XE_HDTT">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="rentaldbEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DATXEs" EntityType="Self.DATXE" />
-          <EntitySet Name="HOADONTTs" EntityType="Self.HOADONTT" />
-          <EntitySet Name="HOPDONGs" EntityType="Self.HOPDONG" />
           <EntitySet Name="KHACHes" EntityType="Self.KHACH" />
           <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
-          <EntitySet Name="SOXEs" EntityType="Self.SOXE" />
-          <EntitySet Name="SUACHUAs" EntityType="Self.SUACHUA" />
           <EntitySet Name="XEs" EntityType="Self.XE" />
-          <EntitySet Name="XE_HDTT" EntityType="Self.XE_HDTT" />
-          <AssociationSet Name="FK_DATXE_KHACH" Association="Self.FK_DATXE_KHACH">
-            <End Role="KHACH" EntitySet="KHACHes" />
-            <End Role="DATXE" EntitySet="DATXEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DATXE_XE" Association="Self.FK_DATXE_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="DATXE" EntitySet="DATXEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOADONTT_HOPDONG" Association="Self.FK_HOADONTT_HOPDONG">
-            <End Role="HOPDONG" EntitySet="HOPDONGs" />
-            <End Role="HOADONTT" EntitySet="HOADONTTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XE_HDTT_HOADONTT" Association="Self.FK_XE_HDTT_HOADONTT">
-            <End Role="HOADONTT" EntitySet="HOADONTTs" />
-            <End Role="XE_HDTT" EntitySet="XE_HDTT" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOPDONG_KHACH" Association="Self.FK_HOPDONG_KHACH">
-            <End Role="KHACH" EntitySet="KHACHes" />
-            <End Role="HOPDONG" EntitySet="HOPDONGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SOXE_HOPDONG" Association="Self.FK_SOXE_HOPDONG">
-            <End Role="HOPDONG" EntitySet="HOPDONGs" />
-            <End Role="SOXE" EntitySet="SOXEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SOXE_XE" Association="Self.FK_SOXE_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="SOXE" EntitySet="SOXEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SUACHUA_XE" Association="Self.FK_SUACHUA_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="SUACHUA" EntitySet="SUACHUAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_XE_HDTT_XE" Association="Self.FK_XE_HDTT_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="XE_HDTT" EntitySet="XE_HDTT" />
-          </AssociationSet>
-          <EntitySet Name="YEUCAUs" EntityType="rentaldbModel.YEUCAU" />
-          <AssociationSet Name="FK_YEUCAU_KHACH" Association="rentaldbModel.FK_YEUCAU_KHACH">
-            <End Role="KHACH" EntitySet="KHACHes" />
-            <End Role="YEUCAU" EntitySet="YEUCAUs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_YEUCAU_XE" Association="rentaldbModel.FK_YEUCAU_XE">
-            <End Role="XE" EntitySet="XEs" />
-            <End Role="YEUCAU" EntitySet="YEUCAUs" />
-          </AssociationSet>
           <EntitySet Name="sysdiagrams" EntityType="rentaldbModel.sysdiagram" />
           <EntitySet Name="PHIEUTHUCHIs" EntityType="rentaldbModel.PHIEUTHUCHI" />
           <AssociationSet Name="FK_PHIEUTHUCHI_KHACH" Association="rentaldbModel.FK_PHIEUTHUCHI_KHACH">
@@ -690,47 +232,21 @@
             <End Role="XE" EntitySet="XEs" />
             <End Role="PHIEUTHUCHI" EntitySet="PHIEUTHUCHIs" />
           </AssociationSet>
+          <EntitySet Name="HOADONs" EntityType="rentaldbModel.HOADON" />
+          <EntitySet Name="YEUCAUs" EntityType="rentaldbModel.YEUCAU" />
+          <AssociationSet Name="FK_HOADON_YEUCAU" Association="rentaldbModel.FK_HOADON_YEUCAU">
+            <End Role="YEUCAU" EntitySet="YEUCAUs" />
+            <End Role="HOADON" EntitySet="HOADONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_YEUCAU_KHACH" Association="rentaldbModel.FK_YEUCAU_KHACH">
+            <End Role="KHACH" EntitySet="KHACHes" />
+            <End Role="YEUCAU" EntitySet="YEUCAUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_YEUCAU_XE" Association="rentaldbModel.FK_YEUCAU_XE">
+            <End Role="XE" EntitySet="XEs" />
+            <End Role="YEUCAU" EntitySet="YEUCAUs" />
+          </AssociationSet>
           </EntityContainer>
-        <EntityType Name="YEUCAU">
-          <Key>
-            <PropertyRef Name="MaYC" />
-          </Key>
-          <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaKhach" Type="Int32" Nullable="false" />
-          <Property Name="MaXe" Type="Int32" Nullable="false" />
-          <Property Name="NgayLay" Type="DateTime" Precision="3" />
-          <Property Name="NgayTra" Type="DateTime" Precision="3" />
-          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgayTaoYC" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="YEUCAU" ToRole="KHACH" />
-          <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="YEUCAU" ToRole="XE" />
-          <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ThoiGianXuLy" Type="DateTime" Precision="3" />
-        </EntityType>
-        <Association Name="FK_YEUCAU_KHACH">
-          <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="1" />
-          <End Type="rentaldbModel.YEUCAU" Role="YEUCAU" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KHACH">
-              <PropertyRef Name="MaKhach" />
-            </Principal>
-            <Dependent Role="YEUCAU">
-              <PropertyRef Name="MaKhach" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_YEUCAU_XE">
-          <End Type="rentaldbModel.XE" Role="XE" Multiplicity="1" />
-          <End Type="rentaldbModel.YEUCAU" Role="YEUCAU" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="XE">
-              <PropertyRef Name="MaXe" />
-            </Principal>
-            <Dependent Role="YEUCAU">
-              <PropertyRef Name="MaXe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -781,57 +297,76 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="HOADON">
+          <Key>
+            <PropertyRef Name="MaHD" />
+          </Key>
+          <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaYC" Type="Int32" />
+          <Property Name="TongTien" Type="Int32" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaXe" Type="Int32" />
+          <NavigationProperty Name="YEUCAU" Relationship="rentaldbModel.FK_HOADON_YEUCAU" FromRole="HOADON" ToRole="YEUCAU" />
+        </EntityType>
+        <EntityType Name="YEUCAU">
+          <Key>
+            <PropertyRef Name="MaYC" />
+          </Key>
+          <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhach" Type="Int32" Nullable="false" />
+          <Property Name="MaXe" Type="Int32" Nullable="false" />
+          <Property Name="NgayLay" Type="DateTime" Precision="3" />
+          <Property Name="NgayTra" Type="DateTime" Precision="3" />
+          <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTaoYC" Type="DateTime" Precision="3" />
+          <Property Name="NVXuLy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ThoiGianXuLy" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="HOADONs" Relationship="rentaldbModel.FK_HOADON_YEUCAU" FromRole="YEUCAU" ToRole="HOADON" />
+          <NavigationProperty Name="KHACH" Relationship="rentaldbModel.FK_YEUCAU_KHACH" FromRole="YEUCAU" ToRole="KHACH" />
+          <NavigationProperty Name="XE" Relationship="rentaldbModel.FK_YEUCAU_XE" FromRole="YEUCAU" ToRole="XE" />
+        </EntityType>
+        <Association Name="FK_HOADON_YEUCAU">
+          <End Type="rentaldbModel.YEUCAU" Role="YEUCAU" Multiplicity="0..1" />
+          <End Type="rentaldbModel.HOADON" Role="HOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YEUCAU">
+              <PropertyRef Name="MaYC" />
+            </Principal>
+            <Dependent Role="HOADON">
+              <PropertyRef Name="MaYC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_YEUCAU_KHACH">
+          <End Type="rentaldbModel.KHACH" Role="KHACH" Multiplicity="1" />
+          <End Type="rentaldbModel.YEUCAU" Role="YEUCAU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACH">
+              <PropertyRef Name="MaKhach" />
+            </Principal>
+            <Dependent Role="YEUCAU">
+              <PropertyRef Name="MaKhach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_YEUCAU_XE">
+          <End Type="rentaldbModel.XE" Role="XE" Multiplicity="1" />
+          <End Type="rentaldbModel.YEUCAU" Role="YEUCAU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XE">
+              <PropertyRef Name="MaXe" />
+            </Principal>
+            <Dependent Role="YEUCAU">
+              <PropertyRef Name="MaXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="rentaldbModelStoreContainer" CdmEntityContainer="rentaldbEntities">
-          <EntitySetMapping Name="DATXEs">
-            <EntityTypeMapping TypeName="rentaldbModel.DATXE">
-              <MappingFragment StoreEntitySet="DATXE">
-                <ScalarProperty Name="NgayDatXe" ColumnName="NgayDatXe" />
-                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="SoLuongDat" ColumnName="SoLuongDat" />
-                <ScalarProperty Name="NgayHenLay" ColumnName="NgayHenLay" />
-                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HOADONTTs">
-            <EntityTypeMapping TypeName="rentaldbModel.HOADONTT">
-              <MappingFragment StoreEntitySet="HOADONTT">
-                <ScalarProperty Name="SoHDTT" ColumnName="SoHDTT" />
-                <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-                <ScalarProperty Name="HinhThucTT" ColumnName="HinhThucTT" />
-                <ScalarProperty Name="TongXeThue" ColumnName="TongXeThue" />
-                <ScalarProperty Name="TraTruoc" ColumnName="TraTruoc" />
-                <ScalarProperty Name="PhiPS" ColumnName="PhiPS" />
-                <ScalarProperty Name="LyDo" ColumnName="LyDo" />
-                <ScalarProperty Name="TongThanhToan" ColumnName="TongThanhToan" />
-                <ScalarProperty Name="SoTienNop" ColumnName="SoTienNop" />
-                <ScalarProperty Name="TenLaiXe" ColumnName="TenLaiXe" />
-                <ScalarProperty Name="TenKeToan" ColumnName="TenKeToan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HOPDONGs">
-            <EntityTypeMapping TypeName="rentaldbModel.HOPDONG">
-              <MappingFragment StoreEntitySet="HOPDONG">
-                <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-                <ScalarProperty Name="NDCongViec" ColumnName="NDCongViec" />
-                <ScalarProperty Name="TrachNhiem" ColumnName="TrachNhiem" />
-                <ScalarProperty Name="DonGia_HTTT" ColumnName="DonGia&amp;HTTT" />
-                <ScalarProperty Name="DKCuThe" ColumnName="DKCuThe" />
-                <ScalarProperty Name="DKChung" ColumnName="DKChung" />
-                <ScalarProperty Name="TienTamUng" ColumnName="TienTamUng" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="KHACHes">
             <EntityTypeMapping TypeName="rentaldbModel.KHACH">
               <MappingFragment StoreEntitySet="KHACH">
@@ -858,29 +393,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SOXEs">
-            <EntityTypeMapping TypeName="rentaldbModel.SOXE">
-              <MappingFragment StoreEntitySet="SOXE">
-                <ScalarProperty Name="SoHD" ColumnName="SoHD" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="NgayNhan" ColumnName="NgayNhan" />
-                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-                <ScalarProperty Name="TienThue" ColumnName="TienThue" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SUACHUAs">
-            <EntityTypeMapping TypeName="rentaldbModel.SUACHUA">
-              <MappingFragment StoreEntitySet="SUACHUA">
-                <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-                <ScalarProperty Name="NgaySuaXong" ColumnName="NgaySuaXong" />
-                <ScalarProperty Name="GhịChu" ColumnName="GhịChu" />
-                <ScalarProperty Name="TienChiPhi" ColumnName="TienChiPhi" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="XEs">
             <EntityTypeMapping TypeName="rentaldbModel.XE">
               <MappingFragment StoreEntitySet="XE">
@@ -889,33 +401,6 @@
                 <ScalarProperty Name="HangXe" ColumnName="HangXe" />
                 <ScalarProperty Name="BienSo" ColumnName="BienSo" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="XE_HDTT">
-            <EntityTypeMapping TypeName="rentaldbModel.XE_HDTT">
-              <MappingFragment StoreEntitySet="XE_HDTT">
-                <ScalarProperty Name="SoHDTT" ColumnName="SoHDTT" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="NgayNhanXe" ColumnName="NgayNhanXe" />
-                <ScalarProperty Name="NgayTraXe" ColumnName="NgayTraXe" />
-                <ScalarProperty Name="Gia" ColumnName="Gia" />
-                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="YEUCAUs">
-            <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
-              <MappingFragment StoreEntitySet="YEUCAU">
-                <ScalarProperty Name="ThoiGianXuLy" ColumnName="ThoiGianXuLy" />
-                <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
-                <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
-                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
-                <ScalarProperty Name="NgayLay" ColumnName="NgayLay" />
-                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
-                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
-                <ScalarProperty Name="MaYC" ColumnName="MaYC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -942,6 +427,32 @@
                 <ScalarProperty Name="SoTien" ColumnName="SoTien" />
                 <ScalarProperty Name="LoaiPhieu" ColumnName="LoaiPhieu" />
                 <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOADONs">
+            <EntityTypeMapping TypeName="rentaldbModel.HOADON">
+              <MappingFragment StoreEntitySet="HOADON">
+                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YEUCAUs">
+            <EntityTypeMapping TypeName="rentaldbModel.YEUCAU">
+              <MappingFragment StoreEntitySet="YEUCAU">
+                <ScalarProperty Name="ThoiGianXuLy" ColumnName="ThoiGianXuLy" />
+                <ScalarProperty Name="NVXuLy" ColumnName="NVXuLy" />
+                <ScalarProperty Name="NgayTaoYC" ColumnName="NgayTaoYC" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+                <ScalarProperty Name="NgayLay" ColumnName="NgayLay" />
+                <ScalarProperty Name="MaXe" ColumnName="MaXe" />
+                <ScalarProperty Name="MaKhach" ColumnName="MaKhach" />
+                <ScalarProperty Name="MaYC" ColumnName="MaYC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -30,6 +30,10 @@
         {
             this.dgvYC = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtngayxuly = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNVxuly = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txttrangthai = new System.Windows.Forms.TextBox();
             this.txtngaytaoYC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,10 +65,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.txtNVxuly = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtngayxuly = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYC)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,6 +113,46 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // txtngayxuly
+            // 
+            this.txtngayxuly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtngayxuly.Location = new System.Drawing.Point(554, 252);
+            this.txtngayxuly.Margin = new System.Windows.Forms.Padding(4);
+            this.txtngayxuly.Name = "txtngayxuly";
+            this.txtngayxuly.Size = new System.Drawing.Size(224, 34);
+            this.txtngayxuly.TabIndex = 50;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(418, 255);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(128, 29);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "Ngày xử lý:";
+            // 
+            // txtNVxuly
+            // 
+            this.txtNVxuly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNVxuly.Location = new System.Drawing.Point(141, 252);
+            this.txtNVxuly.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNVxuly.Name = "txtNVxuly";
+            this.txtNVxuly.Size = new System.Drawing.Size(271, 34);
+            this.txtNVxuly.TabIndex = 48;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(11, 252);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 29);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "NV xử lý:";
             // 
             // txttrangthai
             // 
@@ -450,46 +490,6 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtNVxuly
-            // 
-            this.txtNVxuly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNVxuly.Location = new System.Drawing.Point(141, 252);
-            this.txtNVxuly.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNVxuly.Name = "txtNVxuly";
-            this.txtNVxuly.Size = new System.Drawing.Size(271, 34);
-            this.txtNVxuly.TabIndex = 48;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(11, 252);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 29);
-            this.label12.TabIndex = 47;
-            this.label12.Text = "NV xử lý:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(418, 255);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(128, 29);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Ngày xử lý:";
-            // 
-            // txtngayxuly
-            // 
-            this.txtngayxuly.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtngayxuly.Location = new System.Drawing.Point(554, 252);
-            this.txtngayxuly.Margin = new System.Windows.Forms.Padding(4);
-            this.txtngayxuly.Name = "txtngayxuly";
-            this.txtngayxuly.Size = new System.Drawing.Size(224, 34);
-            this.txtngayxuly.TabIndex = 50;
             // 
             // GUI_YeuCau
             // 

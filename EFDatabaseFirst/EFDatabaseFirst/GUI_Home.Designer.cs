@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Home));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.paneldanhmuc = new System.Windows.Forms.Panel();
-            this.lbdanhmuc = new System.Windows.Forms.Label();
+            this.txtusername = new System.Windows.Forms.TextBox();
+            this.lbchucdanh = new System.Windows.Forms.Label();
             this.panelQL = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelnhanvien = new System.Windows.Forms.Panel();
@@ -40,22 +41,20 @@
             this.panelquanly = new System.Windows.Forms.Panel();
             this.panelQLkhach = new System.Windows.Forms.Panel();
             this.panelyeucau = new System.Windows.Forms.Panel();
-            this.panelbaocao = new System.Windows.Forms.Panel();
             this.panelthuchi = new System.Windows.Forms.Panel();
+            this.panelbaocao = new System.Windows.Forms.Panel();
             this.panelthoat = new System.Windows.Forms.Panel();
             this.lbcoder = new System.Windows.Forms.Label();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelmain = new System.Windows.Forms.Panel();
             this.panelQLTimer = new System.Windows.Forms.Timer(this.components);
             this.paneluser = new System.Windows.Forms.Panel();
-            this.lbtime = new System.Windows.Forms.Label();
-            this.lbuser = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbtime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btndanhmuc = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnhoadon = new System.Windows.Forms.Button();
             this.btnnhanvien = new System.Windows.Forms.Button();
             this.btnQLxe = new System.Windows.Forms.Button();
             this.btntrangchu = new System.Windows.Forms.Button();
@@ -73,14 +72,13 @@
             this.panelquanly.SuspendLayout();
             this.panelQLkhach.SuspendLayout();
             this.panelyeucau.SuspendLayout();
-            this.panelbaocao.SuspendLayout();
             this.panelthuchi.SuspendLayout();
+            this.panelbaocao.SuspendLayout();
             this.panelthoat.SuspendLayout();
             this.paneluser.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btndanhmuc)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -104,8 +102,9 @@
             // 
             // paneldanhmuc
             // 
-            this.paneldanhmuc.Controls.Add(this.lbdanhmuc);
-            this.paneldanhmuc.Controls.Add(this.btndanhmuc);
+            this.paneldanhmuc.Controls.Add(this.txtusername);
+            this.paneldanhmuc.Controls.Add(this.lbchucdanh);
+            this.paneldanhmuc.Controls.Add(this.pictureBox1);
             this.paneldanhmuc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.paneldanhmuc.Location = new System.Drawing.Point(3, 2);
             this.paneldanhmuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -113,16 +112,33 @@
             this.paneldanhmuc.Size = new System.Drawing.Size(256, 117);
             this.paneldanhmuc.TabIndex = 0;
             // 
-            // lbdanhmuc
+            // txtusername
             // 
-            this.lbdanhmuc.AutoSize = true;
-            this.lbdanhmuc.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdanhmuc.ForeColor = System.Drawing.Color.White;
-            this.lbdanhmuc.Location = new System.Drawing.Point(76, 46);
-            this.lbdanhmuc.Name = "lbdanhmuc";
-            this.lbdanhmuc.Size = new System.Drawing.Size(123, 31);
-            this.lbdanhmuc.TabIndex = 1;
-            this.lbdanhmuc.Text = "Danh mục";
+            this.txtusername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtusername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusername.ForeColor = System.Drawing.Color.White;
+            this.txtusername.Location = new System.Drawing.Point(104, 22);
+            this.txtusername.Multiline = true;
+            this.txtusername.Name = "txtusername";
+            this.txtusername.ReadOnly = true;
+            this.txtusername.Size = new System.Drawing.Size(141, 51);
+            this.txtusername.TabIndex = 0;
+            this.txtusername.Text = "Họ tên";
+            // 
+            // lbchucdanh
+            // 
+            this.lbchucdanh.AutoSize = true;
+            this.lbchucdanh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbchucdanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbchucdanh.ForeColor = System.Drawing.Color.White;
+            this.lbchucdanh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbchucdanh.Location = new System.Drawing.Point(104, 76);
+            this.lbchucdanh.Name = "lbchucdanh";
+            this.lbchucdanh.Size = new System.Drawing.Size(102, 25);
+            this.lbchucdanh.TabIndex = 3;
+            this.lbchucdanh.Text = "Chức danh";
+            this.lbchucdanh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelQL
             // 
@@ -134,16 +150,16 @@
             this.panelQL.Controls.Add(this.panelQLkhach);
             this.panelQL.Location = new System.Drawing.Point(3, 123);
             this.panelQL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQL.MaximumSize = new System.Drawing.Size(256, 214);
+            this.panelQL.MaximumSize = new System.Drawing.Size(256, 264);
             this.panelQL.MinimumSize = new System.Drawing.Size(240, 50);
             this.panelQL.Name = "panelQL";
-            this.panelQL.Size = new System.Drawing.Size(256, 214);
+            this.panelQL.Size = new System.Drawing.Size(256, 264);
             this.panelQL.TabIndex = 8;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnhoadon);
             this.panel1.Location = new System.Drawing.Point(-5, 205);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -192,34 +208,34 @@
             // panelyeucau
             // 
             this.panelyeucau.Controls.Add(this.btnyeucau);
-            this.panelyeucau.Location = new System.Drawing.Point(3, 341);
+            this.panelyeucau.Location = new System.Drawing.Point(3, 391);
             this.panelyeucau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelyeucau.Name = "panelyeucau";
             this.panelyeucau.Size = new System.Drawing.Size(263, 50);
             this.panelyeucau.TabIndex = 6;
             // 
-            // panelbaocao
-            // 
-            this.panelbaocao.Controls.Add(this.btnbaocao);
-            this.panelbaocao.Location = new System.Drawing.Point(3, 449);
-            this.panelbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelbaocao.Name = "panelbaocao";
-            this.panelbaocao.Size = new System.Drawing.Size(263, 50);
-            this.panelbaocao.TabIndex = 7;
-            // 
             // panelthuchi
             // 
             this.panelthuchi.Controls.Add(this.btnthuchi);
-            this.panelthuchi.Location = new System.Drawing.Point(3, 395);
+            this.panelthuchi.Location = new System.Drawing.Point(3, 445);
             this.panelthuchi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelthuchi.Name = "panelthuchi";
             this.panelthuchi.Size = new System.Drawing.Size(256, 50);
             this.panelthuchi.TabIndex = 4;
             // 
+            // panelbaocao
+            // 
+            this.panelbaocao.Controls.Add(this.btnbaocao);
+            this.panelbaocao.Location = new System.Drawing.Point(3, 499);
+            this.panelbaocao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelbaocao.Name = "panelbaocao";
+            this.panelbaocao.Size = new System.Drawing.Size(263, 50);
+            this.panelbaocao.TabIndex = 7;
+            // 
             // panelthoat
             // 
             this.panelthoat.Controls.Add(this.btnthoat);
-            this.panelthoat.Location = new System.Drawing.Point(3, 503);
+            this.panelthoat.Location = new System.Drawing.Point(3, 553);
             this.panelthoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelthoat.Name = "panelthoat";
             this.panelthoat.Size = new System.Drawing.Size(263, 50);
@@ -232,7 +248,7 @@
             this.lbcoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcoder.ForeColor = System.Drawing.Color.White;
             this.lbcoder.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lbcoder.Location = new System.Drawing.Point(3, 555);
+            this.lbcoder.Location = new System.Drawing.Point(3, 605);
             this.lbcoder.Name = "lbcoder";
             this.lbcoder.Size = new System.Drawing.Size(254, 47);
             this.lbcoder.TabIndex = 6;
@@ -265,12 +281,19 @@
             this.paneluser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.paneluser.Controls.Add(this.pictureBox2);
             this.paneluser.Controls.Add(this.panel2);
-            this.paneluser.Controls.Add(this.lbuser);
-            this.paneluser.Controls.Add(this.pictureBox1);
             this.paneluser.Location = new System.Drawing.Point(254, 0);
             this.paneluser.Name = "paneluser";
             this.paneluser.Size = new System.Drawing.Size(1278, 66);
             this.paneluser.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbtime);
+            this.panel2.Location = new System.Drawing.Point(1050, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 59);
+            this.panel2.TabIndex = 4;
             // 
             // lbtime
             // 
@@ -285,38 +308,16 @@
             this.lbtime.Text = "lbtime";
             this.lbtime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbuser
-            // 
-            this.lbuser.AutoSize = true;
-            this.lbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbuser.ForeColor = System.Drawing.Color.White;
-            this.lbuser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbuser.Location = new System.Drawing.Point(65, 23);
-            this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(124, 25);
-            this.lbuser.TabIndex = 1;
-            this.lbuser.Text = "label2            ";
-            this.lbuser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lbtime);
-            this.panel2.Location = new System.Drawing.Point(1052, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(223, 59);
-            this.panel2.TabIndex = 4;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EFDatabaseFirst.Properties.Resources.schedulebig;
-            this.pictureBox2.Location = new System.Drawing.Point(987, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(985, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(59, 60);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,43 +326,31 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EFDatabaseFirst.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Image = global::EFDatabaseFirst.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(89, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btndanhmuc
+            // btnhoadon
             // 
-            this.btndanhmuc.ErrorImage = null;
-            this.btndanhmuc.Image = global::EFDatabaseFirst.Properties.Resources.interface__1_;
-            this.btndanhmuc.InitialImage = null;
-            this.btndanhmuc.Location = new System.Drawing.Point(12, 46);
-            this.btndanhmuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btndanhmuc.Name = "btndanhmuc";
-            this.btndanhmuc.Size = new System.Drawing.Size(47, 32);
-            this.btndanhmuc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btndanhmuc.TabIndex = 0;
-            this.btndanhmuc.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::EFDatabaseFirst.Properties.Resources.contract;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, -4);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(261, 65);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "         Hợp đồng thuê";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhoadon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhoadon.ForeColor = System.Drawing.Color.White;
+            this.btnhoadon.Image = global::EFDatabaseFirst.Properties.Resources.contract;
+            this.btnhoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhoadon.Location = new System.Drawing.Point(1, -4);
+            this.btnhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnhoadon.Name = "btnhoadon";
+            this.btnhoadon.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnhoadon.Size = new System.Drawing.Size(261, 65);
+            this.btnhoadon.TabIndex = 2;
+            this.btnhoadon.Text = "         Hóa đơn";
+            this.btnhoadon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhoadon.UseVisualStyleBackColor = true;
+            this.btnhoadon.Click += new System.EventHandler(this.btnhoadon_Click);
             // 
             // btnnhanvien
             // 
@@ -370,7 +359,7 @@
             this.btnnhanvien.ForeColor = System.Drawing.Color.White;
             this.btnnhanvien.Image = global::EFDatabaseFirst.Properties.Resources.employees;
             this.btnnhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnnhanvien.Location = new System.Drawing.Point(0, -4);
+            this.btnnhanvien.Location = new System.Drawing.Point(1, -4);
             this.btnnhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnhanvien.Name = "btnnhanvien";
             this.btnnhanvien.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
@@ -388,7 +377,7 @@
             this.btnQLxe.ForeColor = System.Drawing.Color.White;
             this.btnQLxe.Image = global::EFDatabaseFirst.Properties.Resources.transport;
             this.btnQLxe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLxe.Location = new System.Drawing.Point(-3, -4);
+            this.btnQLxe.Location = new System.Drawing.Point(-1, -4);
             this.btnQLxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLxe.Name = "btnQLxe";
             this.btnQLxe.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
@@ -424,7 +413,7 @@
             this.btnQLkhach.ForeColor = System.Drawing.Color.White;
             this.btnQLkhach.Image = global::EFDatabaseFirst.Properties.Resources.customer_review;
             this.btnQLkhach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLkhach.Location = new System.Drawing.Point(0, -4);
+            this.btnQLkhach.Location = new System.Drawing.Point(1, -4);
             this.btnQLkhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLkhach.Name = "btnQLkhach";
             this.btnQLkhach.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
@@ -469,6 +458,7 @@
             this.btnthuchi.Text = "          Phiếu thu chi";
             this.btnthuchi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnthuchi.UseVisualStyleBackColor = true;
+            this.btnthuchi.Click += new System.EventHandler(this.btnthuchi_Click);
             // 
             // btnbaocao
             // 
@@ -529,16 +519,14 @@
             this.panelquanly.ResumeLayout(false);
             this.panelQLkhach.ResumeLayout(false);
             this.panelyeucau.ResumeLayout(false);
-            this.panelbaocao.ResumeLayout(false);
             this.panelthuchi.ResumeLayout(false);
+            this.panelbaocao.ResumeLayout(false);
             this.panelthoat.ResumeLayout(false);
             this.paneluser.ResumeLayout(false);
-            this.paneluser.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btndanhmuc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -554,8 +542,6 @@
         private System.Windows.Forms.Panel panelQLkhach;
         private System.Windows.Forms.Button btnQLkhach;
         private System.Windows.Forms.Button btnthuchi;
-        private System.Windows.Forms.PictureBox btndanhmuc;
-        private System.Windows.Forms.Label lbdanhmuc;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Panel panelthoat;
         private System.Windows.Forms.Button btnthoat;
@@ -572,13 +558,14 @@
         private System.Windows.Forms.Panel panelbaocao;
         private System.Windows.Forms.Button btnbaocao;
         private System.Windows.Forms.Panel paneluser;
-        private System.Windows.Forms.Label lbuser;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnhoadon;
         private System.Windows.Forms.Label lbtime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbchucdanh;
+        private System.Windows.Forms.TextBox txtusername;
     }
 }
